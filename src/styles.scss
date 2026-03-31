@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../src/app/styles/abstracts/variables' as *;
+@use '../src/app/styles/abstracts/fonts';
+@use '../src/app/styles/base/typography';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+body{
+    background-color: $bg-color;
+}
+
+section{
+    height: 70vh;
+    padding: 100px;
+}

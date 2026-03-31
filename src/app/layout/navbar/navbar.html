@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<div class="nav-container">
+  <nav>
+    <a (click)="scrollToSection('home')">LOGO</a>
+    <ul>
+      <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')">Why me</a></li>
+      <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')">Skills</a></li>
+      <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')">Projects</a></li>
+      <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')">Contact</a></li>
+    </ul>
+    <div>
+      <button>EN</button>
+      <button>DE</button>
+    </div>
+  </nav>
+</div>

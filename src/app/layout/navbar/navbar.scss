@@ -1,0 +1,49 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/fonts';
+
+.nav-container {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+nav {
+  height: 100px;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 100px;
+
+  > ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+  }
+}
+
+a {
+  font-family: 'JosefinSans-Medium';
+  color: $bg-color;
+  font-size: 26px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 15px 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  &.active {
+    color: $secondary-color;
+    background-image: url('/assets/icons/ellipse_text.png');
+  }
+}

@@ -1,0 +1,22 @@
+@use '../../../../styles/abstracts/fonts';
+@use '../../../../styles/abstracts/variables' as *;
+
+section {
+    // display: flex;
+}
+
+h1 {
+  font-family: 'Anta-Regular', sans-serif;
+  color: $secondary-color;
+  font-size: 88px;
+}
+
+.photo-container {
+  height: 100%;
+  background-image: url('/assets/icons/shape.png');
+  background-repeat: no-repeat;
+
+  &:hover{
+    background-image: url('/assets/icons/shape2.png');
+  }
+}

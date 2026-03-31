@@ -1,0 +1,17 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/fonts';
+
+
+footer {
+    height: 200px;
+    background-color: $primary-color;
+    font-family: 'JosefinSans-Regular';
+    color: $bg-color;
+    font-size: 18px;
+}
+
+a{
+    font-family: 'JosefinSans-Regular';
+    color: $bg-color;
+    font-size: 18px;
+}
