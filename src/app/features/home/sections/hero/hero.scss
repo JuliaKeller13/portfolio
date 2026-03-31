@@ -2,21 +2,40 @@
 @use '../../../../styles/abstracts/variables' as *;
 
 section {
-    // display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  max-width: 1440px;
+  width: 100%;
 }
 
 h1 {
   font-family: 'Anta-Regular', sans-serif;
   color: $secondary-color;
   font-size: 88px;
+  line-height: 120%;
+  letter-spacing: 5%;
+  text-align: center;
 }
 
 .photo-container {
   height: 100%;
   background-image: url('/assets/icons/shape.png');
   background-repeat: no-repeat;
-
-  &:hover{
+display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &:hover {
     background-image: url('/assets/icons/shape2.png');
   }
+}
+
+p {
+  font-family: 'JosefinSans-Regular', sans-serif;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $secondary-color;
 }
