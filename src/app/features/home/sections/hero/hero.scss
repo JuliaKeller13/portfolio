@@ -1,11 +1,10 @@
 @use '../../../../styles/abstracts/fonts';
 @use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as mx;
 
 section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
+  @include mx.flex-center;
+  gap: 5rem;
   max-width: 1440px;
   width: 100%;
 }
@@ -13,29 +12,48 @@ section {
 h1 {
   font-family: 'Anta-Regular', sans-serif;
   color: $secondary-color;
-  font-size: 88px;
+  font-size: clamp(3rem, calc(6vw + 1rem), 6rem);
   line-height: 120%;
   letter-spacing: 5%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .photo-container {
-  height: 100%;
+  width: clamp(200px, 40vw, 500px);
+  height: auto;
+  aspect-ratio: 1;
   background-image: url('/assets/icons/shape.png');
   background-repeat: no-repeat;
-display: flex;
+  background-size: contain;
+  background-position: center;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
+  
   &:hover {
     background-image: url('/assets/icons/shape2.png');
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
 p {
   font-family: 'JosefinSans-Regular', sans-serif;
-  font-size: 40px;
+  font-size: clamp(2rem, calc(2vw + 1rem), 2.5rem);
   line-height: 120%;
   letter-spacing: 0%;
   text-align: center;
   color: $secondary-color;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    gap: 40px;
+  }
 }

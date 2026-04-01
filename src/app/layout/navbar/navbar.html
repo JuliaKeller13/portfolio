@@ -1,13 +1,21 @@
 <div class="nav-container">
   <nav>
     <a (click)="scrollToSection('home')">LOGO</a>
-    <ul>
+
+    <button class="burger" [class.open]="menuOpen()" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul [class.show]="menuOpen()">
       <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')">Why me</a></li>
       <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')">Skills</a></li>
       <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')">Projects</a></li>
       <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')">Contact</a></li>
     </ul>
-    <div>
+
+    <div class="lang-switcher">
       <button>EN</button>
       <button>DE</button>
     </div>

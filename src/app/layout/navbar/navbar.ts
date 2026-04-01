@@ -16,7 +16,16 @@ gsap.registerPlugin(ScrollToPlugin);
 export class Navbar implements OnInit, OnDestroy {
   private router = inject(Router);
   activeSection = signal('');
+  menuOpen = signal(false);
   private observer?: IntersectionObserver;
+
+  toggleMenu() {
+    this.menuOpen.update(v => !v);
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
+  }
 
   ngOnInit() {
     this.observer = new IntersectionObserver(
@@ -48,6 +57,7 @@ export class Navbar implements OnInit, OnDestroy {
       if (this.activeSection() === sectionId) return;
       this.router.navigate(['/'], { fragment: sectionId, replaceUrl: true });
       this.animateBounce(sectionId);
+      this.closeMenu();
     }
   }
 
