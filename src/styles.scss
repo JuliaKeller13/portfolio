@@ -1,21 +1,12 @@
-@use '../src/app/styles/abstracts/variables' as *;
-@use '../src/app/styles/abstracts/fonts';
-@use '../src/app/styles/base/typography';
+@use 'app/styles/abstracts/variables' as *;
+@use 'app/styles/abstracts/fonts';
+@use 'app/styles/base/typography';
 
 * {
     margin: 0;
     padding: 0;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body{
     background-color: $bg-color;
-}
-
-section{
-    height: 70vh;
-    // padding: 100px 100px 0 100px;
 }

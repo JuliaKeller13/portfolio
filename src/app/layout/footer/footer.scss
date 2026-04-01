@@ -1,5 +1,4 @@
 @use '../../styles/abstracts/variables' as *;
-@use '../../styles/abstracts/fonts';
 
 
 footer {
@@ -7,11 +6,17 @@ footer {
     background-color: $primary-color;
     font-family: 'JosefinSans-Regular';
     color: $bg-color;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 a{
-    font-family: 'JosefinSans-Regular';
     color: $bg-color;
-    font-size: 18px;
+
+    &:hover {
+        color: #f8f5ec79;
+    }
+
+    &:active {
+        color: $secondary-color;
+    }
 }

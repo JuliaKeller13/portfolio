@@ -1,5 +1,4 @@
 @use '../../styles/abstracts/variables' as *;
-@use '../../styles/abstracts/fonts';
 
 .nav-container {
   background-color: $primary-color;
@@ -30,7 +29,7 @@ nav {
 a {
   font-family: 'JosefinSans-Medium';
   color: $bg-color;
-  font-size: 26px;
+  font-size: 1.625rem;
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 15px 20px;
@@ -44,7 +43,7 @@ a {
 
   &.active {
     color: $secondary-color;
-    background-image: url('/assets/icons/ellipse_text.png');
+    background-image: url('/icons/ellipse_text.png');
   }
 }
 
@@ -91,7 +90,7 @@ a {
   }
 
   a {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -111,7 +110,7 @@ a {
     transform: translate(-50%, -50%) scale(0);
     width: 350px;
     height: 350px;
-    background-image: url('/assets/icons/shape.png');
+    background-image: url('/icons/shape.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
