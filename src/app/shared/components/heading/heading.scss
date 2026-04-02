@@ -1,8 +1,9 @@
 @use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as mx;
 
 h2 {
   font-family: 'Anta-Regular', sans-serif;
-  font-size: clamp(2rem, 5vw, 3.75rem);
+  @include mx.fluid-text(32, 60);
   color: $primary-color;
   text-align: center;
 }

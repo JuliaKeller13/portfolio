@@ -1,4 +1,5 @@
 @use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as mx;
 
 .nav-container {
   background-color: $primary-color;
@@ -29,8 +30,7 @@ nav {
 a {
   font-family: 'JosefinSans-Medium';
   color: $bg-color;
-  font-size: 1.625rem;
-  cursor: pointer;
+  @include mx.fluid-text(22, 26);
   transition: color 0.3s ease;
   padding: 15px 20px;
   background-size: contain;
@@ -80,6 +80,32 @@ a {
   }
 }
 
+.lang-switcher {
+  @include mx.flex-center;
+
+  button {
+    font-family: 'JosefinSans-Regular';
+    color: $bg-color;
+    @include mx.fluid-text(18, 18);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 5px 5px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &.active {
+      color: $secondary-color;
+      background-image: url('/icons/ellipse_text.png');
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   nav {
     margin: 0 40px;
@@ -87,10 +113,6 @@ a {
     > ul {
       gap: 40px;
     }
-  }
-
-  a {
-    font-size: 1.25rem;
   }
 }
 

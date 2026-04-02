@@ -1,0 +1,29 @@
+@use '../../../styles/abstracts/variables' as *;
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.arrow-btn {
+  color: $primary-color;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  border-radius: 19px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .arrow-icon {
+    display: block;
+
+    &.arrow-up {
+      transform: rotate(180deg);
+    }
+  }
+}

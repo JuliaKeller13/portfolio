@@ -1,0 +1,18 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  a {
+    line-height: 0;
+    position: relative;
+
+    img { width: 30px; height: 30px; }
+
+    .icon-hover { position: absolute; inset: 0; opacity: 0; }
+    &:hover .icon-default { opacity: 0; }
+    &:hover .icon-hover { opacity: 1; }
+  }
+}

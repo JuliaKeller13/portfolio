@@ -16,8 +16,8 @@
     </ul>
 
     <div class="lang-switcher">
-      <button>EN</button>
-      <button>DE</button>
+      <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>
+      <button [class.active]="activeLang() === 'en'" (click)="setLang('en')">EN</button>
     </div>
   </nav>
 </div>

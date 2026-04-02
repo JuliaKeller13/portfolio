@@ -1,3 +1,5 @@
+@use '../../styles/abstracts/mixins' as mx;
+
 .not-found-page {
   min-height: 60vh;
   display: grid;
@@ -8,7 +10,7 @@
 }
 
 .status {
-  font-size: 3rem;
+  @include mx.fluid-text(32, 48);
   font-weight: 700;
   line-height: 1;
 }

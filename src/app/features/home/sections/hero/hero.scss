@@ -19,7 +19,7 @@
 h1 {
   font-family: 'Anta-Regular', sans-serif;
   color: $secondary-color;
-  font-size: clamp(3rem, calc(6vw + 1rem), 6rem);
+  @include mx.fluid-text(48, 96);
   letter-spacing: 1%;
   text-align: center;
   margin-bottom: 1rem;
@@ -29,53 +29,93 @@ h1 {
   width: clamp(200px, 40vw, 500px);
   height: auto;
   aspect-ratio: 1;
-  background-image: url('/icons/shape.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  
-  &:hover {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+    z-index: 0;
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    background-image: url('/icons/shape.png');
+    opacity: 1;
+  }
+
+  &::after {
     background-image: url('/icons/shape2.png');
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
   }
 
   img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    position: relative;
+    z-index: 1;
   }
 }
 
 p {
   font-family: 'JosefinSans-Regular', sans-serif;
-  font-size: clamp(1.5rem, calc(2vw + 1rem), 2.5rem);
+  @include mx.fluid-text(24, 40);
   text-align: center;
   color: $secondary-color;
 }
 
 .logo-container {
   @include mx.flex-center;
+  position: relative;
+  margin-bottom: 40px;
 
-  .logo-hover {
-    display: none;
+  .logo-base {
+    display: block;
   }
 
-  &:hover {
-    .logo-default {
-      display: none;
-    }
-    .logo-hover {
-      display: inline;
-      
-    }
+  .logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .logo-overlay {
+    transform: scaleX(1.1);
   }
 }
 
-.hero-content{
+.hero-content {
   @include mx.flex-center;
   flex-direction: column;
+  position: relative;
+
+  app-social-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -85,6 +125,9 @@ p {
   }
 }
 
-.arrow{
-  padding-top: min(8em, 30%);;
+.arrow-buttons {
+  padding-top: min(8em, 30%);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
