@@ -1,23 +1,41 @@
 @use '../../styles/abstracts/variables' as *;
 @use '../../styles/abstracts/mixins' as mx;
 
-
 footer {
-    height: 200px;
-    background-color: $primary-color;
-    font-family: 'JosefinSans-Regular';
-    color: $bg-color;
-    @include mx.fluid-text(14, 18);
+  background-color: $primary-color;
+  font-family: 'JosefinSans-Regular';
+  color: rgba($bg-color, 0.8);
+  @include mx.fluid-text(14, 18);
+  padding-inline: clamp(3rem, 2vw + 1rem, 6rem);
+  padding-block: clamp(2rem, 5vh + 1rem, 5rem);
+  display: flex;
+  justify-content: center;
+
+  > .footer-content {
+    max-width: 1440px;
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    > .imp-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  a {
+  color: rgba($bg-color, 0.8);
+
+  &:hover {
+    color: #f8f5ec79;
+  }
+
+  &:active {
+    color: $secondary-color;
+  }
 }
-
-a{
-    color: $bg-color;
-
-    &:hover {
-        color: #f8f5ec79;
-    }
-
-    &:active {
-        color: $secondary-color;
-    }
 }

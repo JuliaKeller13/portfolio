@@ -1,14 +1,31 @@
-<div class="social-icons">
-  <a href="mailto:" aria-label="Email">
-    <img class="icon-default" src="icons/sosial_media/mail-hero.svg" alt="Email">
-    <img class="icon-hover" src="icons/sosial_media/mail-hero-hover.svg" alt="Email">
+<div class="social-icons" [class.is-horizontal]="orientation === 'row'">
+  <a href="mailto:deine@mail.de" aria-label="Email">
+    @if (theme === 'header') {
+      <img class="icon-default" src="icons/sosial_media/mail-hero.svg" alt="Email" />
+      <img class="icon-hover" src="icons/sosial_media/mail-hero-hover.svg" alt="Email" />
+    } @else {
+      <img class="icon-default" src="icons/sosial_media/mail-footer.svg" alt="Email" />
+      <img class="icon-hover" src="icons/sosial_media/mail-footer-hover.svg" alt="Email" />
+    }
   </a>
+
   <a href="https://github.com/JuliaKeller13" target="_blank" aria-label="GitHub">
-    <img class="icon-default" src="icons/sosial_media/github-hero.svg" alt="GitHub">
-    <img class="icon-hover" src="icons/sosial_media/github-hero-hover.svg" alt="GitHub">
+    @if (theme === 'header') {
+      <img class="icon-default" src="icons/sosial_media/github-hero.svg" alt="GitHub" />
+      <img class="icon-hover" src="icons/sosial_media/github-hero-hover.svg" alt="GitHub" />
+    } @else {
+      <img class="icon-default" src="icons/sosial_media/github-footer.svg" alt="GitHub" />
+      <img class="icon-hover" src="icons/sosial_media/github-footer-hover.svg" alt="GitHub" />
+    }
   </a>
+
   <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-    <img class="icon-default" src="icons/sosial_media/in-hero.svg" alt="LinkedIn">
-    <img class="icon-hover" src="icons/sosial_media/in-hero-hover.svg" alt="LinkedIn">
+    @if (theme === 'header') {
+      <img class="icon-default" src="icons/sosial_media/in-hero.svg" alt="LinkedIn" />
+      <img class="icon-hover" src="icons/sosial_media/in-hero-hover.svg" alt="LinkedIn" />
+    } @else {
+      <img class="icon-default" src="icons/sosial_media/in-footer.svg" alt="LinkedIn" />
+      <img class="icon-hover" src="icons/sosial_media/in-footer-hover.svg" alt="LinkedIn" />
+    }
   </a>
 </div>

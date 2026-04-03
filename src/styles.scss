@@ -2,9 +2,10 @@
 @use 'app/styles/abstracts/fonts';
 @use 'app/styles/base/typography';
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{

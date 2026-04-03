@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 500;
+  padding-inline: clamp(3rem, 2vw + 1rem, 6rem); //später noch anpassen
 }
 
 nav {
@@ -18,7 +19,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 100px;
 
   > ul {
     list-style: none;
@@ -50,6 +50,10 @@ a {
     background-image: url('/icons/ellipse_text.png');
   }
 }
+
+.logo-nav{
+    padding: 0;
+  }
 
 .burger {
   display: none;
@@ -110,20 +114,8 @@ a {
   }
 }
 
-@media (max-width: 1200px) {
-  nav {
-    margin: 0 40px;
-
-    > ul {
-      gap: 40px;
-    }
-  }
-}
 
 @media (max-width: 768px) {
-  nav {
-    margin: 0 20px;
-  }
 
   .burger {
     display: flex;
