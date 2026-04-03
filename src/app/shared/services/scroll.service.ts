@@ -31,10 +31,14 @@ export class ScrollService {
       targetY = 80;
     }
 
+    const distance = Math.abs(window.scrollY - targetY);
+    const duration = Math.min(1.8, Math.max(0.9, distance / 1200));
+    const overshoot = distance > 2000 ? 0.8 : 1.3;
+
     gsap.to(window, {
-      duration: 1.1,
+      duration,
       scrollTo: { y: targetY, autoKill: false },
-      ease: 'back.out(1.3)',
+      ease: `back.out(${overshoot})`,
     });
   }
 }
