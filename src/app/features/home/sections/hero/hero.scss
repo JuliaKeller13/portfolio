@@ -13,7 +13,8 @@
 
 .inner-container {
   @include mx.flex-center;
-  gap: 5rem;
+  gap: clamp(2rem, 5vw, 100px);
+  position: relative;
 }
 
 h1 {
@@ -109,13 +110,12 @@ p {
 .hero-content {
   @include mx.flex-center;
   flex-direction: column;
-  position: relative;
+}
 
-  app-social-icons {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+app-social-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 768px) {

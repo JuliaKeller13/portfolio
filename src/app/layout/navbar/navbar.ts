@@ -1,10 +1,11 @@
 import { Component, inject, signal, OnInit, OnDestroy } from '@angular/core';
 import { ScrollService } from '../../shared/services/scroll.service';
+import { BurgerButton } from '../../shared/components/burger-button/burger-button';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [BurgerButton],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })

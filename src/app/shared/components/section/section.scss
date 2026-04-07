@@ -7,5 +7,6 @@ section {
   .inner-container {
     max-width: 1440px;
     width: 100%;
+    margin-inline: clamp(3rem, 2vw + 1rem, 6rem);
   }
 }

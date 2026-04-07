@@ -1,0 +1,55 @@
+@use '../../../styles/abstracts/variables' as *;
+
+$btn-size: 40px;
+$line-width: 30px;
+$line-height: 2px;
+$line-height-active: 3px;
+$line-spacing: 8px;
+
+.menu-btn {
+  width: $btn-size;
+  height: $btn-size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $line-spacing;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 600;
+
+  .line {
+    width: $line-width;
+    height: 0;
+    background-color: transparent;
+    border-top: $line-height solid $secondary-color;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  @media (hover: hover) {
+    &:hover .line:nth-child(2) {
+      width: $line-width * 0.6;
+    }
+  }
+
+  &.is-active {
+    .line {
+      border-top-width: $line-height-active;
+
+      &:nth-child(1) {
+        transform: translateY($line-height-active + $line-spacing) rotate(45deg);
+      }
+      &:nth-child(2) {
+        width: 0;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-($line-height-active + $line-spacing)) rotate(-45deg);
+      }
+    }
+  }
+}
