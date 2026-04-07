@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class SocialIcons {
   @Input() orientation: 'row' | 'column' = 'column'; 
-  @Input() theme: 'header' | 'footer' = 'header';
+  @Input() theme: 'header' | 'footer' | 'mobile' = 'header';
 }

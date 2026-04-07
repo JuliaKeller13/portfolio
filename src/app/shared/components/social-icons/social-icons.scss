@@ -13,6 +13,10 @@
     }
   }
 
+  &.is-mobile a .icon-default {
+    opacity: 1;
+  }
+
   a {
     position: relative;
     line-height: 0;
@@ -28,12 +32,14 @@
       opacity: 0;
     }
 
-    &:hover {
-      .icon-default {
-        opacity: 0;
-      }
-      .icon-hover {
-        opacity: 1;
+    @media (hover: hover) {
+      &:hover {
+        .icon-default {
+          opacity: 0;
+        }
+        .icon-hover {
+          opacity: 1;
+        }
       }
     }
   }

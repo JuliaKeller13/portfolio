@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 500;
-  padding-inline: clamp(3rem, 2vw + 1rem, 6rem); //später noch anpassen
+  padding-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
 }
 
 nav {
@@ -23,7 +23,7 @@ nav {
   > ul {
     list-style: none;
     display: flex;
-    gap: clamp(1.5rem, 5vw, 100px);
+    gap: clamp(1.5rem, 5vw, 6rem);
   }
 }
 

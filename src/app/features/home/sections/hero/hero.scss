@@ -20,7 +20,7 @@
 h1 {
   font-family: 'Anta-Regular', sans-serif;
   color: $secondary-color;
-  @include mx.fluid-text(48, 96);
+  @include mx.fluid-text(48, 88);
   letter-spacing: 1%;
   text-align: center;
   margin-bottom: 1rem;
@@ -122,6 +122,10 @@ app-social-icons {
   .inner-container {
     flex-direction: column;
     gap: 40px;
+  }
+
+  app-social-icons {
+    display: none;
   }
 }
 

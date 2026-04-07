@@ -1,8 +1,10 @@
-<div class="social-icons" [class.is-horizontal]="orientation === 'row'">
+<div class="social-icons" [class.is-horizontal]="orientation === 'row'" [class.is-mobile]="theme === 'mobile'">
   <a href="mailto:deine@mail.de" aria-label="Email">
     @if (theme === 'header') {
       <img class="icon-default" src="icons/sosial_media/mail-hero.svg" alt="Email" />
       <img class="icon-hover" src="icons/sosial_media/mail-hero-hover.svg" alt="Email" />
+    } @else if (theme === 'mobile') {
+      <img class="icon-default" src="icons/sosial_media/mail-mobile.svg" alt="Email" />
     } @else {
       <img class="icon-default" src="icons/sosial_media/mail-footer.svg" alt="Email" />
       <img class="icon-hover" src="icons/sosial_media/mail-footer-hover.svg" alt="Email" />
@@ -13,6 +15,8 @@
     @if (theme === 'header') {
       <img class="icon-default" src="icons/sosial_media/github-hero.svg" alt="GitHub" />
       <img class="icon-hover" src="icons/sosial_media/github-hero-hover.svg" alt="GitHub" />
+    } @else if (theme === 'mobile') {
+      <img class="icon-default" src="icons/sosial_media/github-mobile.svg" alt="GitHub" />
     } @else {
       <img class="icon-default" src="icons/sosial_media/github-footer.svg" alt="GitHub" />
       <img class="icon-hover" src="icons/sosial_media/github-footer-hover.svg" alt="GitHub" />
@@ -23,6 +27,8 @@
     @if (theme === 'header') {
       <img class="icon-default" src="icons/sosial_media/in-hero.svg" alt="LinkedIn" />
       <img class="icon-hover" src="icons/sosial_media/in-hero-hover.svg" alt="LinkedIn" />
+    } @else if (theme === 'mobile') {
+      <img class="icon-default" src="icons/sosial_media/in-mobile.svg" alt="LinkedIn" />
     } @else {
       <img class="icon-default" src="icons/sosial_media/in-footer.svg" alt="LinkedIn" />
       <img class="icon-hover" src="icons/sosial_media/in-footer-hover.svg" alt="LinkedIn" />
