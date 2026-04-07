@@ -7,7 +7,7 @@ footer {
   color: rgba($bg-color, 0.8);
   @include mx.fluid-text(14, 18);
   padding-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
-  padding-block: clamp(2rem, 5vh + 1rem, 5rem);
+  padding-block: clamp(1.875rem, calc(2.6786vw + 1.3393rem), 3.75rem);
   display: flex;
   justify-content: center;
 
@@ -28,16 +28,16 @@ footer {
   }
 
   a {
-  color: rgba($bg-color, 0.8);
+    color: rgba($bg-color, 0.8);
 
-  &:hover {
-    color: #f8f5ec79;
-  }
+    &:hover {
+      color: #f8f5ec79;
+    }
 
-  &:active {
-    color: $secondary-color;
+    &:active {
+      color: $secondary-color;
+    }
   }
-}
 }
 
 .mobile-icons,
@@ -45,7 +45,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .desktop-icons,
   .desktop-logo {
     display: none;
@@ -72,7 +72,7 @@ footer {
     > .imp-container {
       flex-direction: row;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 }

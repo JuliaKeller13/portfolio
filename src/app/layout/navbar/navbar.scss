@@ -86,6 +86,15 @@ app-burger-button {
 }
 
 @media (max-width: 1000px) {
+  .nav-container {
+    background-color: $bg-color;
+    padding-top: 30px;
+
+    > nav{
+      align-items: flex-start;
+    }
+  }
+
   app-burger-button {
     display: block;
   }

@@ -1,7 +1,11 @@
 <div class="nav-container">
   <nav>
     <a class="logo-nav" (click)="scrollToSection('home')">
-      <img src="icons/logo-dark.svg" alt="Logo">
+      @if (isMobile()) {
+        <img src="icons/logo-mobile.svg" alt="Logo">
+      } @else {
+        <img src="icons/logo-dark.svg" alt="Logo">
+      }
     </a>
 
     <app-burger-button [isActive]="menuOpen()" (toggled)="toggleMenu()"></app-burger-button>

@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, signal, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { ScrollService } from '../../shared/services/scroll.service';
 import { BurgerButton } from '../../shared/components/burger-button/burger-button';
 
@@ -15,7 +15,13 @@ export class Navbar implements OnInit, OnDestroy {
   activeSection = signal('');
   activeLang = signal('en');
   menuOpen = signal(false);
+  isMobile = signal(window.innerWidth <= 1000);
   private observer?: IntersectionObserver;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile.set(window.innerWidth <= 1000);
+  }
 
   toggleMenu() {
     this.menuOpen.update(v => !v);

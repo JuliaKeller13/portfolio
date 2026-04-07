@@ -32,7 +32,7 @@
       opacity: 0;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (min-width: 1001px) {
       &:hover {
         .icon-default {
           opacity: 0;

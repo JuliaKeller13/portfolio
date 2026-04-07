@@ -118,10 +118,18 @@ app-social-icons {
   right: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  :host ::ng-deep section {
+    height: auto;
+  }
+
   .inner-container {
     flex-direction: column;
     gap: 40px;
+  }
+
+  .logo-icon{
+    display: none;
   }
 
   app-social-icons {
