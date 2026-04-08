@@ -1,5 +1,14 @@
+@use '../abstracts/variables' as *;
 
-a{
-    text-decoration: none;
-    cursor: pointer;
+p {
+  color: $secondary-color;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }

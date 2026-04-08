@@ -13,7 +13,8 @@
     "LOGO_ALT": "logo"
   },
   "ABOUT": {
-    "HEADING": "Why me"
+    "HEADING": "Why me",
+    "CONTENT": "My introduction to web development began during my training as a computer science teacher, where I gained my first experience creating websites. This sparked my interest in diving deeper into web application development.\nIt is important to me that web applications are clear, well-structured, and functional. I work analytically and bring a structured, methodical approach. My goal is to develop user-friendly solutions that are both visually and technically convincing."
   },
   "SKILLS": {
     "HEADING": "My Skills"
