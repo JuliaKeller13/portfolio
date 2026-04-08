@@ -1,0 +1,50 @@
+{
+  "NAV": {
+    "WHY_ME": "Why me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "LOGO_ALT": "Logo"
+  },
+  "HERO": {
+    "NAME": "Julia Keller",
+    "ROLE": "FULLSTACK DEVELOPER",
+    "PHOTO_ALT": "person photo",
+    "LOGO_ALT": "logo"
+  },
+  "ABOUT": {
+    "HEADING": "Why me"
+  },
+  "SKILLS": {
+    "HEADING": "My Skills"
+  },
+  "PROJECTS": {
+    "HEADING": "My Projects"
+  },
+  "CONTACT": {
+    "HEADING": "Contact me"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal notice",
+    "COPYRIGHT": "© Julia Keller 2026",
+    "LOGO_ALT": "Logo"
+  },
+  "IMPRINT": {
+    "HEADING": "Imprint",
+    "BACK": "Back to home"
+  },
+  "NOT_FOUND": {
+    "STATUS": "404",
+    "HEADING": "Page not found",
+    "MESSAGE": "The page you requested does not exist.",
+    "BACK": "Back to home"
+  },
+  "SOCIAL": {
+    "EMAIL": "Email",
+    "GITHUB": "GitHub",
+    "LINKEDIN": "LinkedIn"
+  },
+  "BURGER": {
+    "MENU": "menu"
+  }
+}

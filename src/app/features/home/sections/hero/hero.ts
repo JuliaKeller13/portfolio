@@ -3,11 +3,12 @@ import { Section } from '../../../../shared/components/section/section';
 import { Button } from '../../../../shared/components/button/button';
 import { SocialIcons } from '../../../../shared/components/social-icons/social-icons';
 import { ScrollService } from '../../../../shared/services/scroll.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-hero',
-  imports: [Section, Button, SocialIcons],
+  imports: [Section, Button, SocialIcons, TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

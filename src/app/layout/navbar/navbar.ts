@@ -1,19 +1,21 @@
 import { Component, inject, signal, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { ScrollService } from '../../shared/services/scroll.service';
 import { BurgerButton } from '../../shared/components/burger-button/burger-button';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [BurgerButton],
+  imports: [BurgerButton, TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 
 export class Navbar implements OnInit, OnDestroy {
   private scrollService = inject(ScrollService);
+  private translate = inject(TranslateService);
   activeSection = signal('');
-  activeLang = signal('en');
+  activeLang = signal(this.translate.getCurrentLang() || this.translate.getFallbackLang() || 'en');
   menuOpen = signal(false);
   isMobile = signal(window.innerWidth <= 1000);
   private observer?: IntersectionObserver;
@@ -32,7 +34,9 @@ export class Navbar implements OnInit, OnDestroy {
   }
 
   setLang(lang: string) {
+    this.translate.use(lang);
     this.activeLang.set(lang);
+    localStorage.setItem('lang', lang);
   }
 
   ngOnInit() {

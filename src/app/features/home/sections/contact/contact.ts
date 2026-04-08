@@ -3,10 +3,11 @@ import { Heading } from "../../../../shared/components/heading/heading";
 import { Section } from '../../../../shared/components/section/section';
 import { Button } from '../../../../shared/components/button/button';
 import { ScrollService } from '../../../../shared/services/scroll.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
-  imports: [Heading, Section, Button],
+  imports: [Heading, Section, Button, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

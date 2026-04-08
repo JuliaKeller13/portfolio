@@ -59,6 +59,10 @@ app-burger-button {
   display: none;
 }
 
+.lang-switcher-mobile {
+  display: none;
+}
+
 .lang-switcher {
   @include mx.flex-center;
 
@@ -90,8 +94,35 @@ app-burger-button {
     background-color: $bg-color;
     padding-top: 30px;
 
-    > nav{
+    > nav {
       align-items: flex-start;
+      position: relative;
+
+      > ul {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: clamp(300px, 80vw, 340px);
+        height: fit-content;
+        background-image: url('/icons/shape.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 550;
+        @include mx.flex-center;
+        flex-direction: column;
+        gap: 40px;
+
+        &.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
     }
   }
 
@@ -99,35 +130,11 @@ app-burger-button {
     display: block;
   }
 
-  nav > ul {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 350px;
-    height: 350px;
-    background-image: url('/icons/shape.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    transition:
-      transform 0.4s ease,
-      opacity 0.4s ease;
-    opacity: 0;
-    z-index: 550;
-
-    &.show {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 1;
-    }
+  .lang-switcher-desktop {
+    display: none;
   }
 
-  .lang-switcher {
-    display: none;
+  .lang-switcher-mobile {
+    display: block;
   }
 }

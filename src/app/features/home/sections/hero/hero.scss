@@ -35,6 +35,10 @@ h1 {
   align-items: flex-end;
   position: relative;
 
+  .shape {
+    display: none;
+  }
+
   &::before,
   &::after {
     content: '';
@@ -128,7 +132,43 @@ app-social-icons {
     gap: 40px;
   }
 
-  .logo-icon{
+  .photo-container {
+    width: clamp(300px, 80vw, 340px);
+    height: 420px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .shape {
+      display: block;
+      position: absolute;
+      inset: 0;
+      background-image: url('/icons/shape.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+
+    img {
+      position: absolute;
+      height: inherit;
+      width: 100%;
+      max-width: 340px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+
+      mask-image: url('/icons/shape.png'), linear-gradient(#000, #000);
+      mask-size: contain, 100% 70%;
+      mask-repeat: no-repeat;
+      mask-position: bottom, top;
+      mask-composite: add;
+    }
+  }
+
+  .logo-icon {
     display: none;
   }
 

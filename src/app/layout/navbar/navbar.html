@@ -2,22 +2,28 @@
   <nav>
     <a class="logo-nav" (click)="scrollToSection('home')">
       @if (isMobile()) {
-        <img src="icons/logo-mobile.svg" alt="Logo">
+        <img src="icons/logo-mobile.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
       } @else {
-        <img src="icons/logo-dark.svg" alt="Logo">
+        <img src="icons/logo-dark.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
       }
     </a>
 
     <app-burger-button [isActive]="menuOpen()" (toggled)="toggleMenu()"></app-burger-button>
 
     <ul [class.show]="menuOpen()">
-      <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')">Why me</a></li>
-      <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')">Skills</a></li>
-      <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')">Projects</a></li>
-      <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')">Contact</a></li>
+      <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')">{{ 'NAV.WHY_ME' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')">{{ 'NAV.SKILLS' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')">{{ 'NAV.PROJECTS' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')">{{ 'NAV.CONTACT' | translate }}</a></li>
+      <li class="lang-switcher-mobile">
+        <div class="lang-switcher">
+          <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>
+          <button [class.active]="activeLang() === 'en'" (click)="setLang('en')">EN</button>
+        </div>
+      </li>
     </ul>
 
-    <div class="lang-switcher">
+    <div class="lang-switcher lang-switcher-desktop">
       <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>
       <button [class.active]="activeLang() === 'en'" (click)="setLang('en')">EN</button>
     </div>

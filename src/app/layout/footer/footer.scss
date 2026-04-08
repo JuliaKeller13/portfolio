@@ -40,19 +40,16 @@ footer {
   }
 }
 
-.mobile-icons,
-.mobile-logo {
+.mobile-icons {
   display: none;
 }
 
 @media (max-width: 1000px) {
-  .desktop-icons,
-  .desktop-logo {
+  .desktop-icons {
     display: none;
   }
 
-  .mobile-icons,
-  .mobile-logo {
+  .mobile-icons {
     display: block;
   }
 
@@ -63,6 +60,10 @@ footer {
 
     > .logo-nav {
       order: -2;
+
+      .logo-top {
+        opacity: 0.6;
+      }
     }
 
     > app-social-icons {
