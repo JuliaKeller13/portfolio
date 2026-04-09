@@ -1,12 +1,15 @@
 section {
   display: flex;
   justify-content: center;
-  min-height: 70vh;
-  margin-top: min(8.75em, 10%);
+  // min-height: 70vh;
+  margin-top: clamp(5rem, 15vw, 6.25rem);
 
   .inner-container {
     max-width: 1440px;
     width: 100%;
     margin-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }

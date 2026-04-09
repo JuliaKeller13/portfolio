@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Section } from '../../../../shared/components/section/section';
-import { Button } from '../../../../shared/components/button/button';
+import { Button } from '../../../../shared/components/arrow-button/arrow-button';
 import { SocialIcons } from '../../../../shared/components/social-icons/social-icons';
 import { ScrollService } from '../../../../shared/services/scroll.service';
 import { TranslatePipe } from '@ngx-translate/core';
