@@ -114,6 +114,13 @@ p {
 .hero-content {
   @include mx.flex-center;
   flex-direction: column;
+
+  > .arrow-button {
+    padding-top: 140px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 app-social-icons {
@@ -136,6 +143,12 @@ app-social-icons {
     flex-direction: column;
     gap: 40px;
   }
+
+  .hero-content {
+    > .arrow-button {
+    padding-top: 24px;
+  }
+}
 
   .photo-container {
     width: 300px;
@@ -163,7 +176,9 @@ app-social-icons {
       width: 100%;
       max-width: 320px;
       mask-image: url('/icons/shape.png'), linear-gradient(#000, #000);
-      mask-size: contain, 100% 70%;
+      mask-size:
+        contain,
+        100% 70%;
       mask-repeat: no-repeat;
       mask-position: bottom, top;
       mask-composite: add;
@@ -177,11 +192,4 @@ app-social-icons {
   app-social-icons {
     display: none;
   }
-}
-
-.arrow-buttons {
-  padding-top: min(8em, 30%);
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
 }

@@ -14,8 +14,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class About implements OnInit {
   phrases = [
     { icon: 'icons/location-icon.png', prefix: 'I am', text: 'located in Iserlohn' },
-    { icon: 'icons/remote-icon.svg', prefix: 'I build', text: 'modern Interfaces' },
-    // { icon: 'icons/star-icon.png', prefix: 'I build', text: 'modern Interfaces' }
+    { icon: 'icons/remote-icon.svg', prefix: 'I build', text: 'modern web apps' },
+    { icon: 'icons/ellipse_text.png', prefix: 'I create', text: 'digital experiences' }
   ];
 
   displayText = '';
@@ -32,7 +32,7 @@ export class About implements OnInit {
 
   typeEffect() {
     const current = this.phrases[this.currentIndex];
-    const fullText = current.text;
+    const fullText = `${current.prefix} ${current.text}`;
 
     if (this.isDeleting) {
       this.displayText = fullText.substring(0, this.displayText.length - 1);
@@ -56,7 +56,7 @@ export class About implements OnInit {
         this.showIcon = true;
         this.cdr.detectChanges();
         this.typeEffect();
-      }, 100);
+      }, 1000);
       return;
     }
 
