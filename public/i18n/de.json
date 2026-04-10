@@ -14,7 +14,12 @@
   },
   "ABOUT": {
     "HEADING": "Warum ich",
-    "CONTENT": "Mein Weg zur Webentwicklung begann während meiner Ausbildung zur Informatiklehrerin. Seither begeistere ich mich für die Umsetzung gut strukturierter und funktionaler Anwendungen. Mit meiner analytischen Arbeitsweise entwickle ich benutzerfreundliche Lösungen, die sowohl technisch als auch visuell überzeugen."
+    "CONTENT": "Mein Weg zur Webentwicklung begann während meiner Ausbildung zur Informatiklehrerin. Seither begeistere ich mich für die Umsetzung gut strukturierter und funktionaler Anwendungen. Mit meiner analytischen Arbeitsweise entwickle ich benutzerfreundliche Lösungen, die sowohl technisch als auch visuell überzeugen.",
+    "PHRASES": [
+      { "PREFIX": "Ich", "TEXT": "wohne in Iserlohn" },
+      { "PREFIX": "Ich", "TEXT": "entwickle moderne Apps" },
+      { "PREFIX": "Ich", "TEXT": "kreiere digitale Erlebnisse" }
+    ]
   },
   "SKILLS": {
     "HEADING": "Meine Fähigkeiten"

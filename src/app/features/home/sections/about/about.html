@@ -1,14 +1,14 @@
 <app-section sectionId="about">
-    <app-heading>{{ 'ABOUT.HEADING' | translate }}</app-heading>
-    <div class="about-content">
-        <div class="printed-text">
-            <div class="icon-box" [class.visible]="showIcon">
-                <img [src]="phrases[currentIndex].icon" alt="icon">
-            </div>
-            <p class="anim-text">
-                {{ displayText }} <span> ...</span><span class="cursor">|</span>
-            </p>
-        </div>
-        <p class="about-text">{{ 'ABOUT.CONTENT' | translate }}</p>
+  <app-heading>{{ 'ABOUT.HEADING' | translate }}</app-heading>
+  <div class="about-content">
+    <div class="printed-text">
+      <div class="icon-box" [class.visible]="displayText.length > 0">
+        <img [src]="getIcon(currentIndex)" alt="icon">
+      </div>
+      <p class="anim-text">
+        <span class="prefix">{{ displayPrefix }}</span> {{ displayText }}<span class="dots">...</span><span class="cursor">|</span>
+      </p>
     </div>
+    <p class="about-text">{{ 'ABOUT.CONTENT' | translate }}</p>
+  </div>
 </app-section>

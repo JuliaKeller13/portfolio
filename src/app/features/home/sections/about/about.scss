@@ -14,24 +14,23 @@
     justify-content: flex-end;
     gap: 12px;
     height: 40px;
-    text-align: right;
     width: 470px;
 
     .icon-box {
       opacity: 0;
-      transform: scale(0.5);
-      transition: all 0.3s ease;
+      transition: opacity 0.3s;
       display: flex;
       align-items: center;
 
       &.visible {
         opacity: 1;
-        transform: scale(1);
+        
       }
 
       img {
-        width: 74px;
-        height: 64px;
+        width: 70px;
+        height: 60px;
+        transition: opacity 0.3s;
       }
     }
 
@@ -40,8 +39,10 @@
       @include mx.fluid-text(18, 30);
       margin: 0;
       white-space: nowrap;
-      text-align: bottom;
-      span {
+      color: $secondary-color;
+
+      .prefix,
+      .dots {
         color: $primary-color;
       }
     }
@@ -55,41 +56,34 @@
 
   .about-text {
     width: 400px;
-  }
-
-  p {
     color: $secondary-color;
     font-family: 'JosefinSans-Regular', sans-serif;
     font-size: 18px;
     line-height: 120%;
-    letter-spacing: 0%;
   }
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
 @media (max-width: 1000px) {
   .about-content {
-    @include mx.flex-center;
     flex-direction: column;
+    align-items: center;
 
-    > .printed-text {
+    .printed-text {
       text-align: center;
       width: auto;
+      justify-content: center;
 
-      .icon-box {
-        img {
-          width: 30px;
-          height: auto;
-        }
+      .icon-box img {
+        width: 30px;
+        height: 30px;
       }
     }
 
-    > .about-text {
+    .about-text {
       text-align: center;
       width: auto;
     }

@@ -112,7 +112,7 @@ app-burger-button {
         transition: opacity 0.5s ease;
         opacity: 0;
         pointer-events: none;
-        z-index: 550;
+        z-index: 100;
         @include mx.flex-center;
         flex-direction: column;
         gap: clamp(26px, 6vw, 40px);
@@ -135,5 +135,12 @@ app-burger-button {
 
   .lang-switcher-mobile {
     display: block;
+  }
+
+  // Hide active nav link styles on mobile
+  nav a.active {
+    color: $bg-color;
+    background-image: none;
+    pointer-events: auto;
   }
 }

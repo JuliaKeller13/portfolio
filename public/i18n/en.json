@@ -14,7 +14,12 @@
   },
   "ABOUT": {
     "HEADING": "Why me",
-    "CONTENT": "My journey into web development began during my training as a computer science teacher. Since then, I have been passionate about creating well-structured and functional applications. Using an analytical approach, I develop user-friendly solutions that excel both technically and visually."
+    "CONTENT": "My journey into web development began during my training as a computer science teacher. Since then, I have been passionate about creating well-structured and functional applications. Using an analytical approach, I develop user-friendly solutions that excel both technically and visually.",
+    "PHRASES": [
+      { "PREFIX": "I'm", "TEXT": "located in Iserlohn" },
+      { "PREFIX": "I'm", "TEXT": "building modern web apps" },
+      { "PREFIX": "I'm", "TEXT": "creating digital experiences" }
+    ]
   },
   "SKILLS": {
     "HEADING": "My Skills"

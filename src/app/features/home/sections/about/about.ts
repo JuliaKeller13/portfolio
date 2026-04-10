@@ -1,44 +1,79 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Heading } from "../../../../shared/components/heading/heading";
 import { Section } from '../../../../shared/components/section/section';
-import { TranslatePipe } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, Heading, Section, TranslatePipe],
+  imports: [CommonModule, Heading, Section, TranslateModule],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About implements OnInit {
-  phrases = [
-    { icon: 'icons/location-icon.png', prefix: 'I am', text: 'located in Iserlohn' },
-    { icon: 'icons/remote-icon.svg', prefix: 'I build', text: 'modern web apps' },
-    { icon: 'icons/ellipse_text.png', prefix: 'I create', text: 'digital experiences' }
-  ];
 
+export class About implements OnInit, OnDestroy {
+  baseIcons = [
+    'icons/text-anim/pin.png',
+    'icons/text-anim/nb.svg',
+    'icons/text-anim/phone.svg'
+  ];
+  mobileIcons = [
+    'icons/text-anim/pin-mobile.svg',
+    'icons/text-anim/nb-mobile.svg',
+    'icons/text-anim/phone-mobile.svg'
+  ];
+  phrases: any[] = [];
+  displayPrefix = '';
   displayText = '';
   currentIndex = 0;
   isDeleting = false;
-  showIcon = true;
+  isMobile = false;
 
+  private timeoutId: any;
+  private translateSub?: Subscription;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit() {
-    this.typeEffect();
+    this.checkMobile();
+    window.addEventListener('resize', this.checkMobile);
+    this.translateSub = this.translate.stream('ABOUT.PHRASES').subscribe(data => {
+      this.phrases = data;
+      if (!this.timeoutId && this.phrases?.length > 0) {
+        this.typeEffect();
+      }
+    });
   }
 
+  ngOnDestroy() {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+    this.translateSub?.unsubscribe();
+    window.removeEventListener('resize', this.checkMobile);
+  }
+
+  checkMobile = () => {
+    this.isMobile = window.innerWidth < 1000;
+    this.cdr.detectChanges();
+  };
+
   typeEffect() {
+    if (!this.phrases || this.phrases.length === 0) return;
+
     const current = this.phrases[this.currentIndex];
-    const fullText = `${current.prefix} ${current.text}`;
+    const fullText = current.TEXT;
+    this.displayPrefix = current.PREFIX;
 
     if (this.isDeleting) {
       this.displayText = fullText.substring(0, this.displayText.length - 1);
     } else {
       this.displayText = fullText.substring(0, this.displayText.length + 1);
     }
+
     this.cdr.detectChanges();
 
     let speed = this.isDeleting ? 50 : 100;
@@ -46,20 +81,19 @@ export class About implements OnInit {
     if (!this.isDeleting && this.displayText === fullText) {
       speed = 2000;
       this.isDeleting = true;
-      this.cdr.detectChanges();
-    } else if (this.isDeleting && this.displayText === '') {
+    } else if (this.isDeleting && this.displayText.length === 0) {
       this.isDeleting = false;
-      this.showIcon = false;
       this.currentIndex = (this.currentIndex + 1) % this.phrases.length;
-      this.cdr.detectChanges();
-      setTimeout(() => {
-        this.showIcon = true;
-        this.cdr.detectChanges();
+      this.timeoutId = setTimeout(() => {
         this.typeEffect();
-      }, 1000);
+      }, 500);
       return;
     }
 
-    setTimeout(() => this.typeEffect(), speed);
+    this.timeoutId = setTimeout(() => this.typeEffect(), speed);
+  }
+
+  getIcon(index: number): string {
+    return this.isMobile ? this.mobileIcons[index] : this.baseIcons[index];
   }
 }
