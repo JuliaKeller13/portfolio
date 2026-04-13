@@ -1,6 +1,23 @@
 @use '../../../styles/abstracts/variables' as *;
 @use '../../../styles/abstracts/mixins' as mx;
 
+
+.primary-btn {
+  border-radius: 30px;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  padding: 13px 30px;
+  color: $bg-color;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.85);
+  }
+}
+
 .secondary-btn {
   border-radius: 30px;
   border: 1px solid $primary-color;

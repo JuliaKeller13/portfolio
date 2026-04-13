@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -12,7 +12,13 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class ButtonComponent {
   private scrollService = inject(ScrollService);
 
-  scrollToContact() {
-    this.scrollService.scrollTo('contact');
+  @Input() btnClass = 'secondary-btn';
+  @Input() label: string = 'BUTTON.LETSTALK';
+  @Input() scrollToSection?: string;
+
+  onClick() {
+    if (this.scrollToSection) {
+      this.scrollService.scrollTo(this.scrollToSection);
+    }
   }
 }

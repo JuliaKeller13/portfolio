@@ -1,0 +1,50 @@
+
+@use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as mx;
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  color: $secondary-color;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  font-size: 18px;
+  line-height: 120%;
+
+  app-button {
+  display: none;
+}
+
+  > .skills {
+    flex: 1;
+  }
+
+  > .text {
+    flex: 1;
+    height: 400px;
+    background-image: url(/icons/ellipse-bigtext1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all 0.9s ease;
+    overflow: hidden;
+
+    &:hover {
+      background-image: url(/icons/ellipse-bigtext.svg);
+      transition: all 0.9s ease;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+    .skills-content{
+        flex-direction: column;
+        align-items: center;
+
+        app-button {
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+  }
+    }
+
+}
