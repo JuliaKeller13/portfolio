@@ -1,12 +1,2 @@
-.imprint-page {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  display: grid;
-  gap: 1.5rem;
-}
-
-section {
-  display: grid;
-  gap: 0.5rem;
-}
+@use '../../styles/base/typography' as *;
+@use '../../styles/abstracts/mixins' as mx;

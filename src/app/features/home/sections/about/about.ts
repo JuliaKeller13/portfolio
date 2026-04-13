@@ -97,4 +97,8 @@ export class About implements OnInit, OnDestroy {
   getIcon(index: number): string {
     return this.isMobile ? this.mobileIcons[index] : this.baseIcons[index];
   }
+
+  scrollToSection(sectionId: string) {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

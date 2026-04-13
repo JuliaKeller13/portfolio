@@ -15,6 +15,6 @@ export class Contact {
   private scrollService = inject(ScrollService);
 
   scrollToHome() {
-    this.scrollService.scrollTo('home');
+    this.scrollService.scrollTo('social-icons');
   }
 }

@@ -1,50 +1,161 @@
-
 @use '../../../../styles/abstracts/variables' as *;
 @use '../../../../styles/abstracts/mixins' as mx;
 
 .skills-content {
+  margin-top: clamp(32px, 5.5vw, 80px);
   display: flex;
   justify-content: space-between;
+  gap: 80px;
   color: $secondary-color;
   font-family: 'JosefinSans-Regular', sans-serif;
   font-size: 18px;
   line-height: 120%;
 
   app-button {
-  display: none;
-}
+    display: none;
+  }
 
   > .skills {
     flex: 1;
   }
 
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 450px;
+    max-width: 450px;
+    height: auto;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .icon-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+      white-space: nowrap;
+      color: $primary-color;
+    }
+  }
+
   > .text {
-    flex: 1;
-    height: 400px;
-    background-image: url(/icons/ellipse-bigtext1.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 0.9s ease;
+    width: 380px;
+    height: 380px;
+    position: relative;
     overflow: hidden;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transition: opacity 0.9s ease;
+      z-index: 0;
+    }
+
+    &::before {
+      background-image: url('/icons/ellipse-bigtext1.svg');
+      opacity: 1;
+    }
+
+    &::after {
+      background-image: url('/icons/ellipse-bigtext.svg');
+      opacity: 0;
+    }
 
     &:hover {
-      background-image: url(/icons/ellipse-bigtext.svg);
-      transition: all 0.9s ease;
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .icons-box {
+      @include mx.flex-center;
+      gap: 24px;
+
+      > .icon-s {
+        width: auto;
+        min-width: unset;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        p {
+          font-size: 14px;
+          color:$secondary-color;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1000px) {
-    .skills-content{
-        flex-direction: column;
-        align-items: center;
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 
-        app-button {
-    display: flex;
-    margin-top: 24px;
-    justify-content: center;
-  }
+    .skills-container {
+      justify-content: center;
+      width: 100%;
+      gap: 40px;
+
+      .icon-s {
+        width: 45px;
+        >.rend-icons{
+          width: 45px;
+          height: 45px;
+        }
+        p {
+        display: none;
+      }
+      }
+      
+      
     }
 
+    app-button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-container{
+    gap: 30px;
+    padding-inline: 24px;
+  }
 }
