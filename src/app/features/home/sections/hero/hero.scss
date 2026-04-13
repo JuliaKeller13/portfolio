@@ -7,8 +7,14 @@
   ::ng-deep section {
     height: calc(100vh - 100px);
     align-items: flex-end;
-    margin-top: 0 !important;
+    margin-top: 0 !important;//später korrigieren
   }
+}
+
+.experim{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
 }
 
 .inner-container {
@@ -17,7 +23,7 @@
   position: relative;
   max-width: 1440px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 80vh; //später korrigieren
 }
 
 h1 {

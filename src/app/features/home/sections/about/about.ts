@@ -4,11 +4,12 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Heading } from "../../../../shared/components/heading/heading";
 import { Section } from '../../../../shared/components/section/section';
 import { Subscription } from 'rxjs';
+import { ButtonComponent } from "../../../../shared/components/button/button";
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, Heading, Section, TranslateModule],
+  imports: [CommonModule, Heading, Section, TranslateModule, ButtonComponent],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
