@@ -1,9 +1,25 @@
 @use '../../../styles/abstracts/variables' as *;
 @use '../../../styles/abstracts/mixins' as mx;
 
+:host {
+  display: block;
+}
+
 h2 {
   font-family: 'Anta-Regular', sans-serif;
   @include mx.fluid-text(32, 60);
+
   color: $primary-color;
   text-align: center;
+  margin: 0;
+}
+
+:host(.legal-heading) {
+  margin: 65px 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+@media (max-width: 1000px) {
+  :host(.legal-heading) {
+    margin: 0;
+  }
 }

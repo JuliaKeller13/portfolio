@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Navbar } from '../../layout/navbar/navbar';
+import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Heading } from "../../shared/components/heading/heading";
+import { Button } from '../../shared/components/arrow-button/arrow-button';
 
 @Component({
   selector: 'app-imprint',
-  imports: [RouterLink, Navbar, TranslatePipe, Heading],
+  imports: [CommonModule, Navbar, TranslatePipe, Heading, Button],
   templateUrl: './imprint.html',
   styleUrl: './imprint.scss',
 })
-export class Imprint {}
+export class Imprint {
+  scrollToLogoNav() {
+    if (window.location.pathname !== '/') {
+      window.location.href = '/';
+      setTimeout(() => this.scrollLogoNav(), 400);
+    } else {
+      this.scrollLogoNav();
+    }
+  }
+
+  scrollLogoNav() {
+    const logoNav = document.querySelector('.logo-nav') as HTMLElement;
+    if (logoNav) {
+      logoNav.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}

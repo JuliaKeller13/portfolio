@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class Button {
   variant = input<'primary-btn' | 'arrow-btn'>('primary-btn');
-  direction = input<'down' | 'up'>('down');
+  direction = input<'down' | 'up' | 'left' | 'right'>('down');
 }

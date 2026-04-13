@@ -1,6 +1,51 @@
 <app-navbar></app-navbar>
-<main>
-  <app-heading>{{ 'IMPRINT.HEADING' | translate }}</app-heading>
+<main class="legal-container">
+  <button type="button" class="arrow-back-btn" (click)="scrollToLogoNav()" tabindex="0">
+    <img src="/icons/arrow-left.svg" alt="Back" class="arrow-icon" />
+  </button>
 
-  <a routerLink="/" tabindex="0">{{ 'IMPRINT.BACK' | translate }}</a>
+  <app-heading class="legal-heading">{{ 'IMPRINT.HEADING' | translate }}</app-heading>
+
+  <section class="imprint-container">
+    <h3>{{ 'IMPRINT.IMPRINT' | translate }}</h3>
+    <p>{{ 'IMPRINT.NAME' | translate }}</p>
+    <p>{{ 'IMPRINT.ADDRESS1' | translate }}<br /></p>
+    <p>{{ 'IMPRINT.ADDRESS2' | translate }}</p>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.EXPLORING' | translate }}</h4>
+    <p>{{ 'IMPRINT.EMAIL' | translate }}</p>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.ACCEPTANCE_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.ACCEPTANCE' | translate"></div>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.SCOPE_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.SCOPE1' | translate"></div>
+    <div [innerHTML]="'IMPRINT.SCOPE2' | translate"></div>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.PROPRIETARY_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.PROPRIETARY' | translate"></div>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.USE_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.USE' | translate"></div>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.WARRANTY_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.WARRANTY' | translate"></div>
+  </section>
+
+  <section>
+    <h4>{{ 'IMPRINT.INDEMNITY_HEADING' | translate }}</h4>
+    <div [innerHTML]="'IMPRINT.INDEMNITY' | translate"></div>
+  </section>
 </main>
