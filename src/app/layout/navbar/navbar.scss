@@ -103,8 +103,8 @@ app-burger-button {
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        width: clamp(300px, 60vw, 420px);
-        height: 360px;
+        width: clamp(305px, 60vw, 420px);
+        height: 335px;
         background-image: url('/icons/shape.png');
         background-size: contain;
         background-repeat: no-repeat;
@@ -115,7 +115,7 @@ app-burger-button {
         z-index: 100;
         @include mx.flex-center;
         flex-direction: column;
-        gap: clamp(26px, 6vw, 40px);
+        gap: clamp(30px, 6vw, 40px);
 
         &.show {
           opacity: 1;
@@ -137,7 +137,6 @@ app-burger-button {
     display: block;
   }
 
-  // Hide active nav link styles on mobile
   nav a.active {
     color: $bg-color;
     background-image: none;

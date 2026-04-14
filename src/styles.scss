@@ -2,6 +2,10 @@
 @use 'app/styles/abstracts/fonts';
 @use 'app/styles/base/typography';
 
+html, body {
+  height: 100%;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;

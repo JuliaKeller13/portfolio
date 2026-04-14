@@ -3,11 +3,10 @@ import { Navbar } from '../../layout/navbar/navbar';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Heading } from "../../shared/components/heading/heading";
-import { Button } from '../../shared/components/arrow-button/arrow-button';
 
 @Component({
   selector: 'app-imprint',
-  imports: [CommonModule, Navbar, TranslatePipe, Heading, Button],
+  imports: [CommonModule, Navbar, TranslatePipe, Heading],
   templateUrl: './imprint.html',
   styleUrl: './imprint.scss',
 })

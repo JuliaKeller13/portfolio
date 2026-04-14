@@ -15,11 +15,9 @@ h2 {
 }
 
 :host(.legal-heading) {
-  margin: 65px 0 clamp(2rem, 5vw, 3.5rem);
-}
+  // margin: 65px 0 clamp(2rem, 5vw, 3.5rem);
 
-@media (max-width: 1000px) {
-  :host(.legal-heading) {
-    margin: 0;
-  }
+  margin-top: clamp(1rem, 4.5vw, 4rem);
+  margin-bottom: clamp(2rem, 3.5vw, 3.5rem);
+  margin-inline: 0;
 }
