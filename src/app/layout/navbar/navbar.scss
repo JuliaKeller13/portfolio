@@ -115,7 +115,7 @@ app-burger-button {
         z-index: 100;
         @include mx.flex-center;
         flex-direction: column;
-        gap: clamp(30px, 6vw, 40px);
+        gap: 30px;
 
         &.show {
           opacity: 1;

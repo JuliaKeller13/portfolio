@@ -1,6 +1,6 @@
 <div class="nav-container">
   <nav>
-    <a class="logo-nav" (click)="scrollToSection('home')" tabindex="0">
+    <a class="logo-nav" (click)="scrollToSection('home')" appEnterClick tabindex="0">
       @if (isMobile()) {
         <img src="icons/logo-mobile.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
       } @else {
@@ -11,10 +11,10 @@
     <app-burger-button [isActive]="menuOpen()" (toggled)="toggleMenu()"></app-burger-button>
 
     <ul [class.show]="menuOpen()">
-      <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')" tabindex="0">{{ 'NAV.WHY_ME' | translate }}</a></li>
-      <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')" tabindex="0">{{ 'NAV.SKILLS' | translate }}</a></li>
-      <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')" tabindex="0">{{ 'NAV.PROJECTS' | translate }}</a></li>
-      <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')" tabindex="0">{{ 'NAV.CONTACT' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'about'" (click)="scrollToSection('about')" appEnterClick tabindex="0">{{ 'NAV.WHY_ME' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'skills'" (click)="scrollToSection('skills')" appEnterClick tabindex="0">{{ 'NAV.SKILLS' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'projects'" (click)="scrollToSection('projects')" appEnterClick tabindex="0">{{ 'NAV.PROJECTS' | translate }}</a></li>
+      <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')" appEnterClick tabindex="0">{{ 'NAV.CONTACT' | translate }}</a></li>
       <li class="lang-switcher-mobile">
         <div class="lang-switcher">
           <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>

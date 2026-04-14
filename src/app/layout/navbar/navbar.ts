@@ -2,13 +2,14 @@ import { Component, inject, signal, OnInit, OnDestroy, HostListener } from '@ang
 import { ScrollService } from '../../shared/services/scroll.service';
 import { BurgerButton } from '../../shared/components/burger-button/burger-button';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { EnterClickDirective } from '../../shared/directives/enter-click.directive';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [BurgerButton, TranslatePipe],
+  imports: [BurgerButton, TranslatePipe, EnterClickDirective],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
+  styleUrl: './navbar.scss',  
 })
 
 export class Navbar implements OnInit, OnDestroy {

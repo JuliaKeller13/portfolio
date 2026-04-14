@@ -1,7 +1,14 @@
 section {
   display: flex;
   justify-content: center;
-  margin-top: clamp(5rem, 15vw, 6.25rem);
+
+  &:not([id='home']) {
+    margin-top: clamp(5rem, 15vw, 6.25rem);
+  }
+
+  &[id='home'] {
+    width: 100%;
+  }
 
   .inner-container {
     max-width: 1440px;

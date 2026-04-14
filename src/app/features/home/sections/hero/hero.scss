@@ -1,28 +1,15 @@
-
 @use '../../../../styles/abstracts/variables' as *;
 @use '../../../../styles/abstracts/mixins' as mx;
 
-.animate-logo {
-  animation: logo-bounce 1s ease-in;
-}
-
-@keyframes logo-bounce {
-  0% { transform: scale(1); }
-  20% { transform: scale(1.1) rotate(-5deg); }
-  40% { transform: scale(0.95) rotate(5deg); }
-  60% { transform: scale(1.05) rotate(-3deg); }
-  80% { transform: scale(0.98) rotate(2deg); }
-  100% { transform: scale(1); }
-}
-
 :host {
   display: block;
+}
 
-  ::ng-deep section {
-    height: calc(100vh - 100px);
-    align-items: flex-end;
-    margin-top: 0 !important;//später korrigieren
-  }
+.hero-section {
+  min-height: calc(100svh - 100px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .inner-container {
@@ -43,18 +30,13 @@ h1 {
 }
 
 .photo-container {
+  aspect-ratio: 1 / 1;
   width: clamp(200px, 40vw, 500px);
-  height: auto;
-  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
   flex: 1;
-
-  .shape {
-    display: none;
-  }
 
   &::before,
   &::after {
@@ -90,7 +72,7 @@ h1 {
   }
 
   img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     object-fit: contain;
     position: relative;
@@ -100,7 +82,7 @@ h1 {
 
 p {
   font-family: 'JosefinSans-Regular', sans-serif;
-  @include mx.fluid-text(24, 40);
+  @include mx.fluid-text(22, 40);
   text-align: center;
   color: $secondary-color;
 }
@@ -131,7 +113,7 @@ p {
 .hero-content {
   @include mx.flex-center;
   flex-direction: column;
-  
+
   flex: 1;
 
   > .arrow-button {
@@ -148,14 +130,15 @@ app-social-icons {
   right: 0;
 }
 
+
 @media (max-width: 1000px) {
   :host {
     position: relative;
     z-index: 1;
   }
 
-  :host ::ng-deep section {
-    height: auto;
+  .hero-section {
+    min-height: unset;
   }
 
   .inner-container {
@@ -165,9 +148,9 @@ app-social-icons {
 
   .hero-content {
     > .arrow-button {
-    padding-top: 24px;
+      padding-top: 24px;
+    }
   }
-}
 
   .photo-container {
     width: 280px;
@@ -180,7 +163,6 @@ app-social-icons {
     }
 
     .shape {
-      display: block;
       position: absolute;
       inset: 0;
       background-image: url('/icons/shape.png');

@@ -1,16 +1,60 @@
 @use '../../styles/abstracts/mixins' as mx;
+@use '../../styles/abstracts/variables' as *;
+
 
 .not-found-page {
-  min-height: 60vh;
-  display: grid;
-  place-content: center;
-  justify-items: start;
-  gap: 0.75rem;
-  padding: 2rem 1rem;
+  min-height: calc(100dvh - 192px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 20px;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  font-size: 1.18rem;
+  line-height: 120%;
+  color: $secondary-color;
+  background: none;
 }
 
-.status {
+.not-found-page h1 {
+  font-family: 'Anta-Regular', sans-serif;
+  color: $secondary-color;
+  @include mx.fluid-text(48, 88);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.not-found-page .status {
   @include mx.fluid-text(32, 48);
   font-weight: 700;
+  color: $primary-color;
   line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-page p {
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.not-found-page a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: $primary-color;
+  transition: color 0.2s;
+}
+
+.not-found-page a:hover, .not-found-page a:focus {
+  color: $secondary-color;
+}
+
+@media (max-width: 1000px) {
+  .not-found-page {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  .not-found-page h1 {
+    @include mx.fluid-text(32, 48);
+  }
 }
