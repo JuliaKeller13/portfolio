@@ -7,6 +7,7 @@
         [ngClass]="{ active: activeTab === tab.id }"
         (click)="setActiveTab(tab.id)"
         [attr.id]="tab.id === tabs[0].id ? 'defaultOpen' : null"
+        [attr.aria-label]="tab.label"
       >
         {{ tab.label }}
       </button>

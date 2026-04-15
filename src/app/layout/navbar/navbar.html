@@ -22,15 +22,15 @@
       <li><a [class.active]="activeSection() === 'contact'" (click)="scrollToSection('contact')" appEnterClick tabindex="0">{{ 'NAV.CONTACT' | translate }}</a></li>
       <li class="lang-switcher-mobile">
         <div class="lang-switcher">
-          <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>
-          <button [class.active]="activeLang() === 'en'" (click)="setLang('en')">EN</button>
+          <button [class.active]="activeLang() === 'de'" (click)="setLang('de')" aria-label="Sprache Deutsch">DE</button>
+          <button [class.active]="activeLang() === 'en'" (click)="setLang('en')" aria-label="Sprache Englisch">EN</button>
         </div>
       </li>
     </ul>
 
     <div class="lang-switcher lang-switcher-desktop">
-      <button [class.active]="activeLang() === 'de'" (click)="setLang('de')">DE</button>
-      <button [class.active]="activeLang() === 'en'" (click)="setLang('en')">EN</button>
+      <button [class.active]="activeLang() === 'de'" (click)="setLang('de')" aria-label="Sprache Deutsch">DE</button>
+      <button [class.active]="activeLang() === 'en'" (click)="setLang('en')" aria-label="Sprache Englisch">EN</button>
     </div>
   </nav>
 </div>
