@@ -1,10 +1,15 @@
 <div class="nav-container">
   <nav>
     <a class="logo-nav" (click)="scrollToSection('home')" appEnterClick tabindex="0">
-      @if (isMobile()) {
-        <img src="icons/logo-mobile.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
+      <!-- @if (isMobile()) {
+        <img src="/angular-projects/portfolio/icons/logo-mobile.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
       } @else {
-        <img src="icons/logo-dark.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
+        <img src="/angular-projects/portfolio/icons/logo-dark.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
+      } -->
+        @if (isMobile()) {
+        <img src="/icons/logo-mobile.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
+      } @else {
+        <img src="/icons/logo-dark.svg" [attr.alt]="'NAV.LOGO_ALT' | translate">
       }
     </a>
 

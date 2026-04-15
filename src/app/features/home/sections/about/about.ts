@@ -1,29 +1,35 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { Heading } from "../../../../shared/components/heading/heading";
+import { Heading } from '../../../../shared/components/heading/heading';
 import { Section } from '../../../../shared/components/section/section';
 import { Subscription } from 'rxjs';
-import { ButtonComponent } from "../../../../shared/components/button/button";
+import { ButtonComponent } from '../../../../shared/components/button/button';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, Heading, Section, TranslateModule, ButtonComponent],
+  imports: [Heading, Section, TranslateModule, ButtonComponent],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-
 export class About implements OnInit, OnDestroy {
-  baseIcons = [
-    'icons/text-anim/pin.png',
-    'icons/text-anim/nb.svg',
-    'icons/text-anim/phone.svg'
-  ];
+  // baseIcons = [
+  //   '/angular-projects/portfolio/icons/text-anim/pin.png',
+  //   '/angular-projects/portfolio/icons/text-anim/nb.svg',
+  //   '/angular-projects/portfolio/icons/text-anim/phone.svg'
+  // ];
+  // mobileIcons = [
+  //   '/angular-projects/portfolio/icons/text-anim/pin-mobile.svg',
+  //   '/angular-projects/portfolio/icons/text-anim/nb-mobile.svg',
+  //   '/angular-projects/portfolio/icons/text-anim/phone-mobile.svg'
+  // ];
+
+  baseIcons = ['/icons/text-anim/pin.png', '/icons/text-anim/nb.svg', '/icons/text-anim/phone.svg'];
   mobileIcons = [
-    'icons/text-anim/pin-mobile.svg',
-    'icons/text-anim/nb-mobile.svg',
-    'icons/text-anim/phone-mobile.svg'
+    '/icons/text-anim/pin-mobile.svg',
+    '/icons/text-anim/nb-mobile.svg',
+    '/icons/text-anim/phone-mobile.svg',
   ];
   phrases: any[] = [];
   displayPrefix = '';
@@ -37,13 +43,13 @@ export class About implements OnInit, OnDestroy {
 
   constructor(
     private cdr: ChangeDetectorRef,
-    private translate: TranslateService
+    private translate: TranslateService,
   ) {}
 
   ngOnInit() {
     this.checkMobile();
     window.addEventListener('resize', this.checkMobile);
-    this.translateSub = this.translate.stream('ABOUT.PHRASES').subscribe(data => {
+    this.translateSub = this.translate.stream('ABOUT.PHRASES').subscribe((data) => {
       this.phrases = data;
       if (!this.timeoutId && this.phrases?.length > 0) {
         this.typeEffect();

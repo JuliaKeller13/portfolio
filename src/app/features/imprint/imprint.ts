@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Navbar } from '../../layout/navbar/navbar';
-import { CommonModule } from '@angular/common';
+
 import { TranslatePipe } from '@ngx-translate/core';
-import { Heading } from "../../shared/components/heading/heading";
+import { Heading } from '../../shared/components/heading/heading';
 
 @Component({
   selector: 'app-imprint',
-  imports: [CommonModule, Navbar, TranslatePipe, Heading],
+  imports: [Navbar, TranslatePipe, Heading],
   templateUrl: './imprint.html',
   styleUrl: './imprint.scss',
 })

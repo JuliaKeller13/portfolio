@@ -47,6 +47,7 @@ a {
 
   &.active {
     color: $secondary-color;
+    // background-image: url('/angular-projects/portfolio/icons/ellipse_text.png');
     background-image: url('/icons/ellipse_text.png');
   }
 }
@@ -84,6 +85,7 @@ app-burger-button {
 
     &.active {
       color: $secondary-color;
+      // background-image: url('/angular-projects/portfolio/icons/ellipse_text.png');
       background-image: url('/icons/ellipse_text.png');
     }
   }
@@ -105,6 +107,7 @@ app-burger-button {
         transform: translateX(-50%);
         width: clamp(305px, 60vw, 420px);
         height: 335px;
+        // background-image: url('/angular-projects/portfolio/icons/shape.png');
         background-image: url('/icons/shape.png');
         background-size: contain;
         background-repeat: no-repeat;

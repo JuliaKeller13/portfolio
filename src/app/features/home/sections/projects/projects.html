@@ -1,26 +1,27 @@
 <app-section sectionId="projects">
   <app-heading>{{ 'PROJECTS.HEADING' | translate }}</app-heading>
-  <!-- Tab-Navigation mit Angular-Event-Handling -->
   <div class="tab-container">
-    <button
-      *ngFor="let tab of tabs"
-      class="tablinks"
-      [ngClass]="{ 'active': activeTab === tab.id }"
-      (click)="setActiveTab(tab.id)"
-      [attr.id]="tab.id === tabs[0].id ? 'defaultOpen' : null"
-    >
-      {{ tab.label }}
-    </button>
+    @for (tab of tabs; track tab) {
+      <button
+        class="tablinks"
+        [ngClass]="{ active: activeTab === tab.id }"
+        (click)="setActiveTab(tab.id)"
+        [attr.id]="tab.id === tabs[0].id ? 'defaultOpen' : null"
+      >
+        {{ tab.label }}
+      </button>
+    }
   </div>
 
-  <!-- Tab-Inhalte mit Angular-Logik -->
-  <div *ngFor="let tab of tabs">
-    <div
-      class="tabcontent"
-      [style.display]="activeTab === tab.id ? 'block' : 'none'"
-      [attr.id]="tab.id"
-    >
-      <h3>{{ tab.content }}</h3>
+  @for (tab of tabs; track tab) {
+    <div>
+      <div
+        class="tabcontent"
+        [style.display]="activeTab === tab.id ? 'block' : 'none'"
+        [attr.id]="tab.id"
+      >
+        <app-project-card></app-project-card>
+      </div>
     </div>
-  </div>
+  }
 </app-section>

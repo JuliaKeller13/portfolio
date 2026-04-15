@@ -22,7 +22,11 @@
     ]
   },
   "SKILLS": {
-    "HEADING": "My Skills"
+    "HEADING": "My Skills",
+    "CURRENTLY_LEARNING": "What I am currently learning",
+    "FOCUS_TEXT": "Whether deep backend logic or interactive frontend – I am constantly learning to implement innovative solutions with the right technologies.",
+    "ANGULAR": "Angular",
+    "TYPESCRIPT": "TypeScript"
   },
   "PROJECTS": {
     "HEADING": "My Projects"

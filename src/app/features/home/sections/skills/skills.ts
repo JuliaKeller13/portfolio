@@ -11,6 +11,19 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
   styleUrl: './skills.scss',
 })
 export class Skills {
+  // skills = [
+  //   { NAME: 'HTML', ICON: '/angular-projects/portfolio/icons/skill-icons/html.svg' },
+  //   { NAME: 'CSS', ICON: '/angular-projects/portfolio/icons/skill-icons/css.svg' },
+  //   { NAME: 'JavaScript', ICON: '/angular-projects/portfolio/icons/skill-icons/javascript.svg' },
+  //   { NAME: 'TypeScript', ICON: '/angular-projects/portfolio/icons/skill-icons/typescript.svg' },
+  //   { NAME: 'GitHub', ICON: '/angular-projects/portfolio/icons/skill-icons/git.svg' },
+  //   { NAME: 'REST-API', ICON: '/angular-projects/portfolio/icons/skill-icons/api.svg' },
+  //   { NAME: 'Supabase', ICON: '/angular-projects/portfolio/icons/skill-icons/supabase.svg' },
+  //   { NAME: 'Angular', ICON: '/angular-projects/portfolio/icons/skill-icons/angular.svg' },
+  //   { NAME: 'Python', ICON: '/angular-projects/portfolio/icons/skill-icons/python.svg' },
+  //   { NAME: 'SQL', ICON: '/angular-projects/portfolio/icons/skill-icons/sql.svg' }
+  // ];
+
   skills = [
     { NAME: 'HTML', ICON: '/icons/skill-icons/html.svg' },
     { NAME: 'CSS', ICON: '/icons/skill-icons/css.svg' },

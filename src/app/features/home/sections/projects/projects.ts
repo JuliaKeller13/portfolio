@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Heading } from "../../../../shared/components/heading/heading";
 import { Section } from '../../../../shared/components/section/section';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ProjectCard } from "../../../../shared/components/project-card/project-card";
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, Heading, Section, TranslatePipe],
+  imports: [CommonModule, Heading, Section, TranslatePipe, ProjectCard],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
