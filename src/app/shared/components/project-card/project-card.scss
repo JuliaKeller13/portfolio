@@ -2,10 +2,16 @@
 @use '../../../styles/abstracts/mixins' as mx;
 
 .card-content {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   background-color: rgba($primary-color, 0.07);
+  display: flex;
+  justify-content: center;
+}
+
+.card-inner {
   max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 550px;
 }

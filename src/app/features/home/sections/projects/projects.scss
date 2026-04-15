@@ -1,13 +1,57 @@
 @use '../../../../styles/abstracts/variables' as *;
 @use '../../../../styles/abstracts/mixins' as mx;
 
-app-project-card{
+.inner {
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .tab-container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1440px;
+    width: 100%;
+    margin-top: clamp(2rem, 5vh, 5rem);
+
+    .tablinks {
+      font-family: 'JosefinSans-Medium', sans-serif;
+      @include mx.fluid-text(18, 30);
+      line-height: 120%;
+      color: $primary-color;
+      background: none;
+      border: none;
+      border-radius: 26px 26px 0 0;
+      padding: 32px 16px;
+      cursor: default;
+      transition: color 0.5s, background 0.5s;
+
+      .tab-text {
+        transition: color 0.5s;
+        &:hover {
+          cursor: pointer;
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .tablinks.active,
+    .tablinks.active:focus {
+      background-color: rgba($primary-color, 0.07);
+      color: $secondary-color;
+    }
+  }
+}
+
+.bg-inner {
   width: 100%;
 }
 
-.tabcontent {
-  display: none;
-}
-.tablinks.active {
-  background-color: #ccc;
+@media (max-width: 1000px) {
+  .tab-container .tablinks {
+    font-family: 'JosefinSans-Regular', sans-serif;
+    padding: 9px;
+  }
 }

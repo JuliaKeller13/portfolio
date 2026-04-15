@@ -1,21 +1,24 @@
 <app-section sectionId="projects">
-  <app-heading>{{ 'PROJECTS.HEADING' | translate }}</app-heading>
-  <div class="tab-container">
-    @for (tab of tabs; track tab) {
-      <button
-        class="tablinks"
-        [ngClass]="{ active: activeTab === tab.id }"
-        (click)="setActiveTab(tab.id)"
-        [attr.id]="tab.id === tabs[0].id ? 'defaultOpen' : null"
-        [attr.aria-label]="tab.label"
-      >
-        {{ tab.label }}
-      </button>
-    }
+  <div class="inner">
+    <app-heading>{{ 'PROJECTS.HEADING' | translate }}</app-heading>
+    <div class="tab-container">
+      @for (tab of tabs; track tab) {
+        <button
+          class="tablinks"
+          [ngClass]="{ active: activeTab === tab.id }"
+          (click)="setActiveTab(tab.id)"
+          [attr.id]="tab.id === tabs[0].id ? 'defaultOpen' : null"
+          [attr.aria-label]="tab.label"
+        >
+          <span class="tab-text">{{ tab.label }}</span>
+        </button>
+      }
+    </div>
   </div>
+</app-section>
 
-  @for (tab of tabs; track tab) {
-    <div>
+<div class="bg-inner">
+    @for (tab of tabs; track tab) {
       <div
         class="tabcontent"
         [style.display]="activeTab === tab.id ? 'block' : 'none'"
@@ -23,6 +26,5 @@
       >
         <app-project-card></app-project-card>
       </div>
-    </div>
-  }
-</app-section>
+    }
+  </div>

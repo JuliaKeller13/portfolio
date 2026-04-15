@@ -17,7 +17,7 @@ export class Projects {
     { id: 'Card1', label: 'Karte 1', content: 'Inhalt 1' },
     { id: 'Card2', label: 'Karte 2', content: 'Inhalt 2' },
     { id: 'Card3', label: 'Karte 3', content: 'Inhalt 3' },
-    { id: 'Card4', label: 'Karte 4', content: 'Inhalt 4' },
+    { id: 'Card4', label: '4. Ongoing Project', content: 'Inhalt 4' },
   ];
   activeTab = this.tabs[0].id;
 
