@@ -6,6 +6,7 @@
   background-color: rgba($primary-color, 0.07);
   display: flex;
   justify-content: center;
+  padding: 40px 20px;
 }
 
 .card-inner {
@@ -13,5 +14,109 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 550px;
+  gap: 48px;
+  min-height: 550px;
+  color: $secondary-color;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  @include mx.fluid-text(16, 18);
+
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+}
+
+/* --- LEFT --- */
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .info-block {
+    .block-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+
+      .dot {
+        width: 20px;
+        height: 20px;
+        background-color: $primary-color; //HIE DOT ALS BILD !!!!!!!!!!!
+        border-radius: 30px;
+        flex-shrink: 0;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      .duration {
+        margin-left: 16px;
+        font-size: 1rem;
+        opacity: 0.8;
+      }
+    }
+
+    p {
+      margin: 0 0 0 36px;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* --- Reigth side --- */
+.project-screen-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  .technologies-wrapper {
+    text-align: center;
+    width: 100%;
+
+    h4 {
+      margin: 0 0 16px 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .tech-icons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+
+      .tech-icon {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .project-image-wrapper {
+    width: 100%;
+    max-width: 500px;
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+  }
 }

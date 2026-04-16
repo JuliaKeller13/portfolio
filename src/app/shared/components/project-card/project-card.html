@@ -1,17 +1,73 @@
 <section class="card-content">
   <div class="card-inner">
     <div class="project-info">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatem fugiat
-        molestias inventore at, totam amet quis placeat numquam fuga dolor aperiam tempora
-        consequatur asperiores possimus. Suscipit eum nam ipsa.
-      </p>
+      <div class="info-block">
+        <div class="block-header">
+          <span class="dot"></span>
+          <h3>About the project</h3>
+          @if (projectData.duration) {
+            <span class="duration">Duration: {{ projectData.duration }}</span>
+          }
+        </div>
+        <p>{{ projectData.aboutText }}</p>
+      </div>
+
+      @if (projectData.workProcessText) {
+        <div class="info-block">
+          <div class="block-header">
+            <span class="dot"></span>
+            <h3>How I have organised my work process</h3>
+          </div>
+          <p>{{ projectData.workProcessText }}</p>
+        </div>
+      }
+
+      @if (projectData.learnText) {
+        <div class="info-block">
+          <div class="block-header">
+            <span class="dot"></span>
+            <h3>Learnings / My experience</h3>
+          </div>
+          <p>{{ projectData.learnText }}</p>
+        </div>
+      }
     </div>
 
     <div class="project-screen-box">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius totam quisquam maiores alias
-      libero doloribus? Unde dolores ipsum suscipit quam, at beatae neque nesciunt sed architecto
-      vero expedita animi corporis?
+      <div class="technologies-wrapper">
+        <h4>Technologies</h4>
+        <div class="tech-icons">
+          @for (tech of projectData.technologies; track tech) {
+            <img [src]="tech" alt="Technology icon" class="tech-icon" />
+          }
+        </div>
+      </div>
+
+      <div class="project-image-wrapper">
+        <img
+          [src]="projectData.imageUrl"
+          [alt]="projectData.tabLabel + ' Screenshot'"
+          class="project-image"
+        />
+      </div>
+
+      <div class="action-buttons">
+  @if (projectData.liveUrl) {
+    <app-button 
+      label="Live Test" 
+      btnClass="primary-btn"
+      (click)="openLink(projectData.liveUrl)">
+    </app-button>
+  }
+  
+  @if (projectData.githubUrl) {
+    <app-button 
+      label="GitHub" 
+      btnClass="secondary-btn"
+      (click)="openLink(projectData.githubUrl)">
+    </app-button>
+  }
+</div>
     </div>
   </div>
 </section>
