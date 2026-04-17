@@ -13,6 +13,7 @@ export interface ProjectInfo {
   workProcessText: string;
   learnText: string;
   technologies: string[];
+  techNames: string;
   imageUrl: string;
   liveUrl: string;
   githubUrl: string;
@@ -29,72 +30,71 @@ export class Projects {
   projects: ProjectInfo[] = [
     {
       id: 'elPolloLoco',
-      tabLabel: 'El Pollo Loco',
-      duration: '2 weeks',
-      aboutText:
-        'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe defeat El Pollo Loco! Throw salsa bottles or jump on small chickens. Collect all the coins!',
-      workProcessText:
-        'Focused on modular class structures and inheritance. Ensured clean code via descriptive naming, JSDoc, and a strict logic-UI separation.',
-      learnText:
-        'Deepened my Vanilla JavaScript skills with a focus on Object-Oriented Programming (OOP). Mastered complex collision logic, game physics, and fluid animations without frameworks.',
+      tabLabel: 'PROJECTS.TAB.EL_POLLO_LOCO',
+      duration: 'PROJECTS.DURATION.2W',
+      aboutText: 'PROJECTS.ABOUT_TEXT.EL_POLLO_LOCO',
+      workProcessText: 'PROJECTS.WORK_PROCESS_TEXT.EL_POLLO_LOCO',
+      learnText: 'PROJECTS.LEARN_TEXT.EL_POLLO_LOCO',
       technologies: [
         '/icons/skill-icons/html.svg',
         '/icons/skill-icons/css.svg',
         '/icons/skill-icons/javascript.svg',
       ],
+      techNames: 'PROJECTS.TECHNAMES.BASIC',
       imageUrl: '/imgs/el-pollo-loco.webp',
       liveUrl: 'https://juliakeller.developerakademie.net/el-pollo-loco/index.html',
       githubUrl: 'https://github.com/JuliaKeller13/el-pollo-loco.git',
     },
     {
       id: 'pokedex',
-      tabLabel: 'Pokedex',
-      duration: '4 weeks',
-      aboutText:
-        'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe defeat El Pollo Loco! Throw salsa bottles or jump on small chickens. Collect all the coins!',
-      workProcessText:
-        'Focused on modular class structures and inheritance. Ensured clean code via descriptive naming, JSDoc, and a strict logic-UI separation.',
-      learnText:
-        'Deepened my Vanilla JavaScript skills with a focus on Object-Oriented Programming (OOP). Mastered complex collision logic, game physics, and fluid animations without frameworks.',
+      tabLabel: 'PROJECTS.TAB.POKEDEX',
+      duration: 'PROJECTS.DURATION.4W',
+      aboutText: 'PROJECTS.ABOUT_TEXT.POKEDEX',
+      workProcessText: 'PROJECTS.WORK_PROCESS_TEXT.POKEDEX',
+      learnText: 'PROJECTS.LEARN_TEXT.POKEDEX',
       technologies: [
         '/icons/skill-icons/html.svg',
         '/icons/skill-icons/css.svg',
         '/icons/skill-icons/javascript.svg',
         '/icons/skill-icons/api.svg',
       ],
+      techNames: 'PROJECTS.TECHNAMES.API',
       imageUrl: '/imgs/pokedex.webp',
       liveUrl: 'https://juliakeller.developerakademie.net/pokedex/index.html',
       githubUrl: 'https://github.com/JuliaKeller13/pokedex.git',
     },
     {
       id: 'join',
-      tabLabel: 'Join',
-      duration: '2 months',
-      aboutText:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      workProcessText:
-        'How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.',
-      learnText:
-        'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+      tabLabel: 'PROJECTS.TAB.JOIN',
+      duration: 'PROJECTS.DURATION.2M',
+      aboutText: 'PROJECTS.ABOUT_TEXT.JOIN',
+      workProcessText: 'PROJECTS.WORK_PROCESS_TEXT.JOIN',
+      learnText: 'PROJECTS.LEARN_TEXT.JOIN',
       technologies: [
         '/icons/skill-icons/html.svg',
         '/icons/skill-icons/css.svg',
         '/icons/skill-icons/javascript.svg',
         '/icons/skill-icons/angular.svg',
-
       ],
+      techNames: 'PROJECTS.TECHNAMES.ANGULAR',
       imageUrl: '/imgs/join.png',
       liveUrl: '#',
       githubUrl: '#',
     },
     {
       id: 'ongoing',
-      tabLabel: 'Ongoing Project',
-      duration: 'In progress',
-      aboutText: 'Currently working on...',
-      workProcessText: '...',
-      learnText: '...',
-      technologies: [],
+      tabLabel: 'PROJECTS.TAB.ONGOING',
+      duration: 'PROJECTS.DURATION.IN_PROGRESS',
+      aboutText: 'PROJECTS.ABOUT_TEXT.ONGOING',
+      workProcessText: '',
+      learnText: '',
+      technologies: [
+        '/icons/skill-icons/html.svg',
+        '/icons/skill-icons/css.svg',
+        '/icons/skill-icons/javascript.svg',
+        '/icons/skill-icons/angular.svg',
+      ],
+      techNames: 'PROJECTS.TECHNAMES.ANGULAR',
       imageUrl: '',
       liveUrl: '#',
       githubUrl: '#',
@@ -102,6 +102,10 @@ export class Projects {
   ];
 
   activeTab = this.projects[0].id;
+
+  getActiveIndex(): number {
+    return this.projects.findIndex((p) => p.id === this.activeTab);
+  }
 
   setActiveTab(tabId: string) {
     this.activeTab = tabId;

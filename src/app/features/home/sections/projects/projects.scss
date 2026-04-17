@@ -8,41 +8,53 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
 
-  .tab-container {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 1440px;
-    width: 100%;
-    margin-top: clamp(2rem, 5vh, 5rem);
+.tab-container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1440px;
+  width: 100%;
+  margin-top: clamp(2rem, 5vh, 5rem);
+}
 
-    .tablinks {
-      font-family: 'JosefinSans-Medium', sans-serif;
-      @include mx.fluid-text(18, 30);
-      line-height: 120%;
-      color: $primary-color;
-      background: none;
-      border: none;
-      border-radius: 26px 26px 0 0;
-      padding: 32px 16px;
-      cursor: default;
-      transition: color 0.5s, background 0.5s;
+.tablinks {
+  font-family: 'JosefinSans-Medium', sans-serif;
+  @include mx.fluid-text(16, 30);
+  line-height: 120%;
+  color: $primary-color;
+  background: none;
+  border: none;
+  border-radius: 26px 26px 0 0;
+  padding: 32px 16px 28px 16px;
+  cursor: default;
+  transition:
+  background 0.5s,
+    color 0.5s;
+    
 
-      .tab-text {
-        transition: color 0.5s;
-        &:hover {
-          cursor: pointer;
-          color: $secondary-color;
-        }
-      }
-    }
-
-    .tablinks.active,
-    .tablinks.active:focus {
-      background-color: rgba($primary-color, 0.07);
-      color: $secondary-color;
-    }
+  &.active,
+  &:focus.active {
+    background-color: rgba($primary-color, 0.07);
+    color: $secondary-color;
   }
+}
+
+.tab-text {
+  transition: color 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    color: $secondary-color;
+  }
+}
+
+.desktop-label {
+  display: inline;
+}
+
+.mobile-label {
+  display: none;
 }
 
 .bg-inner {
@@ -50,8 +62,45 @@
 }
 
 @media (max-width: 1000px) {
-  .tab-container .tablinks {
+  .inner {
+    margin-inline: 0;
+  }
+
+  .tab-container {
+    justify-content: space-between;
+  }
+
+  .tablinks {
     font-family: 'JosefinSans-Regular', sans-serif;
-    padding: 9px;
+    color: $secondary-color;
+    padding: 11px 9px;
+    flex: 1;
+
+    &.active,
+    &:focus.active {
+      color: $primary-color;
+    }
+  }
+
+  .desktop-label {
+    display: none;
+  }
+
+  .mobile-label {
+    display: inline;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tab-text:hover {
+    cursor: pointer;
+    color: $secondary-color;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .tab-text {
+    color: $primary-color;
+    cursor: default;
   }
 }

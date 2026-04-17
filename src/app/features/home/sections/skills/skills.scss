@@ -177,7 +177,7 @@
       max-width: 500px;
       height: auto;
       min-height: unset;
-      padding-block-start: 24px;
+      padding: 24px 0 40px 0;
       padding-inline: 0;
       background: none;
       box-shadow: none;
@@ -208,7 +208,7 @@
         color: $secondary-color;
         font-size: 1rem;
         margin: 0;
-        align-self: flex-start;
+        align-self: center;
       }
 
       .icons-box {
@@ -223,7 +223,7 @@
   }
 }
 
-@media (width <= 460px) {
+@media (width <= 380px) {
   .skills-content .text .mobile-focus-container,
   .mobile-focus-container {
     flex-direction: column-reverse;
@@ -233,9 +233,7 @@
       text-align: center;
     }
   }
-}
 
-@media (width <= 380px) {
   .skills-container {
     gap: 30px;
     padding-inline: 24px;

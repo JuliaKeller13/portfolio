@@ -3,10 +3,18 @@
 
 .card-content {
   width: 100%;
-  background-color: rgba($primary-color, 0.07);
+  background: rgba($primary-color, 0.07);
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
+  padding-top: 30px;
+  transition:
+    background 0.5s,
+    color 0.5s;
+
+  &.active {
+    background: rgba($primary-color, 0.07);
+  }
 }
 
 .card-inner {
@@ -18,6 +26,9 @@
   color: $secondary-color;
   font-family: 'JosefinSans-Regular', sans-serif;
   @include mx.fluid-text(16, 18);
+  padding-inline: 20px;
+  gap: 50px;
+  transition: color 0.5s;
 
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
@@ -25,7 +36,18 @@
   }
 }
 
-/* --- LEFT --- */
+.action-buttons,
+.action-buttons-mobile {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-buttons-mobile {
+  display: none;
+}
+
 .project-info {
   flex: 1;
   display: flex;
@@ -37,38 +59,34 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
 
       .dot {
-        width: 20px;
-        height: 20px;
-        background-color: $primary-color; //HIE DOT ALS BILD !!!!!!!!!!!
-        border-radius: 30px;
-        flex-shrink: 0;
+        width: 29px;
+        height: 26px;
+        @include mx.flex-center;
       }
 
       h3 {
         margin: 0;
-        font-size: 1.8rem;
-        font-weight: 500;
+        @include mx.fluid-text(18, 28);
+        font-weight: 400;
       }
 
       .duration {
         margin-left: 16px;
-        font-size: 1rem;
-        opacity: 0.8;
+        font-size: 1.12rem;
       }
     }
 
     p {
-      margin: 0 0 0 36px;
-      line-height: 1.6;
-      font-size: 1rem;
+      margin: 0 0 0 45px;
+      line-height: 120%;
+      font-size: 1.12rem;
     }
   }
 }
 
-/* --- Reigth side --- */
 .project-screen-box {
   flex: 1;
   display: flex;
@@ -83,6 +101,7 @@
     h4 {
       margin: 0 0 16px 0;
       font-size: 18px;
+      font-weight: 400;
     }
 
     .tech-icons {
@@ -96,24 +115,146 @@
         object-fit: contain;
       }
     }
+
+    .tech-text {
+      display: none;
+    }
+  }
+
+  .duration-mobile {
+    display: none;
+  }
+
+  .duration-desktop {
+    display: inline;
+    margin: 12px 0 0 0;
   }
 
   .project-image-wrapper {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 
-    .project-image {
+    .project-image,
+    .project-image-placeholder {
       width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      max-width: 450px;
+      aspect-ratio: unset;
+      height: clamp(170px, 50vw, 310px);
+      border-radius: 30px;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-image-placeholder {
+      background: #fff;
+      color: $primary-color;
+      font-size: 2rem;
+      font-family: 'JosefinSans-Medium', sans-serif;
+      text-align: center;
+    }
+  }
+}
+
+.project-label-mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .card-content {
+    border-radius: 30px;
+    transition:
+      background 0.5s,
+      color 0.5s;
+
+    &.active {
+      color: $primary-color;
+      background: rgba($primary-color, 0.07);
+    }
+
+    &.first-tab {
+      border-radius: 0 30px 30px 30px;
+    }
+
+    &.last-tab {
+      border-radius: 30px 0 30px 30px;
     }
   }
 
-  .action-buttons {
+  .project-info {
+    .info-block {
+      p{
+        margin: 0;
+      }
+      .block-header {
+        h3{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .action-buttons-mobile {
     display: flex;
-    gap: 24px;
-    width: 100%;
-    justify-content: center;
+    margin-bottom: 38px;
+  }
+
+  .project-screen-box {
+    .action-buttons {
+      display: none;
+    }
+
+    .technologies-wrapper {
+      text-align: left;
+
+      h4 {
+        display: inline;
+        margin: 0 8px 0 0;
+        font-weight: 400;
+        font-family: 'JosefinSans-Regular', sans-serif;
+        font-size: 14px;
+      }
+
+      .tech-icons {
+        display: none;
+      }
+
+      .tech-text {
+        display: inline;
+        font-size: 18px;
+        font-family: 'JosefinSans-Regular', sans-serif;
+        font-size: 14px;
+      }
+    }
+
+    .duration-mobile {
+      display: block;
+      font-family: 'JosefinSans-Regular', sans-serif;
+      font-size: 14px;
+      margin: 8px 0 0 0;
+      text-align: left;
+    }
+
+    .duration-desktop {
+      display: none;
+    }
+  }
+
+  .info-block {
+    .block-header {
+      .duration {
+        display: none;
+      }
+    }
+  }
+
+  .project-label-mobile {
+    display: block;
+    color: $primary-color;
+    font-family: 'JosefinSans-Regular', sans-serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: left;
   }
 }

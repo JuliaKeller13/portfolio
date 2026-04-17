@@ -29,7 +29,49 @@
     "TYPESCRIPT": "TypeScript"
   },
   "PROJECTS": {
-    "HEADING": "My Projects"
+    "HEADING": "Projects",
+    "TAB": {
+      "EL_POLLO_LOCO": "El Pollo Loco",
+      "POKEDEX": "Pokedex",
+      "JOIN": "Join",
+      "ONGOING": "Ongoing Project"
+    },
+    "DURATION": {
+      "2W": "2 weeks",
+      "4W": "4 weeks",
+      "2M": "2 months",
+      "IN_PROGRESS": "In progress"
+    },
+    "MOBILE_LABEL": "Project",
+    "ABOUT": "About the project",
+    "ABOUT_TEXT": {
+      "EL_POLLO_LOCO": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe defeat El Pollo Loco! Throw salsa bottles or jump on small chickens. Collect all the coins!",
+      "POKEDEX": "A dynamic web application that allows users to explore and search for Pokémon. It fetches and displays detailed data, such as stats, types, and images, directly from the PokéAPI in real-time.",
+      "JOIN": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "ONGOING": "What are you currently working on and what features are you implementing? What is the key to success in your projects?  You can mention good planning,  code quality and execution. Show a desire to learn new technologies and continually improve your skills."
+    },
+    "WORK_PROCESS": "How I have organised my work process",
+    "WORK_PROCESS_TEXT": {
+      "EL_POLLO_LOCO": "Focused on modular class structures and inheritance. Ensured clean code via descriptive naming, JSDoc, and a strict logic-UI separation.",
+      "POKEDEX": "Learned how to efficiently fetch and process large amounts of JSON data using asynchronous JavaScript (Promises, async/await). Improved my dynamic UI design skills, particularly by implementing pagination features and responsive grid layouts.",
+      "JOIN": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing."
+    },
+    "LEARNED": "What I have learnt",
+    "LEARN_TEXT": {
+      "EL_POLLO_LOCO": "Deepened my Vanilla JavaScript skills with a focus on Object-Oriented Programming (OOP). Mastered complex collision logic, game physics, and fluid animations without frameworks.",
+      "POKEDEX": "Deepened my understanding of asynchronous API calls and learned how to implement a smooth search functionality across complex datasets. Furthermore, I expanded my dynamic DOM manipulation skills to create engaging, interactive detail views and modals on the fly.",
+      "JOIN": "How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation."
+    },
+    "TECHNOLOGIES": "Technologies:",
+    "DURATION_LABEL": "Duration: {{duration}}",
+    "LIVE_TEST": "Live Test",
+    "GITHUB": "GitHub",
+    "COMING_SOON": "Coming soon...",
+    "TECHNAMES": {
+      "BASIC": "HTML, CSS, JavaScript",
+      "API": "HTML, CSS, JavaScript, REST-API",
+      "ANGULAR": "HTML, CSS, JavaScript, Angular"
+    }
   },
   "BUTTON": {
     "LETSTALK": "Let's talk"

@@ -1,7 +1,7 @@
 <app-section sectionId="projects">
   <div class="inner">
     <app-heading>{{ 'PROJECTS.HEADING' | translate }}</app-heading>
-    
+
     <div class="tab-container">
       @for (project of projects; let i = $index; track project.id) {
         <button
@@ -9,9 +9,13 @@
           [ngClass]="{ active: activeTab === project.id }"
           (click)="setActiveTab(project.id)"
           [attr.id]="project.id === projects[0].id ? 'defaultOpen' : null"
-          [attr.aria-label]="project.tabLabel"
+          [attr.aria-label]="project.tabLabel | translate"
         >
-          <span class="tab-text">{{ i + 1 }}. {{ project.tabLabel }}</span>
+          <span class="tab-text">
+            {{ i + 1 }}.
+            <span class="desktop-label">{{ project.tabLabel | translate }}</span>
+            <span class="mobile-label">{{ 'PROJECTS.MOBILE_LABEL' | translate }}</span>
+          </span>
         </button>
       }
     </div>
@@ -25,7 +29,12 @@
       [style.display]="activeTab === project.id ? 'block' : 'none'"
       [attr.id]="project.id"
     >
-      <app-project-card [projectData]="project"></app-project-card>
+      <app-project-card
+        [projectData]="projects[getActiveIndex()]"
+        [currentIndex]="getActiveIndex()"
+        [totalProjects]="projects.length"
+      >
+      </app-project-card>
     </div>
   }
 </div>

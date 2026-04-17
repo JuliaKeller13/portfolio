@@ -29,7 +29,49 @@
     "TYPESCRIPT": "TypeScript"
   },
   "PROJECTS": {
-    "HEADING": "Meine Projekte"
+    "HEADING": "Meine Projekte",
+    "TAB": {
+      "EL_POLLO_LOCO": "El Pollo Loco",
+      "POKEDEX": "Pokedex",
+      "JOIN": "Join",
+      "ONGOING": "Laufendes Projekt"
+    },
+    "DURATION": {
+      "2W": "2 Wochen",
+      "4W": "4 Wochen",
+      "2M": "2 Monate",
+      "IN_PROGRESS": "In Bearbeitung"
+    },
+    "MOBILE_LABEL": "Projekt",
+    "ABOUT": "Über das Projekt",
+    "ABOUT_TEXT": {
+      "EL_POLLO_LOCO": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Pepe, El Pollo Loco zu besiegen! Wirf Salsa-Flaschen oder springe auf kleine Hühner. Sammle alle Münzen!",
+      "POKEDEX": "Eine dynamische Webanwendung, die es Benutzern ermöglicht, nach Pokémon zu suchen und diese zu erkunden. Detaillierte Daten wie Statistiken, Typen und Bilder werden in Echtzeit direkt von der PokéAPI abgerufen und angezeigt.",
+      "JOIN": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Nutzer und Kategorien zu.",
+      "ONGOING": "Woran arbeitest du aktuell und welche Features implementierst du? Was ist der Schlüssel zum Erfolg in deinen Projekten? Du kannst gute Planung, Codequalität und Ausführung erwähnen. Zeige den Wunsch, neue Technologien zu lernen und dich ständig weiterzuentwickeln."
+    },
+    "WORK_PROCESS": "So habe ich meinen Arbeitsprozess organisiert",
+    "WORK_PROCESS_TEXT": {
+      "EL_POLLO_LOCO": "Fokus auf modulare Klassenstrukturen und Vererbung. Sauberer Code durch sprechende Namen, JSDoc und strikte Trennung von Logik und UI.",
+      "POKEDEX": "Gelernt, große Mengen an JSON-Daten mit asynchronem JavaScript (Promises, async/await) effizient abzurufen und zu verarbeiten. UI-Design-Fähigkeiten durch Pagination und responsive Grids verbessert.",
+      "JOIN": "Wie hältst du deinen Code sauber und wartbar? Hast du das Projekt in wiederverwendbare Module oder Komponenten unterteilt? Fokus auf Dokumentation, Benennung und Tests."
+    },
+    "LEARNED": "Was ich gelernt habe",
+    "LEARN_TEXT": {
+      "EL_POLLO_LOCO": "Meine Vanilla-JavaScript-Kenntnisse im Bereich OOP vertieft. Komplexe Kollisionslogik, Spielphysik und Animationen ohne Frameworks gemeistert.",
+      "POKEDEX": "Mein Verständnis für asynchrone API-Aufrufe vertieft und gelernt, wie man eine reibungslose Suchfunktion über komplexe Datensätze implementiert. Außerdem habe ich meine Fähigkeiten in der DOM-Manipulation für interaktive Detailansichten und Modals erweitert.",
+      "JOIN": "Wie viele Personen waren im Team und was war deine Rolle? Beschreibe deine Aufgaben in 1-2 Sätzen. Teamarbeit und Kooperation erwähnen."
+    },
+    "TECHNOLOGIES": "Technologien:",
+    "DURATION_LABEL": "Dauer: {{duration}}",
+    "LIVE_TEST": "Live-Test",
+    "GITHUB": "GitHub",
+    "COMING_SOON": "Kommt bald...",
+    "TECHNAMES": {
+      "BASIC": "HTML, CSS, JavaScript",
+      "API": "HTML, CSS, JavaScript, REST-API",
+      "ANGULAR": "HTML, CSS, JavaScript, Angular"
+    }
   },
   "BUTTON": {
     "LETSTALK": "Kontaktieren"

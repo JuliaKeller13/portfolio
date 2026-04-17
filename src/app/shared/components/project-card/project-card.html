@@ -1,73 +1,151 @@
-<section class="card-content">
+<section
+  class="card-content"
+  [ngClass]="{
+    'first-tab': currentIndex === 0,
+    'last-tab': currentIndex === totalProjects - 1,
+  }"
+>
+  
   <div class="card-inner">
+    <div class="action-buttons-mobile">
+      @if (projectData.id !== 'ongoing' && projectData.liveUrl) {
+        <app-button
+          [label]="'PROJECTS.LIVE_TEST' | translate"
+          btnClass="primary-btn"
+          (click)="openLink(projectData.liveUrl)"
+        >
+        </app-button>
+      }
+      @if (projectData.id !== 'ongoing' && projectData.githubUrl) {
+        <app-button
+          [label]="'PROJECTS.GITHUB' | translate"
+          btnClass="secondary-btn"
+          (click)="openLink(projectData.githubUrl)"
+        >
+        </app-button>
+      }
+    </div>
     <div class="project-info">
       <div class="info-block">
         <div class="block-header">
-          <span class="dot"></span>
-          <h3>About the project</h3>
+          <span class="dot">
+            <svg
+              width="29"
+              height="26"
+              viewBox="0 0 29 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29 13C29 20.1797 23.1797 26 16 26C8.8203 26 0 17.6797 0 10.5C0 3.3203 8.8203 0 16 0C23.1797 0 29 5.8203 29 13Z"
+                fill="#89BCD9"
+              />
+            </svg>
+          </span>
+          <h3>{{ 'PROJECTS.ABOUT' | translate }}</h3>
           @if (projectData.duration) {
-            <span class="duration">Duration: {{ projectData.duration }}</span>
+            <span class="duration duration-desktop ">{{ 'PROJECTS.DURATION_LABEL' | translate: { duration: (projectData.duration | translate) } }}</span>
           }
         </div>
-        <p>{{ projectData.aboutText }}</p>
+        <p>{{ projectData.aboutText | translate }}</p>
       </div>
 
       @if (projectData.workProcessText) {
         <div class="info-block">
           <div class="block-header">
-            <span class="dot"></span>
-            <h3>How I have organised my work process</h3>
+            <span class="dot">
+              <svg
+                width="29"
+                height="26"
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29 13C29 20.1797 23.1797 26 16 26C8.8203 26 0 17.6797 0 10.5C0 3.3203 8.8203 0 16 0C23.1797 0 29 5.8203 29 13Z"
+                  fill="#89BCD9"
+                />
+              </svg>
+            </span>
+            <h3>{{ 'PROJECTS.WORK_PROCESS' | translate }}</h3>
           </div>
-          <p>{{ projectData.workProcessText }}</p>
+          <p>{{ projectData.workProcessText | translate }}</p>
         </div>
       }
 
       @if (projectData.learnText) {
         <div class="info-block">
           <div class="block-header">
-            <span class="dot"></span>
-            <h3>What I have learnt</h3>
+            <span class="dot">
+              <svg
+                width="29"
+                height="26"
+                viewBox="0 0 29 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29 13C29 20.1797 23.1797 26 16 26C8.8203 26 0 17.6797 0 10.5C0 3.3203 8.8203 0 16 0C23.1797 0 29 5.8203 29 13Z"
+                  fill="#89BCD9"
+                />
+              </svg>
+            </span>
+            <h3>{{ 'PROJECTS.LEARNED' | translate }}</h3>
           </div>
-          <p>{{ projectData.learnText }}</p>
+          <p>{{ projectData.learnText | translate }}</p>
         </div>
       }
     </div>
 
     <div class="project-screen-box">
       <div class="technologies-wrapper">
-        <h4>Technologies</h4>
+        <span class="project-label-mobile">{{ projectData.tabLabel | translate }}</span>
+        <h4>{{ 'PROJECTS.TECHNOLOGIES' | translate }}</h4>
+
         <div class="tech-icons">
           @for (tech of projectData.technologies; track tech) {
             <img [src]="tech" alt="Technology icon" class="tech-icon" />
           }
         </div>
-      </div>
 
+        <span class="tech-text">{{ projectData.techNames | translate }}</span>
+        @if (projectData.duration) {
+        <span class="duration duration-mobile">{{ 'PROJECTS.DURATION_LABEL' | translate: { duration: (projectData.duration | translate) } }}</span>
+      }
+      </div>
+      
       <div class="project-image-wrapper">
-        <img
-          [src]="projectData.imageUrl"
-          [alt]="projectData.tabLabel + ' Screenshot'"
-          class="project-image"
-        />
+        @if (projectData.imageUrl) {
+          <img
+            [src]="projectData.imageUrl"
+            [alt]="(projectData.tabLabel | translate) + ' Screenshot'"
+            class="project-image"
+          />
+        } @else {
+          <div class="project-image-placeholder">
+            <span>{{ 'PROJECTS.COMING_SOON' | translate }}</span>
+          </div>
+        }
       </div>
-
       <div class="action-buttons">
-  @if (projectData.liveUrl) {
-    <app-button 
-      label="Live Test" 
-      btnClass="primary-btn"
-      (click)="openLink(projectData.liveUrl)">
-    </app-button>
-  }
-  
-  @if (projectData.githubUrl) {
-    <app-button 
-      label="GitHub" 
-      btnClass="secondary-btn"
-      (click)="openLink(projectData.githubUrl)">
-    </app-button>
-  }
-</div>
+        @if (projectData.id !== 'ongoing' && projectData.liveUrl) {
+          <app-button
+            [label]="'PROJECTS.LIVE_TEST' | translate"
+            btnClass="primary-btn"
+            (click)="openLink(projectData.liveUrl)"
+          >
+          </app-button>
+        }
+
+        @if (projectData.id !== 'ongoing' && projectData.githubUrl) {
+          <app-button
+            [label]="'PROJECTS.GITHUB' | translate"
+            btnClass="secondary-btn"
+            (click)="openLink(projectData.githubUrl)"
+          >
+          </app-button>
+        }
+      </div>
     </div>
   </div>
 </section>

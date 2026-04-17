@@ -1,7 +1,6 @@
 @use '../../../styles/abstracts/variables' as *;
 @use '../../../styles/abstracts/mixins' as mx;
 
-
 .primary-btn {
   border-radius: 30px;
   border: 1px solid $primary-color;
@@ -9,7 +8,7 @@
   padding: 13px 30px;
   color: $bg-color;
   font-family: 'JosefinSans-Regular', sans-serif;
-  font-size: 18px;
+  @include mx.fluid-text(14, 18);
   cursor: pointer;
   position: relative;
 
@@ -25,7 +24,7 @@
   padding: 13px 30px;
   color: $primary-color;
   font-family: 'JosefinSans-Regular', sans-serif;
-  font-size: 18px;
+  @include mx.fluid-text(14, 18);
   cursor: pointer;
   position: relative;
 
