@@ -77,7 +77,14 @@
     "LETSTALK": "Let's talk"
   },
   "CONTACT": {
-    "HEADING": "Contact me"
+    "HEADING": "Contact me",
+    "MESSAGE": "Feel free to contact me anytime regarding job offers or exciting opportunities as a Fullstack Developer. I am particularly interested in projects involving web development, scalable applications, and modern software architectures.",
+    "FORM": {
+      "NAME": "Your name",
+      "EMAIL": "Your email",
+      "MESSAGE": "Your message",
+      "SEND": "Send"
+    }
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Legal notice",

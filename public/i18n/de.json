@@ -77,7 +77,14 @@
     "LETSTALK": "Kontaktieren"
   },
   "CONTACT": {
-    "HEADING": "Kontaktiere mich"
+    "HEADING": "Kontaktiere mich",
+    "MESSAGE": "Gerne können Sie mich jederzeit bezüglich Jobangeboten oder spannenden Möglichkeiten als Fullstack Developer kontaktieren. Besonders interessiere ich mich für Projekte in den Bereichen Webentwicklung, skalierbare Anwendungen und moderne Softwarearchitekturen.",
+    "FORM": {
+      "NAME": "Name",
+      "EMAIL": "E-Mail",
+      "MESSAGE": "Nachricht",
+      "SEND": "Senden"
+    }
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Impressum",
