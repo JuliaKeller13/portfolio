@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { Heading } from '../../../../shared/components/heading/heading';
 import { Section } from '../../../../shared/components/section/section';
 import { Button } from '../../../../shared/components/arrow-button/arrow-button';
@@ -9,6 +10,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [Heading, Section, Button, TranslatePipe, ReactiveFormsModule, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
@@ -16,6 +18,7 @@ import { RouterLink } from '@angular/router';
 export class Contact {
   private scrollService = inject(ScrollService);
   private fb = inject(FormBuilder);
+  private http = inject(HttpClient);
 
   contactForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
@@ -28,6 +31,8 @@ export class Contact {
   });
 
   privacyHover = false;
+  isSubmitting = false;
+  successMessage = false;
 
   get name() {
     return this.contactForm.get('name');
