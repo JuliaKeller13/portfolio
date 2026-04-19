@@ -48,19 +48,19 @@
       "EL_POLLO_LOCO": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Pepe, El Pollo Loco zu besiegen! Wirf Salsa-Flaschen oder springe auf kleine Hühner. Sammle alle Münzen!",
       "POKEDEX": "Eine dynamische Webanwendung, die es Benutzern ermöglicht, nach Pokémon zu suchen und diese zu erkunden. Detaillierte Daten wie Statistiken, Typen und Bilder werden in Echtzeit direkt von der PokéAPI abgerufen und angezeigt.",
       "JOIN": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Nutzer und Kategorien zu.",
-      "ONGOING": "Woran arbeitest du aktuell und welche Features implementierst du? Was ist der Schlüssel zum Erfolg in deinen Projekten? Du kannst gute Planung, Codequalität und Ausführung erwähnen. Zeige den Wunsch, neue Technologien zu lernen und dich ständig weiterzuentwickeln."
+      "ONGOING": "Ich baue aktuell meine Expertise in Angular aus und lerne, anspruchsvolle Architekturen für größere Anwendungen umzusetzen. Mein Ziel ist es, Features zu entwickeln, die sowohl technisch brillant als auch nutzerfreundlich sind."
     },
     "WORK_PROCESS": "So habe ich meinen Arbeitsprozess organisiert",
     "WORK_PROCESS_TEXT": {
       "EL_POLLO_LOCO": "Fokus auf modulare Klassenstrukturen und Vererbung. Sauberer Code durch sprechende Namen, JSDoc und strikte Trennung von Logik und UI.",
       "POKEDEX": "Gelernt, große Mengen an JSON-Daten mit asynchronem JavaScript (Promises, async/await) effizient abzurufen und zu verarbeiten. UI-Design-Fähigkeiten durch Pagination und responsive Grids verbessert.",
-      "JOIN": "Wie hältst du deinen Code sauber und wartbar? Hast du das Projekt in wiederverwendbare Module oder Komponenten unterteilt? Fokus auf Dokumentation, Benennung und Tests."
+      "JOIN": "Ich setze auf modulare Komponenten und eine klare Trennung von Logik und Design. Durch sprechende Benennung und eine saubere Dokumentation bleibt der Code auch für Dritte leicht wartbar und skalierbar."
     },
     "LEARNED": "Was ich gelernt habe",
     "LEARN_TEXT": {
       "EL_POLLO_LOCO": "Meine Vanilla-JavaScript-Kenntnisse im Bereich OOP vertieft. Komplexe Kollisionslogik, Spielphysik und Animationen ohne Frameworks gemeistert.",
       "POKEDEX": "Mein Verständnis für asynchrone API-Aufrufe vertieft und gelernt, wie man eine reibungslose Suchfunktion über komplexe Datensätze implementiert. Außerdem habe ich meine Fähigkeiten in der DOM-Manipulation für interaktive Detailansichten und Modals erweitert.",
-      "JOIN": "Wie viele Personen waren im Team und was war deine Rolle? Beschreibe deine Aufgaben in 1-2 Sätzen. Teamarbeit und Kooperation erwähnen."
+      "JOIN": "Als Teil eines kleinen Entwicklerteams habe ich die Core-Features programmiert. Die enge Zusammenarbeit hat mir gezeigt, wie man durch Teamwork komplexe technische Hürden effizient gemeinsam meistert."
     },
     "TECHNOLOGIES": "Technologien:",
     "DURATION_LABEL": "Dauer: {{duration}}",
