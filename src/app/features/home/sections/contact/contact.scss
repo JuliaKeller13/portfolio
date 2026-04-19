@@ -29,7 +29,7 @@
 }
 
 .error-text {
-  color: #e44c36;
+  color: $error-color;
   font-size: 13px;
   margin-top: 8px;
 }
@@ -83,6 +83,21 @@
           display: flex;
           align-items: center;
           gap: 19px;
+          cursor: pointer;
+
+          svg path {
+            transition: stroke 0.5s;
+          }
+
+          &:hover {
+            a {
+              color: $primary-color;
+            }
+
+            svg path {
+              stroke: $primary-color;
+            }
+          }
         }
 
         a {
@@ -90,9 +105,6 @@
           text-decoration: none;
           @include mx.fluid-text(16, 18);
           transition: color 0.5s;
-          &:hover {
-            color: $primary-color;
-          }
         }
       }
 
@@ -100,6 +112,11 @@
         @include mx.fluid-text(16, 18);
         line-height: 120%;
         max-width: 500px;
+
+        @media (min-width: 800px) {
+          text-align: justify;
+          hyphens: auto;
+        }
       }
     }
   }
@@ -118,11 +135,9 @@
         display: flex;
         width: 100%;
         gap: 24px;
-
         @media (max-width: 800px) {
           flex-direction: column;
         }
-
         .field {
           flex: 1;
         }
@@ -160,7 +175,6 @@
         .label-text {
           display: block;
         }
-
         .error-text {
           display: none;
         }
@@ -193,7 +207,6 @@
               color: $secondary-color;
               text-align: start;
             }
-
             & + .valid-icon {
               @media (min-width: 1000px) {
                 opacity: 1;
@@ -243,7 +256,7 @@
           color: rgba($secondary-color, 0.4);
         }
 
-        @media (min-width: 1000px) {
+        @media (min-width: 800px) {
           &::placeholder {
             color: transparent !important;
           }
@@ -254,11 +267,10 @@
         }
 
         &.error {
-          border-color: #e44c36;
-
+          border-color: $error-color;
           @media (max-width: 999px) {
             &::placeholder {
-              color: #e44c36;
+              color: $error-color;
             }
           }
         }
@@ -285,17 +297,19 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          width: 100%;
 
           .privacy-error-text {
-            margin-left: 36px;
-            margin-top: 4px;
+            margin-left: 29px;
+            margin-top: 0;
           }
         }
 
         .privacy-policy {
           display: flex;
-          align-items: center;
+          flex-direction: column;
           margin: 0;
+          min-height: 60px;
 
           .custom-checkbox {
             display: flex;
@@ -331,13 +345,13 @@
               }
 
               &.hovered .box-path {
-                fill: rgba(137, 188, 217, 0.12);
+                fill: rgba($primary-color, 0.12);
               }
 
               &.checked {
                 .box-path {
-                  fill: #89bcd9;
-                  stroke: #89bcd9;
+                  fill: $primary-color;
+                  stroke: $primary-color;
                 }
                 .check-path {
                   opacity: 1;
@@ -346,7 +360,7 @@
               }
 
               &.error .box-path {
-                stroke: #e44c36;
+                stroke: $error-color;
               }
             }
 
@@ -360,32 +374,32 @@
           }
         }
 
+        .button-container {
+          width: 100%;
+          display: flex;
+          justify-content: end;
+        }
+
         button[type='submit'] {
           margin-left: auto;
           background: transparent;
-          border: 1px solid $secondary-color;
-          color: $secondary-color;
-          padding: 0.8rem 3rem;
+          border: 1px solid #89bcd9;
+          color: #89bcd9;
+          padding: 13px 30px;
           border-radius: 30px;
           cursor: pointer;
-          transition: all 0.3s;
-          @include mx.fluid-text(16, 18);
-
-          @media (max-width: 800px) {
-            margin-left: 0;
-            margin-top: 32px;
-            width: 100%;
-          }
+          transition: all 0.3s ease;
+          @include mx.fluid-text(14, 18);
 
           &:hover:not([disabled]) {
-            background: $secondary-color;
-            color: $bg-color;
+            background-color: rgba($secondary-color, 0.12);
           }
 
-          &[disabled] {
-            opacity: 0.5;
-            cursor: not-allowed;
+          &:disabled {
+            opacity: 0.3;
+            cursor: default;
             border-color: rgba($secondary-color, 0.5);
+            color: rgba($secondary-color, 0.5);
           }
         }
       }

@@ -1,43 +1,57 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Heading } from "../../../../shared/components/heading/heading";
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { Heading } from '../../../../shared/components/heading/heading';
 import { Section } from '../../../../shared/components/section/section';
 import { Button } from '../../../../shared/components/arrow-button/arrow-button';
 import { ScrollService } from '../../../../shared/services/scroll.service';
 import { TranslatePipe } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [Heading, Section, Button, TranslatePipe, FormsModule],
+  imports: [Heading, Section, Button, TranslatePipe, ReactiveFormsModule, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
 export class Contact {
-  // --- Formular-Daten Objekt (Lösung 1) ---
-  contactData = {
-    name: '',
-    email: '',
-    message: ''
-  };
+  private scrollService = inject(ScrollService);
+  private fb = inject(FormBuilder);
 
-  // --- Zustands-Variablen ---
-  privacyChecked = false;
-  privacyError = false;
+  contactForm = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    message: [
+      '',
+      [Validators.required, Validators.minLength(10), Validators.pattern(/^[^<>{}[\/\]]*$/)],
+    ],
+    privacy: [false, Validators.requiredTrue],
+  });
+
   privacyHover = false;
 
-  private scrollService = inject(ScrollService);
+  get name() {
+    return this.contactForm.get('name');
+  }
+  get email() {
+    return this.contactForm.get('email');
+  }
+  get message() {
+    return this.contactForm.get('message');
+  }
+  get privacy() {
+    return this.contactForm.get('privacy');
+  }
 
-  /**
-   * Beispiel-Methode für den Formular-Versand
-   * (Hier kannst du später deine Logik einbauen)
-   */
   onSubmit() {
-    if (this.privacyChecked) {
-      console.log('Formular-Daten:', this.contactData);
-      // Hier Logik für Email-Versand einfügen
-    } else {
-      this.privacyError = true;
+    this.contactForm.markAllAsTouched();
+
+    if (this.contactForm.invalid) {
+      console.log('Formular ist ungültig');
+      return;
     }
+
+    console.log('Formular-Daten:', this.contactForm.value);
+    // Hier Logik für Email-Versand einfügen
   }
 
   scrollToHome() {
@@ -47,14 +61,14 @@ export class Contact {
         const navContainer = document.querySelector('.nav-container') as HTMLElement;
         const navbarHeight = navContainer?.offsetHeight ?? 0;
         let targetY = logoNav.getBoundingClientRect().top + window.scrollY - navbarHeight;
-        
+
         if (targetY < 80) targetY = 80;
 
         if (window.gsap) {
           window.gsap.to(window, {
             duration: 1.1,
             scrollTo: { y: targetY, autoKill: false },
-            ease: 'elastic.out(1, 0.5)'
+            ease: 'elastic.out(1, 0.5)',
           });
         } else {
           logoNav.scrollIntoView({ behavior: 'smooth', block: 'center' });

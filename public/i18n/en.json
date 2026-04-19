@@ -78,12 +78,30 @@
   },
   "CONTACT": {
     "HEADING": "Contact me",
+    "SUBHEAD": "Let us work together!",
+    "EMAIL": "Email: juliakeller.vk@gmail.com",
+    "PHONE": "Phone: +49 174 6249499",
     "MESSAGE": "Feel free to contact me anytime regarding job offers or exciting opportunities as a Fullstack Developer. I am particularly interested in projects involving web development, scalable applications, and modern software architectures.",
     "FORM": {
       "NAME": "Your name",
       "EMAIL": "Your email",
       "MESSAGE": "Your message",
       "SEND": "Send"
+    },
+    "ERROR": {
+      "NAME_REQUIRED": "Your name is required",
+      "EMAIL_REQUIRED": "Your Email is required",
+      "MESSAGE_REQUIRED": "Your Message is required",
+      "PRIVACY_REQUIRED": "Please accept the privacy policy.",
+      "NAME_MINLENGTH": "Name must be at least 3 characters long.",
+      "EMAIL_INVALID": "Please enter a valid email (e.g. test@test.com)",
+      "MESSAGE_MINLENGTH": "Message must be at least 10 characters long.",
+      "MESSAGE_PATTERN": "Message contains invalid characters."
+    },
+    "PRIVACY": {
+      "LABEL": "I've read the",
+      "LINK": "privacy policy",
+      "AGREEMENT": "and agree to the processing of my data as outlined."
     }
   },
   "FOOTER": {

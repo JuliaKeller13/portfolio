@@ -6,7 +6,7 @@
   }"
 >
   
-  <div class="card-inner">
+  <div class="card-inner" [attr.id]="projectData.id">
     <div class="action-buttons-mobile">
       @if (projectData.id !== 'ongoing' && projectData.liveUrl) {
         <app-button

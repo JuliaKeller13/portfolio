@@ -78,12 +78,30 @@
   },
   "CONTACT": {
     "HEADING": "Kontaktiere mich",
+    "SUBHEAD": "Lass uns zusammenarbeiten!",
+    "EMAIL": "E-Mail: juliakeller.vk@gmail.com",
+    "PHONE": "Telefon: +49 174 6249499",
     "MESSAGE": "Gerne können Sie mich jederzeit bezüglich Jobangeboten oder spannenden Möglichkeiten als Fullstack Developer kontaktieren. Besonders interessiere ich mich für Projekte in den Bereichen Webentwicklung, skalierbare Anwendungen und moderne Softwarearchitekturen.",
     "FORM": {
       "NAME": "Name",
       "EMAIL": "E-Mail",
       "MESSAGE": "Nachricht",
       "SEND": "Senden"
+    },
+    "ERROR": {
+      "NAME_REQUIRED": "Name ist erforderlich",
+      "EMAIL_REQUIRED": "E-Mail ist erforderlich",
+      "MESSAGE_REQUIRED": "Nachricht ist erforderlich",
+      "PRIVACY_REQUIRED": "Bitte akzeptiere die Datenschutzerklärung.",
+      "NAME_MINLENGTH": "Der Name muss mindestens 3 Zeichen lang sein.",
+      "EMAIL_INVALID": "Bitte gib eine gültige E-Mail ein (z.B. test@test.de)",
+      "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
+      "MESSAGE_PATTERN": "Die Nachricht enthält ungültige Zeichen."
+    },
+    "PRIVACY": {
+      "LABEL": "Ich habe die",
+      "LINK": "Datenschutzerklärung",
+      "AGREEMENT": "gelesen und stimme der Verarbeitung meiner Daten zu."
     }
   },
   "FOOTER": {
@@ -98,7 +116,7 @@
     "NAME": "Julia Keller",
     "ADDRESS1": "Bremsheide 185,",
     "ADDRESS2": "58638 Iserlohn",
-    "EXPLORING": "Exploring the Board",
+    "EXPLORING": "Board erkunden",
     "EMAIL": "E-Mail: juliakeller.vk@gmail.com",
     "ACCEPTANCE_HEADING": "Akzeptanz der Bedingungen",
     "ACCEPTANCE": "Durch den Zugriff auf und die Nutzung von <span>Portfolio</span> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitfäden oder Änderungen, die Ihnen von Zeit zu Zeit präsentiert werden, an und stimmen diesen zu. Wir, die aufgeführten Studierenden, können die Bedingungen von Zeit zu Zeit ohne Vorankündigung aktualisieren oder ändern.",

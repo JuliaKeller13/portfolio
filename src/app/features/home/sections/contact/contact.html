@@ -5,104 +5,164 @@
     <section class="contact-section">
       <div class="contact-info-form-row">
         <div class="contact-info">
-          <p class="subhead">Let us work together!</p>
+          <p class="subhead">{{ 'CONTACT.SUBHEAD' | translate }}</p>
           <p class="contact-message">
             {{ 'CONTACT.MESSAGE' | translate }}
           </p>
           <div class="contact-details">
             <div class="line">
               <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.18262 6H21.6445C22.1695 6.00017 22.8271 6.54564 22.8271 7.5V22.5C22.8271 23.4544 22.1695 23.9998 21.6445 24H4.18262C3.65777 23.9999 3.00045 23.4548 3 22.501L3.01074 7.50098V7.5C3.01074 6.53865 3.66359 6.00006 4.18262 6Z" stroke="#F8F5EC" stroke-width="2" />
-                <path d="M6 10C6 10 12.5033 15 12.8182 15C13.133 15 20.0909 10 20.0909 10" stroke="#F8F5EC" stroke-width="2" stroke-linecap="round" />
+                <path d="M4.18262 6H21.6445C22.1695 6.00017 22.8271 6.54564 22.8271 7.5V22.5C22.8271 23.4544 22.1695 23.9998 21.6445 24H4.18262C3.65777 23.9999 3.00045 23.4548 3 22.501L3.01074 7.50098V7.5C3.01074 6.53865 3.66359 6.00006 4.18262 6Z" stroke="#F8F5EC" stroke-width="2"/>
+                <path d="M6 10C6 10 12.5033 15 12.8182 15C13.133 15 20.0909 10 20.0909 10" stroke="#F8F5EC" stroke-width="2" stroke-linecap="round"/>
               </svg>
-              <a href="mailto:juliakeller.vk@gmail.com"> Email: juliakeller.vk@gmail.com</a>
+              <a href="mailto:juliakeller.vk@gmail.com">{{ 'CONTACT.EMAIL' | translate }}</a>
             </div>
 
             <div class="line">
               <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.18457 4.86719C8.19003 4.87091 8.20013 4.87758 8.21289 4.89258C8.25249 4.93924 8.29688 5.0304 8.29688 5.15625C8.29688 6.85315 8.52699 8.48622 8.9541 10.0146V10.0156C9.00002 10.1878 8.95463 10.3432 8.88477 10.4258L6.47852 13.2617L6.07617 13.7354L6.32227 14.3057C7.97227 18.1273 10.6423 21.2735 13.9316 23.2598L14.6602 23.7002L15.2109 23.0508L17.6172 20.2148C17.6232 20.2078 17.6294 20.2032 17.6338 20.1992C18.9591 20.7117 20.3894 20.9898 21.8564 20.9922C21.8618 20.9957 21.8722 21.0027 21.8857 21.0186C21.9253 21.0652 21.9697 21.1565 21.9697 21.2822V25.7812C21.9697 25.9071 21.9253 25.9983 21.8857 26.0449C21.873 26.0599 21.862 26.0655 21.8564 26.0693C12.2943 26.0571 4.28125 16.8608 4.28125 5.15625C4.28125 5.0304 4.32564 4.93924 4.36523 4.89258C4.37794 4.87764 4.38807 4.87095 4.39355 4.86719H8.18457Z" stroke="#F8F5EC" stroke-width="2" />
+                <path d="M8.18457 4.86719C8.19003 4.87091 8.20013 4.87758 8.21289 4.89258C8.25249 4.93924 8.29688 5.0304 8.29688 5.15625C8.29688 6.85315 8.52699 8.48622 8.9541 10.0146V10.0156C9.00002 10.1878 8.95463 10.3432 8.88477 10.4258L6.47852 13.2617L6.07617 13.7354L6.32227 14.3057C7.97227 18.1273 10.6423 21.2735 13.9316 23.2598L14.6602 23.7002L15.2109 23.0508L17.6172 20.2148C17.6232 20.2078 17.6294 20.2032 17.6338 20.1992C18.9591 20.7117 20.3894 20.9898 21.8564 20.9922C21.8618 20.9957 21.8722 21.0027 21.8857 21.0186C21.9253 21.0652 21.9697 21.1565 21.9697 21.2822V25.7812C21.9697 25.9071 21.9253 25.9983 21.8857 26.0449C21.873 26.0599 21.862 26.0655 21.8564 26.0693C12.2943 26.0571 4.28125 16.8608 4.28125 5.15625C4.28125 5.0304 4.32564 4.93924 4.36523 4.89258C4.37794 4.87764 4.38807 4.87095 4.39355 4.86719H8.18457Z" stroke="#F8F5EC" stroke-width="2"/>
               </svg>
-              <a href="tel:+491234567890"> Phone: +49 174 6249499</a>
+              <a href="tel:+491234567890">{{ 'CONTACT.PHONE' | translate }}</a>
             </div>
           </div>
         </div>
 
         <div class="contact-form">
-          <form #contactForm="ngForm">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="name-part">
-              <div class="field" [class.is-error]="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)">
+              <div class="field" [class.is-error]="name?.invalid && (name?.dirty || name?.touched)">
                 <label for="name">
                   <span class="label-text">{{ 'CONTACT.FORM.NAME' | translate }}</span>
-                  <span class="error-text">Your name is required</span>
+                  @if (name?.touched && name?.errors?.['required']) {
+                    <span class="error-text">{{ 'CONTACT.ERROR.NAME_REQUIRED' | translate }}</span>
+                  } @else if (name?.touched && name?.errors?.['minlength']) {
+                    <span class="error-text">{{ 'CONTACT.ERROR.NAME_MINLENGTH' | translate }}</span>
+                  }
                 </label>
                 <div class="input-wrapper">
-                  <input #nameCtrl="ngModel" [(ngModel)]="contactData.name" name="name" type="text" required
-                    [class.error]="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)"
-                    [class.is-valid]="nameCtrl.valid && (nameCtrl.dirty || nameCtrl.touched)"
-                    [placeholder]="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched) ? 'Your name is required' : 'Your name'" />
-
+                  <input
+                    id="name"
+                    formControlName="name"
+                    type="text"
+                    autocomplete="name"
+                    [class.error]="name?.invalid && (name?.dirty || name?.touched)"
+                    [class.is-valid]="name?.valid && (name?.dirty || name?.touched)"
+                    [placeholder]="
+                      name?.invalid && (name?.dirty || name?.touched)
+                        ? ('CONTACT.ERROR.NAME_REQUIRED' | translate)
+                        : ('CONTACT.FORM.NAME' | translate)
+                    "
+                  />
                   <svg class="valid-icon" width="27" height="32" viewBox="0 0 27 32" fill="none">
-                    <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC" />
+                    <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC"/>
                   </svg>
                 </div>
               </div>
 
-              <div class="field" [class.is-error]="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)">
+              <div class="field" [class.is-error]="email?.invalid && (email?.dirty || email?.touched)">
                 <label for="email">
                   <span class="label-text">{{ 'CONTACT.FORM.EMAIL' | translate }}</span>
-                  <span class="error-text">Your Email is required</span>
+
+                  @if (email?.touched && email?.errors?.['required']) {
+                    <span class="error-text">{{ 'CONTACT.ERROR.EMAIL_REQUIRED' | translate }}</span>
+                  } @else if (email?.touched && email?.errors?.['email']) {
+                    <span class="error-text">{{ 'CONTACT.ERROR.EMAIL_INVALID' | translate }}</span>
+                  }
                 </label>
                 <div class="input-wrapper">
-                  <input id="email" name="email" type="email" required #emailCtrl="ngModel" ngModel
-                    [placeholder]="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched) ? 'Your email is required' : 'Your email'"
-                    [class.error]="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)"
-                    [class.is-valid]="emailCtrl.valid && (emailCtrl.dirty || emailCtrl.touched)" />
+                  <input
+                    id="email"
+                    formControlName="email"
+                    type="email"
+                    autocomplete="email"
+                    [class.error]="email?.invalid && (email?.dirty || email?.touched)"
+                    [class.is-valid]="email?.valid && (email?.dirty || email?.touched)"
+                    [placeholder]="
+                      email?.invalid && (email?.dirty || email?.touched)
+                        ? ('CONTACT.ERROR.EMAIL_REQUIRED' | translate)
+                        : ('CONTACT.FORM.EMAIL' | translate)
+                    "
+                  />
                   <svg class="valid-icon" width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC" />
+                    <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC"/>
                   </svg>
                 </div>
               </div>
             </div>
 
-            <div class="field" [class.is-error]="msgCtrl.invalid && (msgCtrl.dirty || msgCtrl.touched)">
+            <div class="field" [class.is-error]="message?.invalid && (message?.dirty || message?.touched)">
               <label for="message">
                 <span class="label-text">{{ 'CONTACT.FORM.MESSAGE' | translate }}</span>
-                <span class="error-text">Your Message is required</span>
+
+                @if (message?.touched && message?.errors?.['required']) {
+                  <span class="error-text">{{ 'CONTACT.ERROR.MESSAGE_REQUIRED' | translate }}</span>
+                } @else if (message?.touched && message?.errors?.['minlength']) {
+                  <span class="error-text">{{ 'CONTACT.ERROR.MESSAGE_MINLENGTH' | translate }}</span>
+                } @else if (message?.touched && message?.errors?.['pattern']) {
+                  <span class="error-text">{{ 'CONTACT.ERROR.MESSAGE_PATTERN' | translate }}</span>
+                }
               </label>
               <div class="input-wrapper">
-                <textarea id="message" name="message" rows="4" required #msgCtrl="ngModel" ngModel
-                  [placeholder]="msgCtrl.invalid && (msgCtrl.dirty || msgCtrl.touched) ? 'Your message is required' : 'Your message'"
-                  [class.error]="msgCtrl.invalid && (msgCtrl.dirty || msgCtrl.touched)"
-                  [class.is-valid]="msgCtrl.valid && (msgCtrl.dirty || msgCtrl.touched)"></textarea>
+                <textarea
+                  id="message"
+                  formControlName="message"
+                  rows="4"
+                  [class.error]="message?.invalid && (message?.dirty || message?.touched)"
+                  [class.is-valid]="message?.valid && (message?.dirty || message?.touched)"
+                  [placeholder]="
+                    message?.invalid && (message?.dirty || message?.touched)
+                      ? ('CONTACT.ERROR.MESSAGE_REQUIRED' | translate)
+                      : ('CONTACT.FORM.MESSAGE' | translate)
+                  "
+                ></textarea>
                 <svg class="valid-icon" width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC" />
+                  <path d="M9.88033 21.172L6.03782 16.5979C5.60965 16.0882 4.92898 16.0882 4.50081 16.5979C4.07265 17.1076 4.07265 17.9179 4.50081 18.4276L9.10085 23.9034C9.52902 24.4131 10.2207 24.4131 10.6488 23.9034L22.2862 10.0635C22.7143 9.55378 22.7143 8.74351 22.2862 8.23383C21.858 7.72414 21.1773 7.72414 20.7492 8.23383L9.88033 21.172Z" fill="#F8F5EC"/>
                 </svg>
               </div>
             </div>
 
             <div class="send-part">
               <div class="privacy-container">
-                <div class="privacy-policy" [class.error]="privacyError">
+                <div class="privacy-policy" [class.error]="privacy?.invalid && privacy?.touched">
                   <label class="custom-checkbox">
-                    <input type="checkbox" [(ngModel)]="privacyChecked" name="privacy" (change)="privacyError = false" />
-                    <span class="checkbox-svg" [class.checked]="privacyChecked && !privacyError" [class.error]="privacyError" [class.hovered]="privacyHover && !privacyChecked && !privacyError" (mouseenter)="privacyHover = true" (mouseleave)="privacyHover = false">
+                    <input
+                      type="checkbox"
+                      formControlName="privacy"
+                      style="position: absolute; left: -9999px; width: 1px; height: 1px"
+                      (change)="privacy?.markAsTouched()"
+                    />
+                    <span
+                      class="checkbox-svg"
+                      tabindex="0"
+                      [class.checked]="privacy?.value"
+                      [class.error]="privacy?.invalid && privacy?.touched"
+                      [class.hovered]="privacyHover && !privacy?.value && !(privacy?.invalid && privacy?.touched)"
+                      (mouseenter)="privacyHover = true"
+                      (mouseleave)="privacyHover = false"
+                    >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="box-path" d="M10.1612 20.1082C7.81196 19.2947 5.65013 17.1995 4.29235 14.6186C2.93321 12.0352 2.47658 9.15287 3.27598 6.8437C3.91347 5.00254 6.03912 3.81352 8.98276 3.43102C11.8668 3.05628 15.1341 3.52727 17.4137 4.58252C19.6792 5.63136 21.0649 7.16103 21.7104 8.96871C22.3622 10.7945 22.3012 13.0235 21.4372 15.5191C20.616 17.8911 19.0172 19.43 17.0467 20.1925C15.0568 20.9623 12.625 20.9611 10.1612 20.1082Z" stroke-width="2" />
-                        <path class="check-path" d="M10.825 13.225L8.675 11.075C8.49167 10.8917 8.25833 10.8 7.975 10.8C7.69167 10.8 7.45833 10.8917 7.275 11.075C7.09167 11.2583 7 11.4917 7 11.775C7 12.0583 7.09167 12.2917 7.275 12.475L10.125 15.325C10.325 15.525 10.5583 15.625 10.825 15.625C11.0917 15.625 11.325 15.525 11.525 15.325L17.175 9.675C17.3583 9.49167 17.45 9.25833 17.45 8.975C17.45 8.69167 17.3583 8.45833 17.175 8.275C16.9917 8.09167 16.7583 8 16.475 8C16.1917 8 15.9583 8.09167 15.775 8.275L10.825 13.225Z" fill="#F8F5EC" />
+                        <path class="box-path" d="M10.1612 20.1082C7.81196 19.2947 5.65013 17.1995 4.29235 14.6186C2.93321 12.0352 2.47658 9.15287 3.27598 6.8437C3.91347 5.00254 6.03912 3.81352 8.98276 3.43102C11.8668 3.05628 15.1341 3.52727 17.4137 4.58252C19.6792 5.63136 21.0649 7.16103 21.7104 8.96871C22.3622 10.7945 22.3012 13.0235 21.4372 15.5191C20.616 17.8911 19.0172 19.43 17.0467 20.1925C15.0568 20.9623 12.625 20.9611 10.1612 20.1082Z" stroke-width="2"/>
+                        <path class="check-path" d="M10.825 13.225L8.675 11.075C8.49167 10.8917 8.25833 10.8 7.975 10.8C7.69167 10.8 7.45833 10.8917 7.275 11.075C7.09167 11.2583 7 11.4917 7 11.775C7 12.0583 7.09167 12.2917 7.275 12.475L10.125 15.325C10.325 15.525 10.5583 15.625 10.825 15.625C11.0917 15.625 11.325 15.525 11.525 15.325L17.175 9.675C17.3583 9.49167 17.45 9.25833 17.45 8.975C17.45 8.69167 17.3583 8.45833 17.175 8.275C16.9917 8.09167 16.7583 8 16.475 8C16.1917 8 15.9583 8.09167 15.775 8.275L10.825 13.225Z" fill="#F8F5EC"/>
                       </svg>
                     </span>
                     <span class="privacy-label">
-                      I've read the <a href="/impressum" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+                      {{ 'CONTACT.PRIVACY.LABEL' | translate }}
+                      <a routerLink="/imprint" fragment="top" tabindex="0" target="_blank">{{ 'CONTACT.PRIVACY.LINK' | translate }}</a>
+                      {{ 'CONTACT.PRIVACY.AGREEMENT' | translate }}
                     </span>
-                  </label>
-                </div>
-                @if (privacyError) {
-                  <span class="error-text privacy-error-text">Please accept the privacy policy.</span>
+                  </label>@if (privacy?.touched && privacy?.errors?.['required']) {
+                  <span class="error-text privacy-error-text">{{ 'CONTACT.ERROR.PRIVACY_REQUIRED' | translate }}</span>
                 }
+                </div>
+
+                
+
+                <div class="button-container">
+                  <button type="submit" [disabled]="!privacy?.value">
+                    {{ 'CONTACT.FORM.SEND' | translate }}
+                  </button>
+                </div>
               </div>
-              <button type="submit" [disabled]="!privacyChecked || privacyError">
-                {{ 'CONTACT.FORM.SEND' | translate }}
-              </button>
             </div>
           </form>
         </div>
