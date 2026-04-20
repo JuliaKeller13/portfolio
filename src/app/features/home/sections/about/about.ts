@@ -14,16 +14,7 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
   styleUrl: './about.scss',
 })
 export class About implements OnInit, OnDestroy {
-  // baseIcons = [
-  //   '/angular-projects/portfolio/icons/text-anim/pin.png',
-  //   '/angular-projects/portfolio/icons/text-anim/nb.svg',
-  //   '/angular-projects/portfolio/icons/text-anim/phone.svg'
-  // ];
-  // mobileIcons = [
-  //   '/angular-projects/portfolio/icons/text-anim/pin-mobile.svg',
-  //   '/angular-projects/portfolio/icons/text-anim/nb-mobile.svg',
-  //   '/angular-projects/portfolio/icons/text-anim/phone-mobile.svg'
-  // ];
+
 
   baseIcons = ['/icons/text-anim/pin.png', '/icons/text-anim/nb.svg', '/icons/text-anim/phone.svg'];
   mobileIcons = [
