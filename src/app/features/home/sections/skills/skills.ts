@@ -11,10 +11,6 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
   styleUrl: './skills.scss',
 })
 export class Skills {
-  // skills = [
-  
-  // ];
-
   skills = [
     { NAME: 'HTML', ICON: '/icons/skill-icons/html.svg' },
     { NAME: 'CSS', ICON: '/icons/skill-icons/css.svg' },
