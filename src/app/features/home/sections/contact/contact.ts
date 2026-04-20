@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { customEmailValidator } from '../../../../shared/services/validator.servises';
 import { HttpClient } from '@angular/common/http';
 import { Heading } from '../../../../shared/components/heading/heading';
 import { Section } from '../../../../shared/components/section/section';
@@ -22,7 +23,7 @@ export class Contact {
 
   contactForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, customEmailValidator()]],
     message: [
       '',
       [Validators.required, Validators.minLength(10), Validators.pattern(/^[^<>{}[\/\]]*$/)],
@@ -48,16 +49,25 @@ export class Contact {
   }
 
   onSubmit() {
-    this.contactForm.markAllAsTouched();
+  if (this.contactForm.invalid) return;
 
-    if (this.contactForm.invalid) {
-      console.log('Formular ist ungültig');
-      return;
+  this.isSubmitting = true;
+
+  const endpoint = "https://juliakeller-dev.de/api/send_mail.php";
+
+  this.http.post(endpoint, this.contactForm.value).subscribe({
+    next: (response) => {
+      this.isSubmitting = false;
+      this.successMessage = true;
+      this.contactForm.reset();
+      setTimeout(() => this.successMessage = false, 5000);
+    },
+    error: (err) => {
+      this.isSubmitting = false;
+      console.error('Senden fehlgeschlagen', err);
     }
-
-    console.log('Formular-Daten:', this.contactForm.value);
-    // Hier Logik für Email-Versand einfügen
-  }
+  });
+}
 
   scrollToHome() {
     if (window.innerWidth <= 1000) {
