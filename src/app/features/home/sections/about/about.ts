@@ -16,11 +16,11 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
 export class About implements OnInit, OnDestroy {
 
 
-  baseIcons = ['/icons/text-anim/pin.png', '/icons/text-anim/nb.svg', '/icons/text-anim/phone.svg'];
+  baseIcons = ['text-anim/pin.png', 'text-anim/nb.svg', 'text-anim/phone.svg'];
   mobileIcons = [
-    '/icons/text-anim/pin-mobile.svg',
-    '/icons/text-anim/nb-mobile.svg',
-    '/icons/text-anim/phone-mobile.svg',
+    'text-anim/pin-mobile.svg',
+    'text-anim/nb-mobile.svg',
+    'text-anim/phone-mobile.svg',
   ];
   phrases: any[] = [];
   displayPrefix = '';

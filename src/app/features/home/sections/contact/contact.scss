@@ -2,13 +2,17 @@
 @use '../../../../styles/abstracts/mixins' as mx;
 
 .inner-container {
-  max-width: 1440px;
-  width: 100%;
-  margin-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
+
+  @media (min-width: 800px) { 
+    margin-bottom: 180px; 
+  }
 }
 
 .arrow-btn-wrapper {
@@ -22,230 +26,142 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 100px;
+    margin: 3rem 0 100px;
     transform: none;
   }
 }
 
 .error-text {
+  margin-top: 8px;
   color: $error-color;
   font-size: 13px;
-  margin-top: 8px;
 }
 
 .contact-section {
   width: 100%;
   max-width: 910px;
-  font-family: 'JosefinSans-Regular', sans-serif;
-  @include mx.fluid-text(16, 18);
-  line-height: 120%;
   color: $secondary-color;
+  font-family: 'JosefinSans-Regular', sans-serif;
+  line-height: 1.2;
+  @include mx.fluid-text(16, 18);
 
   .contact-info-form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: space-between;
+    gap: 2rem;
     margin-bottom: 3rem;
+  }
 
-    .contact-info {
-      width: 100%;
+  .contact-info {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 80px;
+
+    @media (max-width: 800px) {
+      flex-direction: column-reverse;
+      margin-top: 32px;
+    }
+
+    p { flex: 1; }
+
+    .subhead {
+      color: $primary-color;
+      text-align: center;
+      @media (min-width: 800px) { display: none; }
+    }
+
+    .contact-details {
       display: flex;
-      gap: 2rem;
-      margin-top: 80px;
+      flex-direction: column;
+      flex: 1;
+      gap: 1rem;
 
-      @media (max-width: 800px) {
-        flex-direction: column-reverse;
-        margin-top: 32px;
-      }
+      @media (max-width: 800px) { flex-direction: column-reverse; }
 
-      p {
-        flex: 1;
-      }
-
-      .subhead {
-        color: $primary-color;
-        text-align: center;
-      }
-
-      .contact-details {
-        flex: 1;
+      .line {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        gap: 19px;
+        cursor: pointer;
 
-        @media (max-width: 800px) {
-          flex-direction: column-reverse;
-        }
+        svg path { transition: stroke 0.5s; }
 
-        .line {
-          display: flex;
-          align-items: center;
-          gap: 19px;
-          cursor: pointer;
-
-          svg path {
-            transition: stroke 0.5s;
-          }
-
-          &:hover {
-            a {
-              color: $primary-color;
-            }
-
-            svg path {
-              stroke: $primary-color;
-            }
-          }
-        }
-
-        a {
-          color: $secondary-color;
-          text-decoration: none;
-          @include mx.fluid-text(16, 18);
-          transition: color 0.5s;
+        &:hover {
+          a { color: $primary-color; }
+          svg path { stroke: $primary-color; }
         }
       }
 
-      .contact-message {
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        transition: color 0.5s;
         @include mx.fluid-text(16, 18);
-        line-height: 120%;
-        max-width: 500px;
+      }
+    }
 
-        @media (min-width: 800px) {
-          text-align: justify;
-          hyphens: auto;
-        }
+    .contact-message {
+      max-width: 500px;
+      
+      @media (min-width: 800px) {
+        text-align: justify;
+        hyphens: auto;
       }
     }
   }
 
-  .contact-form {
-    form {
+  .contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (max-width: 800px) { gap: 24px; }
+
+    .name-part {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 24px;
+      width: 100%;
+      @media (max-width: 800px) { flex-direction: column; }
+      
+      .field { flex: 1; }
+    }
 
-      @media (max-width: 800px) {
-        gap: 24px;
+    .field {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &.is-error label {
+        .label-text { display: none; }
+        .error-text { display: block; margin-top: 0; }
       }
+    }
 
-      .name-part {
-        display: flex;
+    label {
+      display: block;
+      width: 100%;
+      margin-left: 27px;
+      color: $primary-color;
+      font-size: 14px;
+
+      @media (max-width: 800px) { display: none; }
+
+      .label-text { display: block; }
+      .error-text { display: none; }
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+
+      input, textarea {
         width: 100%;
-        gap: 24px;
-        @media (max-width: 800px) {
-          flex-direction: column;
-        }
-        .field {
-          flex: 1;
-        }
-      }
-
-      .field {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        &.is-error {
-          label {
-            .label-text {
-              display: none;
-            }
-            .error-text {
-              display: block;
-              margin-top: 0;
-            }
-          }
-        }
-      }
-
-      label {
-        width: 100%;
-        display: block;
-        margin-left: 27px;
-        color: $primary-color;
-        font-size: 14px;
-
-        @media (max-width: 800px) {
-          display: none;
-        }
-
-        .label-text {
-          display: block;
-        }
-        .error-text {
-          display: none;
-        }
-      }
-
-      .input-wrapper {
-        position: relative;
-        width: 100%;
-
-        input,
-        textarea {
-          background-color: transparent;
-          transition: all 0.3s ease;
-
-          &::placeholder {
-            transition: color 0.3s ease;
-            @media (min-width: 1000px) {
-              color: transparent !important;
-            }
-          }
-
-          &:focus {
-            background-color: rgba($primary-color, 0.12);
-          }
-
-          &.is-valid {
-            &,
-            &:focus {
-              background-color: transparent !important;
-              color: $secondary-color;
-              text-align: start;
-            }
-            & + .valid-icon {
-              @media (min-width: 1000px) {
-                opacity: 1;
-                visibility: visible;
-              }
-            }
-
-            &:-webkit-autofill {
-              -webkit-box-shadow: 0 0 0px 1000px $bg-color inset !important;
-              -webkit-text-fill-color: $secondary-color !important;
-            }
-          }
-        }
-
-        .valid-icon {
-          position: absolute;
-          right: 20px;
-          top: 50%;
-          transform: translateY(-50%);
-          opacity: 0;
-          visibility: hidden;
-          pointer-events: none;
-          transition: opacity 0.3s ease;
-        }
-
-        textarea + .valid-icon {
-          top: 16px;
-          transform: translateY(0);
-        }
-      }
-
-      input,
-      textarea {
-        width: 100%;
+        padding: 1rem 45px 1rem 1.5rem;
         background: transparent;
         border: 1px solid $primary-color;
         border-radius: 30px;
-        padding: 1rem 1.5rem;
-        padding-right: 45px;
         color: $secondary-color;
         font-family: 'JosefinSans-Regular', sans-serif;
         font-size: 16px;
@@ -254,164 +170,150 @@
 
         &::placeholder {
           color: rgba($secondary-color, 0.4);
+          transition: color 0.3s ease;
+          @media (min-width: 800px) { color: transparent !important; }
         }
 
-        @media (min-width: 800px) {
-          &::placeholder {
-            color: transparent !important;
+        &:focus { background-color: rgba($primary-color, 0.12); }
+
+        &.is-valid {
+          background-color: transparent !important;
+          color: $secondary-color;
+          text-align: start;
+
+          & + .valid-icon {
+            @media (min-width: 1000px) { opacity: 1; visibility: visible; }
           }
-        }
 
-        &:focus {
-          background-color: rgba($primary-color, 0.12);
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px $bg-color inset !important;
+            -webkit-text-fill-color: $secondary-color !important;
+          }
         }
 
         &.error {
           border-color: $error-color;
-          @media (max-width: 999px) {
-            &::placeholder {
-              color: $error-color;
-            }
-          }
+          @media (max-width: 999px) { &::placeholder { color: $error-color; } }
         }
       }
 
       textarea {
-        resize: vertical;
         min-height: 150px;
         padding-right: 1.5rem;
+        resize: vertical;
+
+        & + .valid-icon { top: 16px; transform: translateY(0); }
       }
 
-      .send-part {
-        width: 100%;
+      .valid-icon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .send-part {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+
+      @media (max-width: 800px) { flex-direction: column; }
+
+      .privacy-container {
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
+        width: 100%;
 
-        @media (max-width: 800px) {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+        .privacy-error-text { margin: 0 0 0 29px; }
+        .success-message { margin-left: 29px; color: $done-color; }
+      }
 
-        .privacy-container {
+      .privacy-policy {
+        display: flex;
+        flex-direction: column;
+        min-height: 60px;
+        margin: 0;
+
+        .custom-checkbox {
           display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          width: 100%;
-
-          .privacy-error-text {
-            margin-left: 29px;
-            margin-top: 0;
-          }
-        }
-
-        .privacy-policy {
-          display: flex;
-          flex-direction: column;
+          align-items: flex-end;
+          gap: 5px;
           margin: 0;
-          min-height: 60px;
-
-          .custom-checkbox {
-            display: flex;
-            align-items: flex-end;
-            cursor: pointer;
-            gap: 5px;
-            margin: 0;
-
-            @media (max-width: 800px) {
-              align-items: flex-start;
-            }
-
-            input {
-              display: none;
-            }
-
-            .checkbox-svg {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .box-path {
-                stroke: #89bcd9;
-                fill: transparent;
-                transition: all 0.2s ease-in-out;
-              }
-
-              .check-path {
-                opacity: 0;
-                transform: scale(0.5);
-                transform-origin: center;
-                transition: all 0.2s ease-in-out;
-              }
-
-              &.hovered .box-path {
-                fill: rgba($primary-color, 0.12);
-              }
-
-              &.checked {
-                .box-path {
-                  fill: $primary-color;
-                  stroke: $primary-color;
-                }
-                .check-path {
-                  opacity: 1;
-                  transform: scale(1);
-                }
-              }
-
-              &.error .box-path {
-                stroke: $error-color;
-              }
-            }
-
-            .privacy-label {
-              color: $secondary-color;
-              @include mx.fluid-text(14, 16);
-              a {
-                color: $primary-color;
-              }
-            }
-          }
-        }
-
-        .button-container {
-          width: 100%;
-          display: flex;
-          justify-content: end;
-        }
-
-        button[type='submit'] {
-          margin-left: auto;
-          background: transparent;
-          border: 1px solid #89bcd9;
-          color: #89bcd9;
-          padding: 13px 30px;
-          border-radius: 30px;
           cursor: pointer;
-          transition: all 0.3s ease;
-          @include mx.fluid-text(14, 18);
 
-          &:hover:not([disabled]) {
-            background-color: rgba($secondary-color, 0.12);
+          @media (max-width: 800px) { align-items: flex-start; }
+
+          input { display: none; }
+
+          .checkbox-svg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .box-path, .check-path { transition: all 0.2s ease-in-out; }
+
+            .box-path {
+              fill: transparent;
+              stroke: #89bcd9;
+            }
+
+            .check-path {
+              transform: scale(0.5);
+              transform-origin: center;
+              opacity: 0;
+            }
+
+            &.hovered .box-path { fill: rgba($primary-color, 0.12); }
+
+            &.checked {
+              .box-path { fill: $primary-color; stroke: $primary-color; }
+              .check-path { transform: scale(1); opacity: 1; }
+            }
+
+            &.error .box-path { stroke: $error-color; }
           }
 
-          &:disabled {
-            opacity: 0.3;
-            cursor: default;
-            border-color: rgba($secondary-color, 0.5);
-            color: rgba($secondary-color, 0.5);
+          .privacy-label {
+            color: $secondary-color;
+            @include mx.fluid-text(14, 16);
+            a { color: $primary-color; }
           }
+        }
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      button[type='submit'] {
+        margin-left: auto;
+        padding: 13px 30px;
+        background: transparent;
+        border: 1px solid #89bcd9;
+        border-radius: 30px;
+        color: #89bcd9;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        @include mx.fluid-text(14, 18);
+
+        &:hover:not([disabled]) { background-color: rgba($secondary-color, 0.12); }
+
+        &:disabled {
+          border-color: rgba($secondary-color, 0.5);
+          color: rgba($secondary-color, 0.5);
+          opacity: 0.3;
+          cursor: default;
         }
       }
     }
-  }
-}
-
-@media (min-width: 800px) {
-  .inner-container {
-    margin-bottom: 180px;
-  }
-  .subhead {
-    display: none;
   }
 }

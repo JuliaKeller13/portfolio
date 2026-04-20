@@ -12,16 +12,16 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
 })
 export class Skills {
   skills = [
-    { NAME: 'HTML', ICON: '/icons/skill-icons/html.svg' },
-    { NAME: 'CSS', ICON: '/icons/skill-icons/css.svg' },
-    { NAME: 'JavaScript', ICON: '/icons/skill-icons/javascript.svg' },
-    { NAME: 'TypeScript', ICON: '/icons/skill-icons/typescript.svg' },
-    { NAME: 'GitHub', ICON: '/icons/skill-icons/git.svg' },
-    { NAME: 'REST-API', ICON: '/icons/skill-icons/api.svg' },
-    { NAME: 'Supabase', ICON: '/icons/skill-icons/supabase.svg' },
-    { NAME: 'Angular', ICON: '/icons/skill-icons/angular.svg' },
-    { NAME: 'Python', ICON: '/icons/skill-icons/python.svg' },
-    { NAME: 'SQL', ICON: '/icons/skill-icons/sql.svg' }
+    { NAME: 'HTML', ICON: 'skill-icons/html.svg' },
+    { NAME: 'CSS', ICON: 'skill-icons/css.svg' },
+    { NAME: 'JavaScript', ICON: 'skill-icons/javascript.svg' },
+    { NAME: 'TypeScript', ICON: 'skill-icons/typescript.svg' },
+    { NAME: 'GitHub', ICON: 'skill-icons/git.svg' },
+    { NAME: 'REST-API', ICON: 'skill-icons/api.svg' },
+    { NAME: 'Supabase', ICON: 'skill-icons/supabase.svg' },
+    { NAME: 'Angular', ICON: 'skill-icons/angular.svg' },
+    { NAME: 'Python', ICON: 'skill-icons/python.svg' },
+    { NAME: 'SQL', ICON: 'skill-icons/sql.svg' }
   ];
 
   scrollToSection(sectionId: string) {

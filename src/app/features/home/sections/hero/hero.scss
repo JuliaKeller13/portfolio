@@ -62,13 +62,13 @@ h1 {
 
   &::before {
     
-    background-image: url('/icons/shape.png');
+    background-image: url('../../../../../../public/icons/shape.png');
     opacity: 1;
   }
 
   &::after {
     
-    background-image: url('/icons/shape2.png');
+    background-image: url('../../../../../../public/icons/shape2.png');
     opacity: 0;
   }
 
@@ -176,7 +176,7 @@ app-social-icons {
       position: absolute;
       inset: 0;
       
-      background-image: url('/icons/shape.png');
+      background-image: url('../../../../../../public/icons/shape.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom;
@@ -187,7 +187,7 @@ app-social-icons {
       width: 100%;
       max-width: 310px;
       
-      mask-image: url('/icons/shape.png'), linear-gradient(#000, #000);
+      mask-image: url('../../../../../../public/icons/shape.png'), linear-gradient(#000, #000);
       mask-size:
         contain,
         100% 70%;

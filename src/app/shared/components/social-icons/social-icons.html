@@ -1,76 +1,37 @@
-<!-- <div class="social-icons" [class.is-horizontal]="orientation === 'row'" [class.is-mobile]="theme === 'mobile'">
-  <a href="mailto:juliakeller.vk@gmail.com" [attr.aria-label]="'SOCIAL.EMAIL' | translate" tabindex="0">
-    @if (theme === 'header') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/mail-hero.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/mail-hero-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-    } @else if (theme === 'mobile') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/mail-mobile.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-    } @else {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/mail-footer.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/mail-footer-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-    }
-  </a>
-
-  <a href="https://github.com/JuliaKeller13" target="_blank" [attr.aria-label]="'SOCIAL.GITHUB' | translate" tabindex="0">
-    @if (theme === 'header') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/github-hero.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/github-hero-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-    } @else if (theme === 'mobile') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/github-mobile.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-    } @else {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/github-footer.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/github-footer-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-    }
-  </a>
-
-  <a href="https://linkedin.com" target="_blank" [attr.aria-label]="'SOCIAL.LINKEDIN' | translate" tabindex="0">
-    @if (theme === 'header') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/in-hero.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/in-hero-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-    } @else if (theme === 'mobile') {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/in-mobile.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-    } @else {
-      <img class="icon-default" src="/angular-projects/portfolio/icons/sosial_media/in-footer.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-      <img class="icon-hover" src="/angular-projects/portfolio/icons/sosial_media/in-footer-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-    }
-  </a>
-</div> -->
-
-
 <div class="social-icons" [class.is-horizontal]="orientation === 'row'" [class.is-mobile]="theme === 'mobile'">
   <a href="mailto:juliakeller.vk@gmail.com" [attr.aria-label]="'SOCIAL.EMAIL' | translate" tabindex="0">
     @if (theme === 'header') {
-      <img class="icon-default" src="assets/icons/sosial_media/mail-hero.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/mail-hero-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
+      <img class="icon-default" src="/social-media/mail-hero.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
+      <img class="icon-hover" src="/social-media/mail-hero-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
     } @else if (theme === 'mobile') {
-      <img class="icon-default" src="assets/icons/sosial_media/mail-mobile.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
+      <img class="icon-default" src="/social-media/mail-mobile.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
     } @else {
-      <img class="icon-default" src="assets/icons/sosial_media/mail-footer.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/mail-footer-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
+      <img class="icon-default" src="/social-media/mail-footer.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
+      <img class="icon-hover" src="/social-media/mail-footer-hover.svg" [attr.alt]="'SOCIAL.EMAIL' | translate" />
     }
   </a>
 
   <a href="https://github.com/JuliaKeller13" target="_blank" [attr.aria-label]="'SOCIAL.GITHUB' | translate" tabindex="0">
     @if (theme === 'header') {
-      <img class="icon-default" src="assets/icons/sosial_media/github-hero.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/github-hero-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
+      <img class="icon-default" src="/social-media/github-hero.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
+      <img class="icon-hover" src="/social-media/github-hero-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
     } @else if (theme === 'mobile') {
-      <img class="icon-default" src="assets/icons/sosial_media/github-mobile.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
+      <img class="icon-default" src="/social-media/github-mobile.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
     } @else {
-      <img class="icon-default" src="assets/icons/sosial_media/github-footer.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/github-footer-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
+      <img class="icon-default" src="/social-media/github-footer.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
+      <img class="icon-hover" src="/social-media/github-footer-hover.svg" [attr.alt]="'SOCIAL.GITHUB' | translate" />
     }
   </a>
 
   <a href="https://linkedin.com" target="_blank" [attr.aria-label]="'SOCIAL.LINKEDIN' | translate" tabindex="0">
     @if (theme === 'header') {
-      <img class="icon-default" src="assets/icons/sosial_media/in-hero.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/in-hero-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
+      <img class="icon-default" src="/social-media/in-hero.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
+      <img class="icon-hover" src="/social-media/in-hero-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
     } @else if (theme === 'mobile') {
-      <img class="icon-default" src="assets/icons/sosial_media/in-mobile.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
+      <img class="icon-default" src="/social-media/in-mobile.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
     } @else {
-      <img class="icon-default" src="assets/icons/sosial_media/in-footer.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
-      <img class="icon-hover" src="assets/icons/sosial_media/in-footer-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
+      <img class="icon-default" src="/social-media/in-footer.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
+      <img class="icon-hover" src="/social-media/in-footer-hover.svg" [attr.alt]="'SOCIAL.LINKEDIN' | translate" />
     }
   </a>
 </div>

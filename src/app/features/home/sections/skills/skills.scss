@@ -84,13 +84,13 @@
 
     &::before {
       
-      background-image: url('/icons/ellipse-bigtext1.svg');
+      background-image: url('../../../../../../public/icons/ellipse-bigtext1.svg');
       opacity: 1;
     }
 
     &::after {
       
-      background-image: url('/icons/ellipse-bigtext.svg');
+      background-image: url('../../../../../../public/icons/ellipse-bigtext.svg');
       opacity: 0;
     }
 
@@ -214,7 +214,7 @@
       .icons-box {
         flex: 1;
         
-        background: url('/icons/ellipse-learn.svg') no-repeat center/contain;
+        background: url('../../../../../../public/icons/ellipse-learn.svg') no-repeat center/contain;
         min-width: 120px;
         min-height: 120px;
         gap: 10px;

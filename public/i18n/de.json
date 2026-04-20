@@ -98,6 +98,7 @@
       "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
       "MESSAGE_PATTERN": "Die Nachricht enthält ungültige Zeichen."
     },
+    "SUCCESS": "Nachricht erfolgreich gesendet!",
     "PRIVACY": {
       "LABEL": "Ich habe die",
       "LINK": "Datenschutzerklärung",

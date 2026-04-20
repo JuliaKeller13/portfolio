@@ -53,7 +53,7 @@ export class Contact {
 
   this.isSubmitting = true;
 
-  const endpoint = "https://juliakeller-dev.de/api/send_mail.php";
+  const endpoint = "https://julia-keller-dev.de/send_mail.php";
 
   this.http.post(endpoint, this.contactForm.value).subscribe({
     next: (response) => {
