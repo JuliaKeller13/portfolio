@@ -39,7 +39,7 @@
     "DURATION": {
       "2W": "2 Wochen",
       "4W": "4 Wochen",
-      "2M": "2 Monate",
+      "2M": "1 Monat",
       "IN_PROGRESS": "In Bearbeitung"
     },
     "MOBILE_LABEL": "Projekt",
@@ -70,7 +70,7 @@
     "TECHNAMES": {
       "BASIC": "HTML, CSS, JavaScript",
       "API": "HTML, CSS, JavaScript, REST-API",
-      "ANGULAR": "HTML, CSS, JavaScript, Angular"
+      "ANGULAR": "HTML, SCSS, TypeScript, Angular"
     }
   },
   "BUTTON": {

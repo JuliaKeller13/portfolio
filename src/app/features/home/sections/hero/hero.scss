@@ -1,16 +1,19 @@
 @use '../../../../styles/abstracts/variables' as *;
 @use '../../../../styles/abstracts/mixins' as mx;
 
+:host {
+  display: block;
+}
+
 .inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  gap: clamp(2rem, 5vw, 100px);
+  position: relative;
   max-width: 1440px;
   width: 100%;
   margin-inline: clamp(0.5rem, 2vw + 1rem, 6rem);
-  display: flex;
-  align-items: center;
-}
-
-:host {
-  display: block;
 }
 
 .hero-section {
@@ -18,14 +21,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.inner-container {
-  @include mx.flex-center;
-  gap: clamp(2rem, 5vw, 100px);
-  position: relative;
-  max-width: 1440px;
-  width: 100%;
 }
 
 h1 {
@@ -37,14 +32,20 @@ h1 {
   margin-bottom: 1rem;
 }
 
+p {
+  font-family: 'JosefinSans-Regular', sans-serif;
+  @include mx.fluid-text(22, 40);
+  text-align: center;
+  color: $secondary-color;
+}
+
 .photo-container {
   aspect-ratio: 1 / 1;
-  width: clamp(200px, 40vw, 500px);
+  width: clamp(250px, min(45vw, 65vh), 550px);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  flex: 1;
 
   &::before,
   &::after {
@@ -61,17 +62,15 @@ h1 {
   }
 
   &::before {
-    
     background-image: url('../../../../../../public/icons/shape.png');
     opacity: 1;
   }
 
   &::after {
-    
     background-image: url('../../../../../../public/icons/shape2.png');
     opacity: 0;
   }
-
+  
   &:hover {
     &::before {
       opacity: 0;
@@ -90,17 +89,10 @@ h1 {
   }
 }
 
-p {
-  font-family: 'JosefinSans-Regular', sans-serif;
-  @include mx.fluid-text(22, 40);
-  text-align: center;
-  color: $secondary-color;
-}
-
 .logo-container {
   @include mx.flex-center;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: clamp(10px, 4vh, 40px);
 
   .logo-base {
     display: block;
@@ -123,11 +115,12 @@ p {
 .hero-content {
   @include mx.flex-center;
   flex-direction: column;
-
   flex: 1;
+  width: 100%;
+  margin-bottom: clamp(20px, 6vh, 70px);
 
   > .arrow-button {
-    padding-top: 140px;
+    padding-top: clamp(20px, 12vh, 140px);
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -140,6 +133,15 @@ app-social-icons {
   right: 0;
 }
 
+@media (min-height: 800px) {
+  .photo-container {
+    width: clamp(400px, min(45vw, 65vh), 650px);
+  }
+
+  .hero-content {
+    margin-bottom: 120px; 
+  }
+}
 
 @media (max-width: 1000px) {
   :host {
@@ -152,6 +154,7 @@ app-social-icons {
   }
 
   .inner-container {
+    align-items: center;
     flex-direction: column;
     gap: 40px;
   }
@@ -175,7 +178,6 @@ app-social-icons {
     .shape {
       position: absolute;
       inset: 0;
-      
       background-image: url('../../../../../../public/icons/shape.png');
       background-size: contain;
       background-repeat: no-repeat;
@@ -188,19 +190,14 @@ app-social-icons {
       max-width: 310px;
       
       mask-image: url('../../../../../../public/icons/shape.png'), linear-gradient(#000, #000);
-      mask-size:
-        contain,
-        100% 70%;
+      mask-size: contain, 100% 70%;
       mask-repeat: no-repeat;
       mask-position: bottom, top;
       mask-composite: add;
     }
   }
 
-  .logo-icon {
-    display: none;
-  }
-
+  .logo-icon,
   app-social-icons {
     display: none;
   }

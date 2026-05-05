@@ -24,7 +24,12 @@ export class ScrollService {
     if (!element) return;
 
     const navContainer = document.querySelector('.nav-container') as HTMLElement;
-    const navbarHeight = navContainer?.offsetHeight ?? 0;
+    let navbarHeight = navContainer?.offsetHeight ?? 0;
+
+    if (window.innerWidth <= 1000) {
+      navbarHeight = 20;
+    }
+
     let targetY = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
     if (targetY < 80) {
