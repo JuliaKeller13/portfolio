@@ -34,12 +34,14 @@
       "EL_POLLO_LOCO": "El Pollo Loco",
       "POKEDEX": "Pokedex",
       "JOIN": "Join",
+      "DABUBBLE": "DABubble",
       "ONGOING": "Laufendes Projekt"
     },
     "DURATION": {
-      "2W": "2 Wochen",
-      "4W": "4 Wochen",
-      "2M": "1 Monat",
+      "1W": "1 Wochene",
+      "3W": "3 Wochenen",
+      "4W": "4 Wochenen",
+      "5W": "5 Wochenen",
       "IN_PROGRESS": "In Bearbeitung"
     },
     "MOBILE_LABEL": "Projekt",
@@ -48,19 +50,22 @@
       "EL_POLLO_LOCO": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Pepe, El Pollo Loco zu besiegen! Wirf Salsa-Flaschen oder springe auf kleine Hühner. Sammle alle Münzen!",
       "POKEDEX": "Eine dynamische Webanwendung, die es Benutzern ermöglicht, nach Pokémon zu suchen und diese zu erkunden. Detaillierte Daten wie Statistiken, Typen und Bilder werden in Echtzeit direkt von der PokéAPI abgerufen und angezeigt.",
       "JOIN": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Nutzer und Kategorien zu.",
+      "DABUBBLE": "Ein moderner Business-Messenger (inspiriert von Slack) für eine effiziente Teamkommunikation. Erstelle Channels, starte private Chats und tausche dich in Echtzeit mit deinen Kollegen aus.",
       "ONGOING": "Ich baue aktuell meine Expertise in Angular aus und lerne, anspruchsvolle Architekturen für größere Anwendungen umzusetzen. Mein Ziel ist es, Features zu entwickeln, die sowohl technisch brillant als auch nutzerfreundlich sind."
     },
     "WORK_PROCESS": "So habe ich meinen Arbeitsprozess organisiert",
     "WORK_PROCESS_TEXT": {
       "EL_POLLO_LOCO": "Fokus auf modulare Klassenstrukturen und Vererbung. Sauberer Code durch sprechende Namen, JSDoc und strikte Trennung von Logik und UI.",
       "POKEDEX": "Gelernt, große Mengen an JSON-Daten mit asynchronem JavaScript (Promises, async/await) effizient abzurufen und zu verarbeiten. UI-Design-Fähigkeiten durch Pagination und responsive Grids verbessert.",
-      "JOIN": "Ich setze auf modulare Komponenten und eine klare Trennung von Logik und Design. Durch sprechende Benennung und eine saubere Dokumentation bleibt der Code auch für Dritte leicht wartbar und skalierbar."
+      "JOIN": "Ich setze auf modulare Komponenten und eine klare Trennung von Logik und Design. Durch sprechende Benennung und eine saubere Dokumentation bleibt der Code auch für Dritte leicht wartbar und skalierbar.",
+      "DABUBBLE": "Bei der Entwicklung des Login-Bereichs und der einigen Chat-Funktionen habe ich besonderen Wert auf höchste Sicherheitsstandards und eine intuitive User Experience gelegt. Durch eine klare, modulare Strukturierung der Authentifizierungs-Logik und die saubere Trennung von Design und Funktionalität bleibt der Code auch bei steigender Nutzerzahl sicher, performant und leicht erweiterbar."
     },
     "LEARNED": "Was ich gelernt habe",
     "LEARN_TEXT": {
       "EL_POLLO_LOCO": "Meine Vanilla-JavaScript-Kenntnisse im Bereich OOP vertieft. Komplexe Kollisionslogik, Spielphysik und Animationen ohne Frameworks gemeistert.",
       "POKEDEX": "Mein Verständnis für asynchrone API-Aufrufe vertieft und gelernt, wie man eine reibungslose Suchfunktion über komplexe Datensätze implementiert. Außerdem habe ich meine Fähigkeiten in der DOM-Manipulation für interaktive Detailansichten und Modals erweitert.",
-      "JOIN": "Als Teil eines kleinen Entwicklerteams habe ich die Core-Features programmiert. Die enge Zusammenarbeit hat mir gezeigt, wie man durch Teamwork komplexe technische Hürden effizient gemeinsam meistert."
+      "JOIN": "Als Teil eines kleinen Entwicklerteams habe ich die Core-Features programmiert. Die enge Zusammenarbeit hat mir gezeigt, wie man durch Teamwork komplexe technische Hürden effizient gemeinsam meistert.",
+      "DABUBBLE": "Im Team habe ich die Verantwortung für die sensiblen Kernbereiche – den kompletten Authentifizierungs-Flow sowie interaktive Features wie die Emoji-Integration im Chat – übernommen. Dabei habe ich gelernt, wie wichtig präzises State-Management bei Benutzerdaten ist und wie man durch enge Absprachen im Entwicklerteam komplexe Echtzeit-Features erfolgreich und nahtlos zusammenfügt."
     },
     "TECHNOLOGIES": "Technologien:",
     "DURATION_LABEL": "Dauer: {{duration}}",

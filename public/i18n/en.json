@@ -43,12 +43,14 @@
       "EL_POLLO_LOCO": "El Pollo Loco",
       "POKEDEX": "Pokedex",
       "JOIN": "Join",
+      "DABUBBLE": "DABubble",
       "ONGOING": "Ongoing Project"
     },
     "DURATION": {
-      "2W": "2 weeks",
+      "1W": "1 week",
+      "3W": "3 weeks",
       "4W": "4 weeks",
-      "2M": "2 months",
+      "5W": "5 weeks",
       "IN_PROGRESS": "In progress"
     },
     "MOBILE_LABEL": "Project",
