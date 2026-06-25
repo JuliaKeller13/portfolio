@@ -65,7 +65,7 @@
       "EL_POLLO_LOCO": "Meine Vanilla-JavaScript-Kenntnisse im Bereich OOP vertieft. Komplexe Kollisionslogik, Spielphysik und Animationen ohne Frameworks gemeistert.",
       "POKEDEX": "Mein Verständnis für asynchrone API-Aufrufe vertieft und gelernt, wie man eine reibungslose Suchfunktion über komplexe Datensätze implementiert. Außerdem habe ich meine Fähigkeiten in der DOM-Manipulation für interaktive Detailansichten und Modals erweitert.",
       "JOIN": "Als Teil eines kleinen Entwicklerteams habe ich die Core-Features programmiert. Die enge Zusammenarbeit hat mir gezeigt, wie man durch Teamwork komplexe technische Hürden effizient gemeinsam meistert.",
-      "DABUBBLE": "Im Team habe ich die Verantwortung für die sensiblen Kernbereiche – den kompletten Authentifizierungs-Flow sowie interaktive Features wie die Emoji-Integration im Chat – übernommen. Dabei habe ich gelernt, wie wichtig präzises State-Management bei Benutzerdaten ist und wie man durch enge Absprachen im Entwicklerteam komplexe Echtzeit-Features erfolgreich und nahtlos zusammenfügt."
+      "DABUBBLE": "Im Team habe ich die Verantwortung für die sensiblen Kernbereiche, den kompletten Authentifizierungs-Flow sowie interaktive Features wie die Emoji-Integration im Chat übernommen. Dabei habe ich gelernt, wie wichtig präzises State-Management bei Benutzerdaten ist und wie man durch enge Absprachen im Entwicklerteam komplexe Echtzeit-Features erfolgreich und nahtlos zusammenfügt."
     },
     "TECHNOLOGIES": "Technologien:",
     "DURATION_LABEL": "Dauer: {{duration}}",
