@@ -38,10 +38,10 @@
       "ONGOING": "Laufendes Projekt"
     },
     "DURATION": {
-      "1W": "1 Wochene",
-      "3W": "3 Wochenen",
-      "4W": "4 Wochenen",
-      "5W": "5 Wochenen",
+      "1W": "1 Woche",
+      "3W": "3 Wochen",
+      "4W": "4 Wochen",
+      "5W": "5 Wochen",
       "IN_PROGRESS": "In Bearbeitung"
     },
     "MOBILE_LABEL": "Projekt",
