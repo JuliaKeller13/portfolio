@@ -16,9 +16,18 @@
     "HEADING": "Warum ich",
     "CONTENT": "Mein Weg zur Webentwicklung begann während meiner Ausbildung zur Informatiklehrerin. Seither begeistere ich mich für die Umsetzung gut strukturierter und funktionaler Anwendungen. Mit meiner analytischen Arbeitsweise entwickle ich benutzerfreundliche Lösungen, die sowohl technisch als auch visuell überzeugen.",
     "PHRASES": [
-      { "PREFIX": "Ich", "TEXT": "wohne in Iserlohn" },
-      { "PREFIX": "Ich", "TEXT": "entwickle moderne Apps" },
-      { "PREFIX": "Ich", "TEXT": "kreiere digitale Erlebnisse" }
+      {
+        "PREFIX": "Ich",
+        "TEXT": "wohne in Iserlohn"
+      },
+      {
+        "PREFIX": "Ich",
+        "TEXT": "entwickle moderne Apps"
+      },
+      {
+        "PREFIX": "Ich",
+        "TEXT": "kreiere digitale Erlebnisse"
+      }
     ]
   },
   "SKILLS": {
@@ -97,7 +106,7 @@
       "NAME_REQUIRED": "Name ist erforderlich",
       "EMAIL_REQUIRED": "E-Mail ist erforderlich",
       "MESSAGE_REQUIRED": "Nachricht ist erforderlich",
-      "PRIVACY_REQUIRED": "Bitte akzeptiere die Datenschutzerklärung.",
+      "PRIVACY_REQUIRED": "Bitte lies die Datenschutzerklärung.",
       "NAME_MINLENGTH": "Der Name muss mindestens 3 Zeichen lang sein.",
       "EMAIL_INVALID": "Bitte gib eine gültige E-Mail ein (z.B. test@test.de)",
       "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
@@ -107,36 +116,56 @@
     "PRIVACY": {
       "LABEL": "Ich habe die",
       "LINK": "Datenschutzerklärung",
-      "AGREEMENT": "gelesen und stimme der Verarbeitung meiner Daten zu."
+      "AGREEMENT": "gelesen."
     }
   },
   "FOOTER": {
-    "LEGAL_NOTICE": "Impressum",
+    "LEGAL_NOTICE": "Impressum & Datenschutz",
     "COPYRIGHT": "© Julia Keller 2026",
     "LOGO_ALT": "Logo"
   },
   "IMPRINT": {
-    "HEADING": "Rechtlicher Hinweis",
+    "HEADING": "Impressum & Datenschutz",
     "BACK": "Zurück zur Startseite",
     "IMPRINT": "Impressum",
     "NAME": "Julia Keller",
     "ADDRESS1": "Bremsheide 185,",
     "ADDRESS2": "58638 Iserlohn",
-    "EXPLORING": "Board erkunden",
+    "EXPLORING": "Kontakt",
     "EMAIL": "E-Mail: juliakeller.vk@gmail.com",
-    "ACCEPTANCE_HEADING": "Akzeptanz der Bedingungen",
-    "ACCEPTANCE": "Durch den Zugriff auf und die Nutzung von <span>Portfolio</span> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitfäden oder Änderungen, die Ihnen von Zeit zu Zeit präsentiert werden, an und stimmen diesen zu. Wir, die aufgeführten Studierenden, können die Bedingungen von Zeit zu Zeit ohne Vorankündigung aktualisieren oder ändern.",
-    "SCOPE_HEADING": "Umfang und Eigentum am Produkt",
-    "SCOPE1": "<span>Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der <span>Developer Akademie GmbH</span> entwickelt. Es dient ausschließlich Bildungszwecken und ist nicht für umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts garantieren.",
-    "SCOPE2": "Das Design von <span>Portfolio</span> ist Eigentum der <span>Developer Akademie GmbH</span>. Eine unbefugte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Replikation des Designs ist strengstens untersagt.",
-    "PROPRIETARY_HEADING": "Eigentumsrechte",
-    "PROPRIETARY": "Abgesehen vom Design, das der <span>Developer Akademie GmbH</span> gehört, behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an <span>Portfolio</span>, einschließlich aller zugehörigen urheberrechtlich geschützten Materialien, Marken und sonstigen Schutzrechte.",
-    "USE_HEADING": "Nutzung des Produkts",
-    "USE": "<span>Portfolio</span> darf nur für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jegliche Nutzung von <span>Portfolio</span> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern von <span>Portfolio</span> verantwortlich.",
-    "WARRANTY_HEADING": "Haftungsausschluss und Gewährleistung",
-    "WARRANTY": "<span>Portfolio</span> wird ohne jegliche Gewährleistung bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten. In keinem Fall haften wir, die aufgeführten Studierenden, oder die <span>Developer Akademie</span> für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Goodwill, Nutzung, Daten oder anderen immateriellen Verlusten, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus der Nutzung oder Leistung von <span>Portfolio</span> ergeben.",
-    "INDEMNITY_HEADING": "Freistellung",
-    "INDEMNITY": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die <span>Developer Akademie</span> sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltsgebühren), die sich aus Ihrer Nutzung von <span>Portfolio</span> und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben, schadlos zu halten, zu verteidigen und freizustellen."
+    "ACCEPTANCE_HEADING": "Über dieses Portfolio",
+    "ACCEPTANCE": "Dies ist mein persönliches Entwicklerportfolio. Es stellt ausgewählte Frontend-Projekte und Backend-APIs vor und ermöglicht die Kontaktaufnahme zu beruflichen Zwecken.",
+    "SCOPE_HEADING": "Projektkontext und Gestaltung",
+    "SCOPE1": "Das Portfolio wurde während meiner Weiterbildung bei der Developer Akademie als persönliche Angular-Anwendung umgesetzt.",
+    "SCOPE2": "Das zugrunde liegende Design stammt aus dem Ausbildungsumfeld. Gemeinschaftlich entwickelte Projekte werden in den jeweiligen GitHub-Repositories als Teamarbeit gekennzeichnet.",
+    "PROPRIETARY_HEADING": "Urheberrecht und Projektmaterialien",
+    "PROPRIETARY": "Für Texte, Quellcode, Gestaltungselemente und eingebundene Projektmaterialien gelten die Rechte der jeweiligen Urheber und die angegebenen Lizenzen.",
+    "USE_HEADING": "Externe Links",
+    "USE": "Diese Website verlinkt unter anderem auf GitHub, LinkedIn und Live-Demos. Bei einem Besuch externer Webseiten gelten die Datenschutzbestimmungen der jeweiligen Anbieter.",
+    "WARRANTY_HEADING": "Hinweis zu Demo-Anwendungen",
+    "WARRANTY": "Die vorgestellten Projekte dienen der Darstellung meiner Entwicklungsarbeit. Demo-Funktionen können eingeschränkt sein oder sich im Laufe der Weiterentwicklung ändern.",
+    "INDEMNITY_HEADING": "Teamprojekte",
+    "INDEMNITY": "Join und DABubble wurden gemeinsam mit anderen Entwicklern umgesetzt. Die zugehörigen GitHub-Repositories nennen die Mitwirkenden und beschreiben meine persönlichen Beiträge.",
+    "PRIVACY": {
+      "HEADING": "Datenschutzerklärung",
+      "INTRO": "Die folgenden Hinweise informieren über den Umgang mit personenbezogenen Daten beim Besuch dieser Website und bei der Kontaktaufnahme.",
+      "CONTROLLER_HEADING": "Verantwortliche Stelle",
+      "CONTROLLER": "Verantwortlich für diese Website ist die im Impressum genannte Betreiberin. Die Anschrift und Kontaktadresse findest du oben auf dieser Seite.",
+      "HOSTING_HEADING": "Hosting und Server-Logfiles",
+      "HOSTING": "Diese Website wird bei netcup GmbH, Emmy-Noether-Straße 10, 76131 Karlsruhe, gehostet. Beim Aufruf können Verbindungsdaten, insbesondere IP-Adresse, Zeitpunkt, angeforderte Inhalte und Browserinformationen, in Server-Logfiles verarbeitet werden. Dies dient dem sicheren Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). Die Aufbewahrungsdauer richtet sich nach der verwendeten Hosting- und Log-Konfiguration.",
+      "FORM_HEADING": "Kontaktformular",
+      "FORM": "Bei Nutzung des Kontaktformulars verarbeite ich deinen Namen, deine E-Mail-Adresse und deine Nachricht, um deine Anfrage zu beantworten. Rechtsgrundlage ist bei vorvertraglichen Anfragen Art. 6 Abs. 1 lit. b DSGVO und bei sonstigen Anfragen mein berechtigtes Interesse an der Kommunikation nach Art. 6 Abs. 1 lit. f DSGVO. Die Angaben sind freiwillig, aber zur Bearbeitung über das Formular erforderlich.",
+      "MAIL_HEADING": "E-Mail-Versand und Empfänger",
+      "MAIL": "Das Formular sendet deine Eingaben an ein PHP-Skript unter julia-keller-dev.de; die Nachricht wird anschließend an mein E-Mail-Postfach übermittelt. Bei der Zustellung können der Hostinganbieter und der E-Mail-Dienstleister Daten verarbeiten. Da ich Gmail nutze, kann eine Verarbeitung durch Google und eine Übermittlung außerhalb des Europäischen Wirtschaftsraums nicht ausgeschlossen werden.",
+      "RETENTION_HEADING": "Speicherdauer",
+      "RETENTION": "Kontaktanfragen und E-Mails bewahre ich nur so lange auf, wie sie für die Bearbeitung und weitere Korrespondenz erforderlich sind; gesetzliche Aufbewahrungspflichten bleiben unberührt. Für Server-Logfiles gelten die konfigurierten Aufbewahrungsfristen des Hostings.",
+      "LANGUAGE_HEADING": "Spracheinstellung",
+      "LANGUAGE": "Wenn du die Sprache wechselst, speichert die Website die gewählte Einstellung lokal im Browser (localStorage), damit sie bei späteren Besuchen erhalten bleibt.",
+      "LINKS_HEADING": "Externe Angebote",
+      "LINKS": "GitHub, LinkedIn und veröffentlichte Projekte werden über externe Links aufgerufen. Beim Öffnen gelten die Datenverarbeitungsregeln des jeweiligen Anbieters.",
+      "RIGHTS_HEADING": "Deine Datenschutzrechte",
+      "RIGHTS": "Nach Maßgabe der DSGVO hast du insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Soweit eine Verarbeitung auf Einwilligung beruht, ist diese mit Wirkung für die Zukunft widerrufbar. Du kannst dich außerdem bei einer Datenschutzaufsichtsbehörde beschweren. Für Fragen nutze bitte die Kontaktadresse im Impressum."
+    }
   },
   "NOT_FOUND": {
     "STATUS": "404",
