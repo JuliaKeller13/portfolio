@@ -11,17 +11,22 @@ import { ButtonComponent } from '../../../../shared/components/button/button';
   styleUrl: './skills.scss',
 })
 export class Skills {
-  skills = [
+  skills_frontend = [
     { NAME: 'HTML', ICON: 'skill-icons/html.svg' },
     { NAME: 'CSS', ICON: 'skill-icons/css.svg' },
     { NAME: 'JavaScript', ICON: 'skill-icons/javascript.svg' },
     { NAME: 'TypeScript', ICON: 'skill-icons/typescript.svg' },
-    { NAME: 'GitHub', ICON: 'skill-icons/git.svg' },
-    { NAME: 'REST-API', ICON: 'skill-icons/api.svg' },
-    { NAME: 'Supabase', ICON: 'skill-icons/supabase.svg' },
     { NAME: 'Angular', ICON: 'skill-icons/angular.svg' },
+    { NAME: 'Git', ICON: 'skill-icons/git.svg' },
+    { NAME: 'Docker', ICON: 'skill-icons/docker.svg' },
+    { NAME: 'Scrum', ICON: 'skill-icons/scrum.svg' },
     { NAME: 'Python', ICON: 'skill-icons/python.svg' },
-    { NAME: 'SQL', ICON: 'skill-icons/sql.svg' }
+    { NAME: 'REST-API', ICON: 'skill-icons/api.svg' },
+    { NAME: 'Django', ICON: 'skill-icons/django.svg' },
+    { NAME: 'DRF', ICON: 'skill-icons/DRF.svg' },
+    { NAME: 'SQL', ICON: 'skill-icons/sql.svg' },
+    { NAME: 'Redis', ICON: 'skill-icons/redis.svg' },
+    { NAME: 'Supabase', ICON: 'skill-icons/supabase.svg' },
   ];
 
   scrollToSection(sectionId: string) {

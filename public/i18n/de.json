@@ -32,10 +32,10 @@
   },
   "SKILLS": {
     "HEADING": "Meine Fähigkeiten",
-    "CURRENTLY_LEARNING": "Was ich aktuell lerne",
-    "FOCUS_TEXT": "Ob tiefe Backend-Logik oder interaktives Frontend – ich bilde mich ständig weiter, um innovative Lösungen mit den passenden Technologien umzusetzen.",
-    "ANGULAR": "Angular",
-    "TYPESCRIPT": "TypeScript"
+    "CURRENTLY_LEARNING": "Mein aktueller Fokus",
+    "FOCUS_TEXT": "Ich vertiefe meine Kenntnisse in der eigenständigen Planung und Architektur von Full-Stack-Anwendungen und beschäftige mich mit der sinnvollen Integration moderner KI-Technologien.",
+    "ARCHTECTURE": "Architektur",
+    "AI": "KI"
   },
   "PROJECTS": {
     "HEADING": "Meine Projekte",

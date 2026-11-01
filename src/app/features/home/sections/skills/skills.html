@@ -2,14 +2,14 @@
   <div class="inner-container">
     <app-heading>{{ 'SKILLS.HEADING' | translate }}</app-heading>
     <div class="skills-content">
-      <div class="skills-container">
-        @for (skill of skills; track skill.NAME) {
+        <div class="skills-container">
+        @for (skill of skills_frontend; track skill.NAME) {
           <div class="icon-s">
             <img class="rend-icons" [src]="skill.ICON" [alt]="skill.NAME + ' icon'" />
             <p>{{ skill.NAME }}</p>
           </div>
         }
-      </div>
+    </div>      
       
       <div class="text">
         <p>{{ 'SKILLS.CURRENTLY_LEARNING' | translate }}</p>
@@ -19,12 +19,12 @@
           </p>
           <div class="icons-box">
             <div class="icon-s">
-              <img src="/skill-icons/angular.svg" alt="Angular icon" />
-              <p>{{ 'SKILLS.ANGULAR' | translate }}</p>
+              <img src="/skill-icons/architektur.png" alt="Software Architektur icon" />
+              <p>{{ 'SKILLS.ARCHTECTURE' | translate }}</p>
             </div>
             <div class="icon-s">
-              <img src="/skill-icons/typescript.svg" alt="TypeScript icon" />
-              <p>{{ 'SKILLS.TYPESCRIPT' | translate }}</p>
+              <img src="/skill-icons/ai.png" alt="AI icon" />
+              <p>{{ 'SKILLS.AI' | translate }}</p>
             </div>
           </div>
         </div>
