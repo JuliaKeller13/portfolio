@@ -17,6 +17,7 @@ export class Skills {
     { NAME: 'JavaScript', ICON: 'skill-icons/javascript.svg' },
     { NAME: 'TypeScript', ICON: 'skill-icons/typescript.svg' },
     { NAME: 'Angular', ICON: 'skill-icons/angular.svg' },
+    { NAME: 'Supabase', ICON: 'skill-icons/supabase.svg' },
     { NAME: 'Git', ICON: 'skill-icons/git.svg' },
     { NAME: 'Docker', ICON: 'skill-icons/docker.svg' },
     { NAME: 'Scrum', ICON: 'skill-icons/scrum.svg' },
@@ -26,7 +27,7 @@ export class Skills {
     { NAME: 'DRF', ICON: 'skill-icons/DRF.svg' },
     { NAME: 'SQL', ICON: 'skill-icons/sql.svg' },
     { NAME: 'Redis', ICON: 'skill-icons/redis.svg' },
-    { NAME: 'Supabase', ICON: 'skill-icons/supabase.svg' },
+    { NAME: 'PostgreSQL', ICON: 'skill-icons/postgesql.svg' },
   ];
 
   scrollToSection(sectionId: string) {
