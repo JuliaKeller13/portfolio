@@ -39,11 +39,16 @@
   },
   "PROJECTS": {
     "HEADING": "Meine Projekte",
+    "ALL_PROJECTS": "Alle Projekte ansehen",
     "TAB": {
       "EL_POLLO_LOCO": "El Pollo Loco",
       "POKEDEX": "Pokedex",
       "JOIN": "Join",
       "DABUBBLE": "DABubble",
+      "VIDEOFLIX": "Videoflix",
+      "QUIZLY": "Quizly",
+      "CODERR": "Coderr",
+      "KANMIND": "KanMind",
       "ONGOING": "Laufendes Projekt"
     },
     "DURATION": {
@@ -60,6 +65,10 @@
       "POKEDEX": "Eine dynamische Webanwendung, die es Benutzern ermöglicht, nach Pokémon zu suchen und diese zu erkunden. Detaillierte Daten wie Statistiken, Typen und Bilder werden in Echtzeit direkt von der PokéAPI abgerufen und angezeigt.",
       "JOIN": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Nutzer und Kategorien zu.",
       "DABUBBLE": "Ein moderner Business-Messenger (inspiriert von Slack) für eine effiziente Teamkommunikation. Erstelle Channels, starte private Chats und tausche dich in Echtzeit mit deinen Kollegen aus.",
+      "VIDEOFLIX": "Ein Backend für eine Videostreaming-Plattform mit Benutzerverwaltung, sicherer Authentifizierung und Videowiedergabe. Hochgeladene Videos werden automatisch in verschiedene Auflösungen konvertiert und als HLS-Streams bereitgestellt.",
+      "QUIZLY": "Eine KI-gestützte Anwendung, die aus YouTube-Videos automatisch Quizfragen generiert. Das Backend verarbeitet die Audiospur, transkribiert die Inhalte mit Whisper und erstellt mithilfe von Gemini interaktive Quizze.",
+      "CODERR": "Ein Backend für einen digitalen Dienstleistungsmarktplatz. Geschäftskunden können Angebote erstellen und Bestellungen verwalten, während Kunden Dienstleistungen buchen und Bewertungen abgeben können.",
+      "KANMIND": "Ein Backend für eine kollaborative Aufgabenverwaltung. Nutzer können Boards erstellen, Aufgaben organisieren, Teammitglieder zuweisen und über Kommentare zusammenarbeiten.",
       "ONGOING": "Ich baue aktuell meine Expertise in Angular aus und lerne, anspruchsvolle Architekturen für größere Anwendungen umzusetzen. Mein Ziel ist es, Features zu entwickeln, die sowohl technisch brillant als auch nutzerfreundlich sind."
     },
     "WORK_PROCESS": "So habe ich meinen Arbeitsprozess organisiert",
@@ -67,14 +76,22 @@
       "EL_POLLO_LOCO": "Fokus auf modulare Klassenstrukturen und Vererbung. Sauberer Code durch sprechende Namen, JSDoc und strikte Trennung von Logik und UI.",
       "POKEDEX": "Gelernt, große Mengen an JSON-Daten mit asynchronem JavaScript (Promises, async/await) effizient abzurufen und zu verarbeiten. UI-Design-Fähigkeiten durch Pagination und responsive Grids verbessert.",
       "JOIN": "Ich setze auf modulare Komponenten und eine klare Trennung von Logik und Design. Durch sprechende Benennung und eine saubere Dokumentation bleibt der Code auch für Dritte leicht wartbar und skalierbar.",
-      "DABUBBLE": "Bei der Entwicklung des Login-Bereichs und der einigen Chat-Funktionen habe ich besonderen Wert auf höchste Sicherheitsstandards und eine intuitive User Experience gelegt. Durch eine klare, modulare Strukturierung der Authentifizierungs-Logik und die saubere Trennung von Design und Funktionalität bleibt der Code auch bei steigender Nutzerzahl sicher, performant und leicht erweiterbar."
+      "DABUBBLE": "Bei der Entwicklung des Login-Bereichs und der einigen Chat-Funktionen habe ich besonderen Wert auf höchste Sicherheitsstandards und eine intuitive User Experience gelegt. Durch eine klare, modulare Strukturierung der Authentifizierungs-Logik und die saubere Trennung von Design und Funktionalität bleibt der Code auch bei steigender Nutzerzahl sicher, performant und leicht erweiterbar.",
+      "VIDEOFLIX": "Ich habe das Backend mit Django REST Framework strukturiert und die Authentifizierung über JWT und HttpOnly-Cookies umgesetzt. Für die Videoverarbeitung habe ich FFmpeg mit Redis und Django RQ kombiniert, um Uploads asynchron in verschiedene HLS-Auflösungen zu konvertieren.",
+      "QUIZLY": "Ich habe eine Verarbeitungskette entwickelt, die YouTube-Audio herunterlädt, mit FFmpeg aufbereitet und durch Whisper transkribiert. Anschließend generiert Gemini strukturierte Quizfragen, die vor dem Speichern validiert werden. Die REST API und die Authentifizierung habe ich mit Django umgesetzt.",
+      "CODERR": "Ich habe die REST API in eigenständige Django-Apps für Benutzer, Angebote, Bestellungen und Bewertungen aufgeteilt. Dabei habe ich besonderen Wert auf klare Datenmodelle, Serializer, Berechtigungen und automatisierte Tests gelegt.",
+      "KANMIND": "Ich habe die Backend-Architektur mit getrennten Verantwortlichkeiten für Benutzer, Boards, Aufgaben und Kommentare umgesetzt. Ein Schwerpunkt lag auf objektbezogenen Berechtigungen sowie der Validierung von Aufgaben- und Mitgliederzuweisungen."
     },
     "LEARNED": "Was ich gelernt habe",
     "LEARN_TEXT": {
       "EL_POLLO_LOCO": "Meine Vanilla-JavaScript-Kenntnisse im Bereich OOP vertieft. Komplexe Kollisionslogik, Spielphysik und Animationen ohne Frameworks gemeistert.",
       "POKEDEX": "Mein Verständnis für asynchrone API-Aufrufe vertieft und gelernt, wie man eine reibungslose Suchfunktion über komplexe Datensätze implementiert. Außerdem habe ich meine Fähigkeiten in der DOM-Manipulation für interaktive Detailansichten und Modals erweitert.",
       "JOIN": "Als Teil eines kleinen Entwicklerteams habe ich die Core-Features programmiert. Die enge Zusammenarbeit hat mir gezeigt, wie man durch Teamwork komplexe technische Hürden effizient gemeinsam meistert.",
-      "DABUBBLE": "Im Team habe ich die Verantwortung für die sensiblen Kernbereiche, den kompletten Authentifizierungs-Flow sowie interaktive Features wie die Emoji-Integration im Chat übernommen. Dabei habe ich gelernt, wie wichtig präzises State-Management bei Benutzerdaten ist und wie man durch enge Absprachen im Entwicklerteam komplexe Echtzeit-Features erfolgreich und nahtlos zusammenfügt."
+      "DABUBBLE": "Im Team habe ich die Verantwortung für die sensiblen Kernbereiche, den kompletten Authentifizierungs-Flow sowie interaktive Features wie die Emoji-Integration im Chat übernommen. Dabei habe ich gelernt, wie wichtig präzises State-Management bei Benutzerdaten ist und wie man durch enge Absprachen im Entwicklerteam komplexe Echtzeit-Features erfolgreich und nahtlos zusammenfügt.",
+      "VIDEOFLIX": "Ich habe mein Wissen über asynchrone Hintergrundprozesse, Video-Streaming und containerisierte Anwendungen vertieft. Besonders wertvoll waren die Arbeit mit Redis, FFmpeg und Docker sowie die Absicherung von API-Endpunkten und Mediendateien.",
+      "QUIZLY": "Ich habe gelernt, KI-Modelle in mehrstufige Backend-Prozesse zu integrieren und externe Ergebnisse zuverlässig zu validieren. Dabei konnte ich meine Kenntnisse in Audioverarbeitung, Fehlerbehandlung, JWT-Authentifizierung und automatisierten Tests erweitern.",
+      "CODERR": "Ich habe meine Kenntnisse in der Entwicklung relationaler Datenmodelle, REST APIs und rollenbasierter Zugriffsregeln vertieft. Durch die umfassenden Tests konnte ich außerdem die Zuverlässigkeit der Geschäftslogik gezielt überprüfen.",
+      "KANMIND": "Ich habe mein Verständnis für komplexe Datenbeziehungen und objektbezogene Berechtigungen erweitert. Besonders wichtig waren die sichere Verwaltung von Board-Mitgliedschaften, Aufgabenverantwortlichkeiten und die Absicherung der API durch automatisierte Tests."
     },
     "TECHNOLOGIES": "Technologien:",
     "DURATION_LABEL": "Dauer: {{duration}}",
@@ -84,7 +101,11 @@
     "TECHNAMES": {
       "BASIC": "HTML, CSS, JavaScript",
       "API": "HTML, CSS, JavaScript, REST-API",
-      "ANGULAR": "HTML, SCSS, TypeScript, Angular"
+      "ANGULAR": "HTML, SCSS, TypeScript, Angular",
+      "VIDEOFLIX": "Python, Django, Django REST Framework, PostgreSQL, Redis, Docker, FFmpeg",
+      "QUIZLY": "Python, Django, Django REST Framework, Whisper, Gemini, FFmpeg",
+      "CODERR": "Python, Django, Django REST Framework, REST API",
+      "KANMIND": "Python, Django, Django REST Framework, SQLite"
     }
   },
   "BUTTON": {
