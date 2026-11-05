@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { ProjectInfo } from '../../../features/home/sections/projects/projects';
 import { ButtonComponent } from '../button/button';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -16,9 +18,15 @@ export class ProjectCard {
   @Input() currentIndex: number = 0;
   @Input() totalProjects: number = 0;
 
-  openLink(url: string) {
+  private readonly router = inject(Router);
+
+  openLink(url: string): void {
     if (url) {
       window.open(url, '_blank');
     }
+  }
+
+  navigateToProjects(): void {
+    void this.router.navigate(['/projects']);
   }
 }
