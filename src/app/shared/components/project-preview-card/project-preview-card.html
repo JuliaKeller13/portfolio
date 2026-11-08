@@ -1,0 +1,56 @@
+<article class="preview-card">
+  <div class="preview-card__media">
+    @if (project().imageUrl) {
+      <img
+        [src]="project().imageUrl"
+        [alt]="'PROJECT_CATALOG.IMAGE_ALT' | translate: { project: project().name }"
+        loading="lazy"
+      />
+    } @else {
+      <div class="preview-card__placeholder" aria-hidden="true">
+        <span>JK</span>
+      </div>
+    }
+    @if (project().featured) {
+      <span class="preview-card__featured">{{ 'PROJECT_CATALOG.FEATURED' | translate }}</span>
+    }
+  </div>
+
+  <div class="preview-card__body">
+    <span class="preview-card__category">
+      {{ (project().category === 'frontend'
+        ? 'PROJECT_CATALOG.FRONTEND'
+        : 'PROJECT_CATALOG.BACKEND') | translate }}
+    </span>
+
+    <h3>{{ project().name }}</h3>
+    <p class="preview-card__description">
+      {{ ('PROJECT_CATALOG.DESCRIPTIONS.' + project().key) | translate }}
+    </p>
+
+    <ul class="preview-card__stack" [attr.aria-label]="'PROJECT_CATALOG.TECHNOLOGIES' | translate">
+      @for (tech of project().stack; track tech) {
+        <li>{{ tech }}</li>
+      }
+    </ul>
+
+    <div class="preview-card__actions">
+      @if (project().liveUrl) {
+        <a
+          class="preview-card__link preview-card__link--primary"
+          [href]="project().liveUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="'PROJECT_CATALOG.OPEN_LIVE' | translate: { project: project().name }"
+        >{{ 'PROJECT_CATALOG.LIVE' | translate }}</a>
+      }
+      <a
+        class="preview-card__link preview-card__link--outline"
+        [href]="project().githubUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="'PROJECT_CATALOG.OPEN_CODE' | translate: { project: project().name }"
+      >GitHub</a>
+    </div>
+  </div>
+</article>

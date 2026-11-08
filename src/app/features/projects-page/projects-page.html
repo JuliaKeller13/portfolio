@@ -1,0 +1,47 @@
+<app-navbar />
+
+<main class="projects-page">
+  <div class="projects-page__inner">
+    <a class="projects-page__back" routerLink="/" fragment="projects">
+      <img src="/icon/arrowleft.svg" alt="" aria-hidden="true" />
+      {{ 'PROJECT_CATALOG.BACK' | translate }}
+    </a>
+
+    <header class="projects-page__header">
+      <h1>{{ 'PROJECT_CATALOG.HEADING' | translate }}</h1>
+      <p>{{ 'PROJECT_CATALOG.INTRO' | translate }}</p>
+    </header>
+
+    <section class="projects-page__catalog" aria-labelledby="catalog-heading">
+      <div class="projects-page__toolbar">
+        <h2 id="catalog-heading" class="visually-hidden">
+          {{ 'PROJECT_CATALOG.LIST_HEADING' | translate }}
+        </h2>
+        <div class="projects-page__filters" role="group" [attr.aria-label]="'PROJECT_CATALOG.FILTER_LABEL' | translate">
+          @for (filter of filters; track filter.value) {
+            <button
+              type="button"
+              class="projects-page__filter"
+              [class.is-active]="selectedFilter() === filter.value"
+              [attr.aria-pressed]="selectedFilter() === filter.value"
+              (click)="selectedFilter.set(filter.value)"
+            >
+              {{ filter.label | translate }}
+            </button>
+          }
+        </div>
+        <p class="projects-page__count" aria-live="polite">
+          {{ 'PROJECT_CATALOG.COUNT' | translate: { count: filteredProjects().length } }}
+        </p>
+      </div>
+
+      <div class="projects-page__grid">
+        @for (project of filteredProjects(); track project.id) {
+          <app-project-preview-card [project]="project" />
+        } @empty {
+          <p class="projects-page__empty">{{ 'PROJECT_CATALOG.EMPTY' | translate }}</p>
+        }
+      </div>
+    </section>
+  </div>
+</main>
