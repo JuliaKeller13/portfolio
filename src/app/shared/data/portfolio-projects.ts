@@ -58,6 +58,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     technologyIcons: ['skill-icons/python.svg', 'skill-icons/django.svg', 'skill-icons/DRF.svg', 'skill-icons/postgesql.svg', 'skill-icons/redis.svg', 'skill-icons/docker.svg'],
     technologyTextKey: 'PROJECTS.TECHNAMES.VIDEOFLIX',
     stack: ['Django', 'PostgreSQL', 'Redis', 'Docker', 'FFmpeg'],
+    imageUrl: '/imgs/videoflix.png',
     githubUrl: 'https://github.com/JuliaKeller13/videoflix_backend',
   },
   {
@@ -65,6 +66,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     technologyIcons: ['skill-icons/python.svg', 'skill-icons/django.svg', 'skill-icons/DRF.svg'],
     technologyTextKey: 'PROJECTS.TECHNAMES.KANMIND',
     stack: ['Python', 'Django', 'DRF', 'Permissions'],
+    imageUrl: '/imgs/kanmind.png',
     githubUrl: 'https://github.com/JuliaKeller13/Kanmind_backend',
   },
   {

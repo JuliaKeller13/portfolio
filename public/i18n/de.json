@@ -39,7 +39,7 @@
   },
   "PROJECT_CATALOG": {
     "HEADING": "Alle Projekte",
-    "INTRO": "Entdecke meine Frontend- und Backend-Projekte – von interaktiven Webanwendungen bis zu REST APIs und KI-gestützten Lösungen.",
+    "INTRO": "Entdecke meine Frontend- und Backend-Projekte - von interaktiven Webanwendungen bis zu REST APIs und KI-gestützten Lösungen.",
     "BACK": "Zurück zum Portfolio",
     "LIST_HEADING": "Projektübersicht",
     "FILTER_LABEL": "Projekte nach Bereich filtern",
@@ -55,7 +55,7 @@
     "IMAGE_ALT": "Vorschau von {{project}}",
     "TECHNOLOGIES": "Verwendete Technologien",
     "DESCRIPTIONS": {
-      "DABUBBLE": "Echtzeit-Messenger mit Channels, Direktnachrichten und Authentifizierung – entwickelt im Team mit Angular und Supabase.",
+      "DABUBBLE": "Echtzeit-Messenger mit Channels, Direktnachrichten und Authentifizierung - entwickelt im Team mit Angular und Supabase.",
       "JOIN": "Kanban-basierte Aufgabenverwaltung mit kollaborativen Workflows, Drag-and-Drop und responsiver Oberfläche.",
       "CODERR": "REST API für einen Dienstleistungsmarktplatz mit Benutzerprofilen, Angeboten, Bestellungen und Bewertungen.",
       "QUIZLY": "Aus YouTube-Videos werden mit Whisper und Gemini automatisch Quizfragen erstellt und validiert.",

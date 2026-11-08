@@ -39,7 +39,7 @@
   },
   "PROJECT_CATALOG": {
     "HEADING": "All Projects",
-    "INTRO": "Explore my frontend and backend work – from interactive web applications to REST APIs and AI-powered solutions.",
+    "INTRO": "Explore my frontend and backend work - from interactive web applications to REST APIs and AI-powered solutions.",
     "BACK": "Back to portfolio",
     "LIST_HEADING": "Project overview",
     "FILTER_LABEL": "Filter projects by category",
@@ -55,7 +55,7 @@
     "IMAGE_ALT": "Preview of {{project}}",
     "TECHNOLOGIES": "Technologies used",
     "DESCRIPTIONS": {
-      "DABUBBLE": "Real-time messaging with channels, direct messages and authentication – built collaboratively with Angular and Supabase.",
+      "DABUBBLE": "Real-time messaging with channels, direct messages and authentication - built collaboratively with Angular and Supabase.",
       "JOIN": "Kanban-style task management with collaborative workflows, drag-and-drop and a responsive interface.",
       "CODERR": "REST API for a service marketplace featuring user profiles, offers, orders and reviews.",
       "QUIZLY": "Automatically generates and validates quizzes from YouTube videos using Whisper and Gemini.",
