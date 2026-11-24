@@ -38,9 +38,11 @@ export class Navbar implements OnInit, OnDestroy {
     this.translate.use(lang);
     this.activeLang.set(lang);
     localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
   }
 
   ngOnInit() {
+    document.documentElement.lang = this.activeLang();
     this.observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
