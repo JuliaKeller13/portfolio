@@ -24,19 +24,23 @@
 }
 
 h1 {
-  font-family: 'Anta-Regular', sans-serif;
-  color: $secondary-color;
-  @include mx.fluid-text(48, 88);
-  letter-spacing: 1%;
   text-align: center;
-  margin-bottom: 1rem;
-}
+  color: $secondary-color;
 
-p {
-  font-family: 'JosefinSans-Regular', sans-serif;
-  @include mx.fluid-text(22, 40);
-  text-align: center;
-  color: $secondary-color;
+  .name {
+    display: block;
+    font-family: 'Anta-Regular', sans-serif;
+    @include mx.fluid-text(48, 88);
+    letter-spacing: 1%;
+    margin-bottom: 1rem;
+  }
+
+  .role {
+    display: block;
+    font-family: 'JosefinSans-Regular', sans-serif;
+    font-weight: normal;
+    @include mx.fluid-text(22, 40);
+  }
 }
 
 .photo-container {
